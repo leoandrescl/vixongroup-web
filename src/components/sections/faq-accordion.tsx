@@ -20,7 +20,14 @@ export function FaqAccordion({
     <Accordion type="single" collapsible className="w-full">
       {items.map((item, index) => (
         <AccordionItem key={item.question} value={`faq-${index}`}>
-          <AccordionTrigger className="text-base hover:no-underline">
+          <AccordionTrigger
+            className={cn(
+              "text-base hover:no-underline",
+              tone === "light"
+                ? "hover:bg-canvas-foreground/5 hover:text-brand"
+                : "hover:bg-white/8 hover:text-brand",
+            )}
+          >
             {item.question}
           </AccordionTrigger>
           <AccordionContent

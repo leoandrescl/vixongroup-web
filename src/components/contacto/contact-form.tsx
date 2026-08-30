@@ -119,7 +119,7 @@ export function ContactForm() {
             id="interest"
             name="interest"
             defaultValue=""
-            className="h-10 w-full rounded-lg border border-black/10 bg-white px-3 text-sm"
+            className="h-10 w-full cursor-pointer rounded-lg border border-black/10 bg-white px-3 text-sm transition-colors hover:border-brand"
             aria-invalid={Boolean(fieldErrors.interest)}
           >
             <option value="" disabled>
