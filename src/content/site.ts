@@ -57,17 +57,6 @@ export const footerNav = {
   ],
 } as const;
 
-export const techLogos = [
-  "AWS",
-  "Google Cloud",
-  "Next.js",
-  "WordPress",
-  "Shopify",
-  "React",
-  "Node.js",
-  "Cloudflare",
-] as const;
-
 export const homeStats = [
   { value: "+120", label: "Proyectos" },
   { value: "+80", label: "Clientes satisfechos" },
