@@ -1,0 +1,13 @@
+---
+description: After every code change, commit and push to git so Vercel deploys.
+alwaysApply: true
+---
+
+# Subir cambios a git
+
+Después de cada cambio de código en este repo, haz commit y `git push` a `origin` sin esperar a que el usuario lo pida.
+
+- Mensaje de commit corto, en inglés o español, centrado en el porqué.
+- No pidas confirmación para push en `master`/`main` de este proyecto.
+- No hagas force push.
+- No commitees secretos (`.env.local`, keys).

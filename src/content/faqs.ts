@@ -48,7 +48,7 @@ export const contactFaqs: FaqItem[] = [
       "30–40 minutos: contexto, objetivos, restricciones y siguiente paso. No es un pitch de 20 slides. Salimos con un plan de qué necesitamos para cotizar en firme.",
   },
   {
-    question: "¿Trabajan con empresas fuera de Venezuela?",
+    question: "¿Trabajan con empresas fuera de Chile?",
     answer:
       "Sí. Operamos en remoto con clientes en Latam, España y US. Facturación y horarios se acuerdan en la propuesta.",
   },

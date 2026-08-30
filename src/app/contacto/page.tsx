@@ -67,8 +67,8 @@ export default function ContactoPage() {
             </ul>
             <div className="mt-6 overflow-hidden rounded-2xl ring-1 ring-black/5">
               <iframe
-                title="Mapa de Caracas"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-67.05%2C10.39%2C-66.82%2C10.55&layer=mapnik"
+                title="Mapa de Santiago"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-70.85%2C-33.58%2C-70.50%2C-33.30&layer=mapnik"
                 className="h-52 w-full border-0 grayscale"
                 loading="lazy"
               />

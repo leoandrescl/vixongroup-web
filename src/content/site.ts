@@ -9,8 +9,8 @@ export const siteConfig = {
   email: "hola@vixongroup.com",
   phone: "+58 412 000 0000",
   phoneDisplay: "+58 412 000 0000",
-  address: "Caracas, Venezuela",
-  hours: "Lun–Vie, 9:00–18:00 (GMT-4)",
+  address: "Santiago, Chile",
+  hours: "Lun–Vie, 9:00–18:00 (GMT-3)",
   whatsapp: {
     number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "584120000000",
     message:

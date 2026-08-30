@@ -37,7 +37,7 @@ export function buildMetadata({
     robots: noIndex ? { index: false, follow: false } : undefined,
     openGraph: {
       type: "website",
-      locale: "es_VE",
+      locale: "es_CL",
       url,
       siteName: siteConfig.name,
       title: resolvedTitle,
@@ -63,8 +63,8 @@ export function organizationJsonLd() {
     telephone: siteConfig.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Caracas",
-      addressCountry: "VE",
+      addressLocality: "Santiago",
+      addressCountry: "CL",
     },
     sameAs: Object.values(siteConfig.social),
   };
