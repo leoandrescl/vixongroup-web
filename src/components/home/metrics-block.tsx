@@ -1,76 +1,7 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
+import { AnimatedStat } from "@/components/ui/animated-stat";
 import { homeStats } from "@/content/site";
-
-function parseStat(value: string) {
-  const match = value.match(/^(.*?)(\d+)(.*)$/);
-  if (!match) return { prefix: "", target: 0, suffix: value };
-  return {
-    prefix: match[1],
-    target: Number(match[2]),
-    suffix: match[3],
-  };
-}
-
-function AnimatedStat({ value }: { value: string }) {
-  const { prefix, target, suffix } = parseStat(value);
-  const ref = useRef<HTMLSpanElement>(null);
-  const [inView, setInView] = useState(false);
-  const [display, setDisplay] = useState(0);
-
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setInView(Boolean(entry?.isIntersecting)),
-      { threshold: 0.45 },
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView) {
-      setDisplay(0);
-      return;
-    }
-
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      setDisplay(target);
-      return;
-    }
-
-    const duration = 1400;
-    const started = performance.now();
-    let frame = 0;
-
-    const tick = (now: number) => {
-      const progress = Math.min(1, (now - started) / duration);
-      const eased = 1 - (1 - progress) ** 3;
-      setDisplay(Math.round(target * eased));
-      if (progress < 1) frame = requestAnimationFrame(tick);
-    };
-
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [inView, target]);
-
-  return (
-    <span ref={ref} className="tabular-nums">
-      <span aria-hidden="true">
-        {prefix}
-        {display}
-        {suffix}
-      </span>
-      <span className="sr-only">{value}</span>
-    </span>
-  );
-}
 
 export function MetricsBlock() {
   return (

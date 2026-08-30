@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { CtaBanner } from "@/components/sections/cta-banner";
+import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -143,7 +144,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 key={metric.label}
                 className="rounded-2xl bg-surface p-6 ring-1 ring-white/8"
               >
-                <p className="text-3xl font-semibold text-brand">{metric.value}</p>
+                <p className="text-3xl font-semibold text-brand">
+                  <AnimatedStat value={metric.value} />
+                </p>
                 <p className="mt-2 text-sm text-muted-foreground">{metric.label}</p>
               </div>
             ))}
