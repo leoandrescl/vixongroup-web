@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, FolderKanban, Handshake, Timer, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Eyebrow } from "@/components/ui/section";
 import { homeStats } from "@/content/site";
 
@@ -46,7 +47,9 @@ export function HomeHero() {
                 <Icon className="mt-0.5 size-5 text-brand" aria-hidden />
               ) : null}
               <div>
-                <p className="text-xl font-semibold">{stat.value}</p>
+                <p className="text-xl font-semibold">
+                  <AnimatedStat value={stat.value} />
+                </p>
                 <p className="text-xs text-muted-foreground">{stat.label}</p>
               </div>
             </div>
