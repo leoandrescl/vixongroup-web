@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/container";
 import {
   Sheet,
   SheetContent,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -116,13 +117,19 @@ export function Header() {
                 <Menu />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background">
-              <SheetHeader>
+            <SheetContent
+              side="right"
+              className="w-[min(92vw,22rem)] gap-0 bg-background p-0 data-[side=right]:w-[min(92vw,22rem)]"
+            >
+              <SheetHeader className="border-b border-white/8 px-5 py-4 pr-12">
                 <SheetTitle className="text-left tracking-[0.16em] uppercase">
                   {siteConfig.name}
                 </SheetTitle>
               </SheetHeader>
-              <nav className="mt-6 flex flex-col gap-1" aria-label="Móvil">
+              <nav
+                className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4"
+                aria-label="Móvil"
+              >
                 {mainNav.map((item) => {
                   const active = isActivePath(pathname, item.href);
                   return (
@@ -131,7 +138,7 @@ export function Header() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "rounded-xl px-3 py-3 text-sm font-medium transition-colors duration-300 ease-out-expo",
+                        "rounded-xl px-3 py-2.5 text-sm font-medium transition-colors duration-300 ease-out-expo",
                         active
                           ? "bg-brand/15 text-brand"
                           : "text-foreground/80 hover:bg-muted",
@@ -143,12 +150,19 @@ export function Header() {
                   );
                 })}
               </nav>
-              <Button asChild className="mt-8" onClick={() => setOpen(false)}>
-                <Link href="/contacto">
-                  Hablemos de tu proyecto
-                  <ArrowRight />
-                </Link>
-              </Button>
+              <SheetFooter className="border-t border-white/8 px-4 pt-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+                <Button
+                  asChild
+                  size="sm"
+                  className="h-9 w-full max-w-full px-4 text-[0.8rem]"
+                  onClick={() => setOpen(false)}
+                >
+                  <Link href="/contacto">
+                    Hablemos de tu proyecto
+                    <ArrowRight />
+                  </Link>
+                </Button>
+              </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>
