@@ -25,9 +25,9 @@ export default function TerminosPage() {
             oferta vinculante hasta que exista una propuesta firmada.
           </p>
           <p>
-            Los proyectos mostrados en esta fase son contenido de demostración
-            con fines de diseño. Las métricas ilustran el formato de entrega, no
-            resultados auditados de clientes reales.
+            Los casos del portafolio corresponden a trabajo en producción. Las
+            cifras que se muestran describen el alcance del entregable, no
+            resultados financieros auditados de cada cliente.
           </p>
           <p>
             El uso del formulario implica que la información es veraz y que

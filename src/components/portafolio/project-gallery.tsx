@@ -10,9 +10,13 @@ import {
   type ProjectCategory,
 } from "@/content/projects";
 
+const usedCategories = projectCategories.filter((id) =>
+  projects.some((project) => project.category === id),
+);
+
 const filters: Array<{ id: "all" | ProjectCategory; label: string }> = [
   { id: "all", label: "Todos" },
-  ...projectCategories.map((id) => ({ id, label: categoryLabels[id] })),
+  ...usedCategories.map((id) => ({ id, label: categoryLabels[id] })),
 ];
 
 export function ProjectGallery() {

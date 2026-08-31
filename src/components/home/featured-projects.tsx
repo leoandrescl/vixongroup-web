@@ -14,7 +14,7 @@ export function FeaturedProjects() {
       <Container>
         <Eyebrow>Casos destacados</Eyebrow>
         <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
-          Proyectos que se pueden auditar.
+          Proyectos que se pueden abrir.
         </h2>
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {featured.map((project) => (

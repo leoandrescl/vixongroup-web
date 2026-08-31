@@ -26,15 +26,17 @@ export default function HomePage() {
       <MetricsBlock />
       <WhyUs />
       <FeaturedProjects />
-      <Section>
-        <Container>
-          <Eyebrow>Testimonios</Eyebrow>
-          <h2 className="mt-4 mb-10 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-            Clientes que validan el resultado, no el discurso.
-          </h2>
-          <TestimonialSlider items={testimonials} />
-        </Container>
-      </Section>
+      {testimonials.length > 0 ? (
+        <Section>
+          <Container>
+            <Eyebrow>Testimonios</Eyebrow>
+            <h2 className="mt-4 mb-10 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+              Clientes que validan el resultado, no el discurso.
+            </h2>
+            <TestimonialSlider items={testimonials} />
+          </Container>
+        </Section>
+      ) : null}
       <CtaBanner
         title="¿Listo para llevar tu proyecto al siguiente nivel?"
         description="Cuéntanos el objetivo. En una reunión acotamos alcance, riesgos y el siguiente paso."

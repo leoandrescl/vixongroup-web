@@ -41,185 +41,123 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "norte-market",
-    client: "Norte Market",
-    title: "E-commerce de alta conversión",
+    slug: "pagate",
+    client: "Pagate",
+    title: "SaaS para vender y entregar desde un link",
     summary:
-      "Tienda headless con checkout en menos de tres pasos, catálogo sincronizado y LCP bajo 2.2 s en 4G.",
-    category: "ecommerce",
-    year: 2025,
-    liveUrl: "https://example.com",
-    featured: true,
-    cover: {
-      src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80",
-      alt: "Checkout y vitrina de e-commerce en laptop",
-    },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-        alt: "Dashboard de ventas en escritorio",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80",
-        alt: "Vista móvil de la tienda",
-      },
-    ],
-    stack: ["Next.js", "Shopify Hydrogen", "Sanity", "Cloudflare"],
-    services: ["E-commerce", "Performance", "CRO"],
-    metrics: [
-      { value: "+38%", label: "Aumento de ventas" },
-      { value: "2.1s", label: "Carga de página" },
-    ],
-    challenge:
-      "La tienda en un monolito lento perdía carritos en móvil y no tenía atribución fiable entre ads y catálogo.",
-    solution:
-      "Migración a storefront headless, checkout reducido, edge caching y dataLayer unificado para Meta y Google Ads.",
-    testimonial: {
-      quote:
-        "Por fin vemos el funnel completo. El sitio se siente premium y las campañas dejan de ser un salto de fe.",
-      author: "Mariana Rivas",
-      role: "Directora comercial, Norte Market",
-    },
-  },
-  {
-    slug: "atlas-ops",
-    client: "Atlas Ops",
-    title: "Plataforma operativa B2B",
-    summary:
-      "Software a medida para orquestar pedidos, inventario y SLAs entre sucursales en tiempo real.",
+      "Producto en producción para creadores en Chile: tienda en un link, cobro en CLP con Mercado Pago, agenda 1:1 y entrega automática.",
     category: "software",
-    year: 2025,
+    year: 2026,
+    liveUrl: "https://pagate.cl",
     featured: true,
     cover: {
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
-      alt: "Dashboard analítico de plataforma B2B",
+      src: "/portafolio/pagate-cover.jpg",
+      alt: "Landing de Pagate: un link para vender productos digitales y agendar sesiones",
     },
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80",
-        alt: "Equipo trabajando sobre la plataforma",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?auto=format&fit=crop&w=900&q=80",
-        alt: "Interfaz móvil de operaciones",
+        src: "/portafolio/pagate-gallery.jpg",
+        alt: "Flujos de Pagate para distintos oficios y pasos para lanzar la tienda",
       },
     ],
-    stack: ["Next.js", "Node.js", "PostgreSQL", "GraphQL"],
-    services: ["Software a medida", "APIs", "Infraestructura"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Mercado Pago", "Google Calendar"],
+    services: ["Software a medida", "Checkout", "Integraciones"],
     metrics: [
-      { value: "+50K", label: "Usuarios activos" },
-      { value: "-41%", label: "Tiempo operativo" },
+      { value: "1", label: "Link para vender y entregar" },
+      { value: "0%", label: "Comisión de plataforma" },
     ],
     challenge:
-      "Operaban con hojas de cálculo y tres sistemas que no se hablaban. Los SLAs se rompían sin visibilidad.",
+      "Coaches, terapeutas y creadores cobraban por WhatsApp: precio, horario, comprobante y PDF se resolvían a mano en cada venta.",
     solution:
-      "Backoffice unificado, APIs versionadas y paneles de SLA con alertas. Despliegue por regiones con observabilidad.",
-    testimonial: {
-      quote:
-        "Pasamos de apagar incendios a dirigir la operación. El tablero es la fuente de verdad del equipo.",
-      author: "Diego Solano",
-      role: "COO, Atlas Ops",
-    },
+      "Construimos un SaaS con tienda en pagate.cl/usuario, checkout Mercado Pago, agenda con Google Calendar y Meet, y entrega de archivos o acceso sin operación manual.",
   },
   {
-    slug: "lumen-growth",
-    client: "Lumen Studio",
-    title: "Motor de growth y atribución",
+    slug: "sorteo-seguro",
+    client: "Sorteo Seguro",
+    title: "Plataforma de concursos con DigiTicket",
     summary:
-      "Estrategia de paid + SEO técnico y un data stack que conecta creatividades con ingresos reales.",
-    category: "marketing",
-    year: 2024,
-    featured: true,
-    cover: {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-      alt: "Analítica de campañas de marketing",
-    },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1600&q=80",
-        alt: "Reporte de crecimiento en pantalla",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1432888498266-38ffec3bdb2d?auto=format&fit=crop&w=900&q=80",
-        alt: "Creatividades y métricas en móvil",
-      },
-    ],
-    stack: ["GA4", "Meta Ads", "Looker Studio", "Next.js"],
-    services: ["Performance ads", "SEO", "Analítica"],
-    metrics: [
-      { value: "4.7x", label: "ROAS blended" },
-      { value: "+62%", label: "Leads calificados" },
-    ],
-    challenge:
-      "Inversión alta en ads sin lectura de calidad de lead. El sitio corporativo no convertía el tráfico pagado.",
-    solution:
-      "Reconstrucción de landing, eventos server-side, pruebas CRO y un calendario de contenidos alineado a keywords de intención.",
-    testimonial: {
-      quote:
-        "Dejamos de discutir opiniones. Cada peso tiene una hipótesis y un resultado. Eso cambió al comité.",
-      author: "Camila Ortega",
-      role: "Head of Growth, Lumen Studio",
-    },
-  },
-  {
-    slug: "orbe-retail",
-    client: "Orbe Retail",
-    title: "Catálogo omnicanal",
-    summary:
-      "Integración de POS, inventario y web con búsqueda facetada y disponibilidad en sucursal.",
+      "Rediseño transaccional de sorteoseguro.cl: catálogo de concursos, packs, checkout y ticket digital numerado al instante.",
     category: "ecommerce",
-    year: 2024,
+    year: 2026,
+    liveUrl: "https://sorteoseguro.cl",
+    featured: true,
+    cover: {
+      src: "/portafolio/sorteo-cover.jpg",
+      alt: "Home de Sorteo Seguro con concursos inmobiliarios y vehiculares",
+    },
+    gallery: [
+      {
+        src: "/portafolio/sorteo-gallery.jpg",
+        alt: "Ficha de concurso inmobiliario con DigiTicket y llamado a participar",
+      },
+    ],
+    stack: ["WordPress", "WooCommerce", "PHP", "Mercado Pago", "LiteSpeed"],
+    services: ["E-commerce", "Checkout", "UX"],
+    metrics: [
+      { value: "100%", label: "Compra y ticket digitales" },
+      { value: "1", label: "DigiTicket por email al pagar" },
+    ],
+    challenge:
+      "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarela y un ticket único. El front y el checkout no acompañaban ese estándar.",
+    solution:
+      "Mu-plugins a medida sobre WordPress/WooCommerce: home, fichas, carrito, checkout invitado, packs con Mercado Pago y emisión del DigiTicket tras el pago.",
+  },
+  {
+    slug: "san-mateo",
+    client: "San Mateo S.A.",
+    title: "Sitio inmobiliario para la V Región",
+    summary:
+      "Portal de inmobiliariasanmateo.cl: búsqueda de propiedades, fichas en UF y pesos, simulador de crédito y captación de mandantes.",
+    category: "software",
+    year: 2026,
+    liveUrl: "https://inmobiliariasanmateo.cl",
+    featured: true,
+    cover: {
+      src: "/portafolio/sanmateo-cover.jpg",
+      alt: "Home de San Mateo Gestión Inmobiliaria con buscador de propiedades",
+    },
+    gallery: [
+      {
+        src: "/portafolio/sanmateo-gallery.jpg",
+        alt: "Listado de propiedades destacadas en venta con precios en UF y pesos",
+      },
+    ],
+    stack: ["WordPress", "PHP", "LiteSpeed"],
+    services: ["Sitio web", "Catálogo", "Captación de leads"],
+    metrics: [
+      { value: "2", label: "Precios en UF y pesos" },
+      { value: "1", label: "Simulador de crédito en el sitio" },
+    ],
+    challenge:
+      "La inmobiliaria necesitaba un canal propio en Valparaíso: filtrar casa, depto o parcela, mostrar stock real y convertir visitas en consultas o publicaciones.",
+    solution:
+      "Sitio con buscador por tipo, operación y comuna, fichas con UF/CLP, simulador de crédito, blog y CTAs a WhatsApp, publicación de propiedad y contacto con asesores.",
+  },
+  {
+    slug: "imppulsor-dmc",
+    client: "Imppulsor",
+    title: "Panel del Diagnóstico de Madurez Comercial",
+    summary:
+      "Aplicación privada en dmc.imppulsor.com para que empresas ingresen al DMC: evaluación comercial en 12 dimensiones.",
+    category: "software",
+    year: 2026,
+    liveUrl: "https://dmc.imppulsor.com",
     featured: false,
     cover: {
-      src: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80",
-      alt: "Retail y experiencia de compra",
+      src: "/portafolio/imppulsor-cover.jpg",
+      alt: "Acceso autenticado al Diagnóstico de Madurez Comercial de Imppulsor",
     },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80",
-        alt: "Experiencia de catálogo en escritorio",
-      },
-    ],
-    stack: ["Next.js", "Shopify", "Algolia", "AWS"],
-    services: ["E-commerce", "Integraciones", "UX"],
+    gallery: [],
+    stack: ["PHP", "HTML", "CSS"],
+    services: ["Software a medida", "Paneles internos", "Autenticación"],
     metrics: [
-      { value: "+27%", label: "Ticket promedio" },
-      { value: "99.9%", label: "Uptime temporada" },
+      { value: "12", label: "Dimensiones del diagnóstico" },
+      { value: "1", label: "Acceso autenticado por cliente" },
     ],
     challenge:
-      "Stock desfasado entre tienda física y web. Clientes compraban online lo que ya no existía en bodega.",
+      "El DMC es un producto de consultoría con datos sensibles. No podía vivir en una planilla ni en un sitio público: hacía falta un acceso controlado para cada empresa.",
     solution:
-      "Sincronización de inventario casi en tiempo real, retiro en tienda y búsqueda que prioriza disponibilidad local.",
-  },
-  {
-    slug: "pulse-health",
-    client: "Pulse Health",
-    title: "Portal de pacientes",
-    summary:
-      "Aplicación segura para agendar, ver resultados y reducir no-shows con recordatorios inteligentes.",
-    category: "software",
-    year: 2023,
-    featured: false,
-    cover: {
-      src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80",
-      alt: "Interfaz de producto de salud digital",
-    },
-    gallery: [
-      {
-        src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80",
-        alt: "Flujo de agendamiento en desktop",
-      },
-    ],
-    stack: ["Next.js", "Node.js", "PostgreSQL", "Twilio"],
-    services: ["Software a medida", "UX", "Integraciones"],
-    metrics: [
-      { value: "-33%", label: "No-shows" },
-      { value: "LCP < 1.4s", label: "Portal autenticado" },
-    ],
-    challenge:
-      "El call center saturado y un portal legado que no cumplía expectativas móviles de los pacientes.",
-    solution:
-      "Portal con auth moderna, flujos de cita en tres pantallas y mensajería transaccional con consentimiento explícito.",
+      "Panel B2B con login por correo registrado, recuperación de clave y un entorno cerrado para aplicar el marco de 12 dimensiones de madurez comercial.",
   },
 ];
 

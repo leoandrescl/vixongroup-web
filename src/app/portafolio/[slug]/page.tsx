@@ -13,7 +13,7 @@ import {
   getProjectBySlug,
   projects,
 } from "@/content/projects";
-import { buildMetadata } from "@/lib/seo";
+import { absoluteUrl, buildMetadata } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -71,14 +71,20 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 name: `${project.client}: ${project.title}`,
                 description: project.summary,
                 datePublished: String(project.year),
-                image: project.cover.src,
+                image: project.cover.src.startsWith("http")
+                  ? project.cover.src
+                  : absoluteUrl(project.cover.src),
               }),
             }}
           />
           {project.liveUrl ? (
             <Button asChild variant="outline" className="mt-8">
-              <a href={project.liveUrl} target="_blank" rel="noreferrer">
-                Live preview
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver sitio
                 <ExternalLink />
               </a>
             </Button>
@@ -137,7 +143,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <Section>
         <Container>
           <Eyebrow>Impacto</Eyebrow>
-          <h2 className="mt-3 text-3xl font-semibold">KPIs del proyecto</h2>
+          <h2 className="mt-3 text-3xl font-semibold">Alcance del entregable</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {project.metrics.map((metric) => (
               <div
@@ -177,28 +183,30 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </Container>
       </Section>
 
-      <Section>
-        <Container>
-          <Eyebrow>Showcase</Eyebrow>
-          <h2 className="mt-3 text-3xl font-semibold">Galería</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {project.gallery.map((image) => (
-              <div
-                key={image.src}
-                className="relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-white/10"
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
+      {project.gallery.length > 0 ? (
+        <Section>
+          <Container>
+            <Eyebrow>Showcase</Eyebrow>
+            <h2 className="mt-3 text-3xl font-semibold">Galería</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {project.gallery.map((image) => (
+                <div
+                  key={image.src}
+                  className="relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-white/10"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      ) : null}
 
       {project.testimonial ? (
         <Section>
