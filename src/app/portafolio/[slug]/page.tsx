@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { CtaBanner } from "@/components/sections/cta-banner";
-import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -136,26 +135,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 </span>
               ))}
             </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Section>
-        <Container>
-          <Eyebrow>Impacto</Eyebrow>
-          <h2 className="mt-3 text-3xl font-semibold">Alcance del entregable</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {project.metrics.map((metric) => (
-              <div
-                key={metric.label}
-                className="rounded-2xl bg-surface p-6 ring-1 ring-white/8"
-              >
-                <p className="text-3xl font-semibold text-brand">
-                  <AnimatedStat value={metric.value} />
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{metric.label}</p>
-              </div>
-            ))}
           </div>
         </Container>
       </Section>

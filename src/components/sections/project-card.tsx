@@ -39,16 +39,16 @@ export function ProjectCard({
         <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">
           {project.summary}
         </p>
-        <dl className="mt-5 grid grid-cols-2 gap-3 border-t border-white/8 pt-4">
-          {project.metrics.map((metric) => (
-            <div key={metric.label}>
-              <dt className="text-[0.65rem] tracking-wide text-muted-foreground uppercase">
-                {metric.label}
-              </dt>
-              <dd className="text-sm font-semibold text-brand">{metric.value}</dd>
-            </div>
+        <div className="mt-5 flex flex-wrap gap-1.5 border-t border-white/8 pt-4">
+          {project.stack.slice(0, 4).map((item) => (
+            <span
+              key={item}
+              className="rounded-full bg-white/5 px-2.5 py-1 text-[0.7rem] font-medium text-muted-foreground"
+            >
+              {item}
+            </span>
           ))}
-        </dl>
+        </div>
       </div>
     </Link>
   );

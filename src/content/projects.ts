@@ -8,11 +8,6 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   marketing: "Marketing digital",
 };
 
-export type ProjectMetric = {
-  value: string;
-  label: string;
-};
-
 export type Project = {
   slug: string;
   client: string;
@@ -29,7 +24,6 @@ export type Project = {
   gallery: { src: string; alt: string }[];
   stack: string[];
   services: string[];
-  metrics: ProjectMetric[];
   challenge: string;
   solution: string;
   testimonial?: {
@@ -62,10 +56,6 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Mercado Pago", "Google Calendar"],
     services: ["Software a medida", "Checkout", "Integraciones"],
-    metrics: [
-      { value: "1", label: "Link para vender y entregar" },
-      { value: "0%", label: "Comisión de plataforma" },
-    ],
     challenge:
       "Coaches, terapeutas y creadores cobraban por WhatsApp: precio, horario, comprobante y PDF se resolvían a mano en cada venta.",
     solution:
@@ -93,10 +83,6 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "WooCommerce", "PHP", "Mercado Pago", "LiteSpeed"],
     services: ["E-commerce", "Checkout", "UX"],
-    metrics: [
-      { value: "100%", label: "Compra y ticket digitales" },
-      { value: "1", label: "DigiTicket por email al pagar" },
-    ],
     challenge:
       "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarela y un ticket único. El front y el checkout no acompañaban ese estándar.",
     solution:
@@ -124,10 +110,6 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "PHP", "LiteSpeed"],
     services: ["Sitio web", "Catálogo", "Captación de leads"],
-    metrics: [
-      { value: "2", label: "Precios en UF y pesos" },
-      { value: "1", label: "Simulador de crédito en el sitio" },
-    ],
     challenge:
       "La inmobiliaria necesitaba un canal propio en Valparaíso: filtrar casa, depto o parcela, mostrar stock real y convertir visitas en consultas o publicaciones.",
     solution:
@@ -150,10 +132,6 @@ export const projects: Project[] = [
     gallery: [],
     stack: ["PHP", "HTML", "CSS"],
     services: ["Software a medida", "Paneles internos", "Autenticación"],
-    metrics: [
-      { value: "12", label: "Dimensiones del diagnóstico" },
-      { value: "1", label: "Acceso autenticado por cliente" },
-    ],
     challenge:
       "El DMC es un producto de consultoría con datos sensibles. No podía vivir en una planilla ni en un sitio público: hacía falta un acceso controlado para cada empresa.",
     solution:
