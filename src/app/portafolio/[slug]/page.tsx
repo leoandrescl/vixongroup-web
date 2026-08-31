@@ -1,3 +1,4 @@
+import { ViewTransition } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -49,7 +50,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         <Container>
           <Link
             href="/portafolio"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-brand"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors duration-300 ease-out-expo hover:text-brand"
           >
             <ArrowLeft className="size-4" />
             Portafolio
@@ -95,16 +96,18 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       <Section className="pt-0">
         <Container>
-          <div className="relative aspect-[21/9] overflow-hidden rounded-3xl ring-1 ring-white/10">
-            <Image
-              src={project.cover.src}
-              alt={project.cover.alt}
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
-            />
-          </div>
+          <ViewTransition name={`project-${project.slug}`} share="morph" default="none">
+            <div className="relative aspect-[21/9] overflow-hidden rounded-3xl ring-1 ring-white/10">
+              <Image
+                src={project.cover.src}
+                alt={project.cover.alt}
+                fill
+                priority
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
+          </ViewTransition>
         </Container>
       </Section>
 

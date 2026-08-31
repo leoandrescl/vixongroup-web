@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, FolderKanban, Handshake, Timer, Users } from "lucide-react";
+import { HeroWords } from "@/components/motion/hero-words";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { AnimatedStat } from "@/components/ui/animated-stat";
@@ -14,17 +15,18 @@ export function HomeHero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.18),transparent_55%)]" />
       <Container className="relative grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <Eyebrow>Agencia tecnológica integral</Eyebrow>
-          <h1 className="mt-5 max-w-xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Tecnología que funciona. Marketing que la hace{" "}
-            <span className="text-brand">crecer.</span>
-          </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
+          <Eyebrow className="hero-fade">Agencia tecnológica integral</Eyebrow>
+          <HeroWords
+            words="Tecnología que funciona. Marketing que la hace"
+            accent="crecer."
+            className="mt-5 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+          />
+          <p className="hero-fade hero-fade-2 mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
             Diseñamos y construimos productos digitales de alto rendimiento, y
             los conectamos a estrategias de growth que se miden en ventas,
             leads y velocidad — no en vanidad.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="hero-fade hero-fade-3 mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <Link href="/contacto">
                 Hablemos de tu proyecto
@@ -36,9 +38,11 @@ export function HomeHero() {
             </Button>
           </div>
         </div>
-        <DeviceShowcase />
+        <div className="hero-fade hero-fade-2">
+          <DeviceShowcase />
+        </div>
       </Container>
-      <Container className="relative mt-14 grid grid-cols-2 gap-6 border-t border-white/8 pt-8 md:grid-cols-4">
+      <Container className="hero-fade hero-fade-4 relative mt-14 grid grid-cols-2 gap-6 border-t border-white/8 pt-8 md:grid-cols-4">
         {homeStats.map((stat, index) => {
           const Icon = statIcons[index];
           return (
@@ -62,7 +66,7 @@ export function HomeHero() {
 
 function DeviceShowcase() {
   return (
-    <div className="relative mx-auto w-full max-w-lg">
+    <div className="hero-float relative mx-auto w-full max-w-lg">
       <div className="rounded-2xl border border-white/10 bg-surface p-3 shadow-2xl shadow-black/40">
         <div className="flex items-center gap-1.5 px-2 pb-3">
           <span className="size-2.5 rounded-full bg-white/15" />
@@ -83,9 +87,17 @@ function DeviceShowcase() {
             {[40, 55, 42, 70, 62, 88, 76, 94].map((h, i) => (
               <div
                 key={i}
-                className="flex-1 rounded-sm bg-brand/80"
-                style={{ height: `${h}%`, opacity: 0.45 + i * 0.07 }}
-              />
+                className="flex flex-1 items-end"
+                style={{ height: `${h}%` }}
+              >
+                <div
+                  className="hero-bar h-full w-full rounded-sm bg-brand/80"
+                  style={{
+                    opacity: 0.45 + i * 0.07,
+                    animationDelay: `${620 + i * 55}ms`,
+                  }}
+                />
+              </div>
             ))}
           </div>
           <div className="grid grid-cols-3 gap-2">
@@ -110,7 +122,10 @@ function DeviceShowcase() {
           <p className="text-[0.6rem] text-muted-foreground">Campañas</p>
           <p className="text-sm font-semibold text-marketing">Activas 12</p>
           <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
-            <div className="h-full w-2/3 rounded-full bg-marketing" />
+            <div
+              className="hero-bar-x h-full w-2/3 rounded-full bg-marketing"
+              style={{ animationDelay: "0.9s" }}
+            />
           </div>
         </div>
       </div>

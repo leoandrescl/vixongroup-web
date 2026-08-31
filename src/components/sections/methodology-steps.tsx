@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/motion/reveal";
 import { ArrowRight } from "lucide-react";
 import { methodologySteps } from "@/content/site";
 
@@ -5,7 +6,7 @@ export function MethodologySteps() {
   return (
     <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-7">
       {methodologySteps.map((step, index) => (
-        <li key={step.n} className="relative">
+        <Reveal key={step.n} as="li" delay={index * 55} className="relative">
           <p className="text-xs font-semibold tracking-[0.18em] text-brand">
             {step.n}
           </p>
@@ -19,7 +20,7 @@ export function MethodologySteps() {
               aria-hidden
             />
           ) : null}
-        </li>
+        </Reveal>
       ))}
     </ol>
   );

@@ -6,6 +6,7 @@ import { MetricsBlock } from "@/components/home/metrics-block";
 import { ServicePillars } from "@/components/home/service-pillars";
 import { TestimonialSlider } from "@/components/sections/testimonial-slider";
 import { WhyUs } from "@/components/home/why-us";
+import { Reveal } from "@/components/motion/reveal";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { testimonials } from "@/content/testimonials";
@@ -29,11 +30,15 @@ export default function HomePage() {
       {testimonials.length > 0 ? (
         <Section>
           <Container>
-            <Eyebrow>Testimonios</Eyebrow>
-            <h2 className="mt-4 mb-10 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-              Clientes que validan el resultado, no el discurso.
-            </h2>
-            <TestimonialSlider items={testimonials} />
+            <Reveal>
+              <Eyebrow>Testimonios</Eyebrow>
+              <h2 className="mt-4 mb-10 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+                Clientes que validan el resultado, no el discurso.
+              </h2>
+            </Reveal>
+            <Reveal delay={80}>
+              <TestimonialSlider items={testimonials} />
+            </Reveal>
           </Container>
         </Section>
       ) : null}

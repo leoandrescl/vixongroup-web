@@ -7,7 +7,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Escribir por WhatsApp"
-      className="fixed right-4 z-50 flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg shadow-black/30 transition-transform hover:scale-105 md:right-6"
+      className="site-whatsapp fixed right-4 z-50 flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg shadow-black/30 transition-transform duration-300 ease-out-expo hover:scale-105 md:right-6"
       style={{ bottom: "max(1.25rem, env(safe-area-inset-bottom))" }}
     >
       <svg viewBox="0 0 24 24" className="size-7 fill-current" aria-hidden>

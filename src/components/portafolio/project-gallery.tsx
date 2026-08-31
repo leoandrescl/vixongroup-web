@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Reveal } from "@/components/motion/reveal";
 import { ProjectCard } from "@/components/sections/project-card";
 import { Button } from "@/components/ui/button";
 import {
@@ -51,8 +52,10 @@ export function ProjectGallery() {
         ))}
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {visible.map((project) => (
-          <ProjectCard key={project.slug} project={project} />
+        {visible.map((project, index) => (
+          <Reveal key={project.slug} delay={index * 70}>
+            <ProjectCard project={project} />
+          </Reveal>
         ))}
       </div>
     </div>

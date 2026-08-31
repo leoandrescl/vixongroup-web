@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import {
@@ -24,9 +24,50 @@ function isActivePath(pathname: string, href: string) {
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [compact, setCompact] = useState(false);
+  const lastY = useRef(0);
+
+  useEffect(() => {
+    lastY.current = window.scrollY;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      setCompact(y > 16);
+
+      if (open) {
+        setHidden(false);
+        lastY.current = y;
+        return;
+      }
+
+      if (y < 72) {
+        setHidden(false);
+      } else if (y > lastY.current + 6) {
+        setHidden(true);
+      } else if (y < lastY.current - 6) {
+        setHidden(false);
+      }
+
+      lastY.current = y;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/8 bg-background/80 backdrop-blur-md">
+    <header
+      className={cn(
+        "site-header sticky top-0 z-50 border-b",
+        compact
+          ? "border-white/10 bg-background/85 backdrop-blur-xl"
+          : "border-white/8 bg-background/70 backdrop-blur-md",
+      )}
+      data-hidden={hidden ? "" : undefined}
+      data-compact={compact ? "" : undefined}
+      onFocusCapture={() => setHidden(false)}
+    >
       <Container className="flex h-16 items-center justify-between gap-4 md:h-[4.25rem]">
         <Link
           href="/"
@@ -43,7 +84,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-[0.7rem] font-semibold tracking-[0.16em] uppercase transition-colors",
+                  "text-[0.7rem] font-semibold tracking-[0.16em] uppercase transition-colors duration-300 ease-out-expo",
                   active
                     ? "text-brand"
                     : "text-foreground/70 hover:text-foreground",
@@ -90,7 +131,7 @@ export function Header() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        "rounded-xl px-3 py-3 text-sm font-medium",
+                        "rounded-xl px-3 py-3 text-sm font-medium transition-colors duration-300 ease-out-expo",
                         active
                           ? "bg-brand/15 text-brand"
                           : "text-foreground/80 hover:bg-muted",
