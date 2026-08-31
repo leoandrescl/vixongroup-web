@@ -81,12 +81,12 @@ export const projects: Project[] = [
         alt: "Ficha de concurso inmobiliario con DigiTicket y llamado a participar",
       },
     ],
-    stack: ["WordPress", "WooCommerce", "PHP", "Mercado Pago", "LiteSpeed"],
+    stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
     services: ["E-commerce", "Checkout", "UX"],
     challenge:
-      "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarela y un ticket único. El front y el checkout no acompañaban ese estándar.",
+      "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único. El front y el checkout no acompañaban ese estándar.",
     solution:
-      "Mu-plugins a medida sobre WordPress/WooCommerce: home, fichas, carrito, checkout invitado, packs con Mercado Pago y emisión del DigiTicket tras el pago.",
+      "Mu-plugins a medida sobre WordPress/WooCommerce: home, fichas, carrito, checkout invitado, packs con Mercado Pago y TUU (Webpay), y emisión del DigiTicket tras el pago.",
   },
   {
     slug: "san-mateo",
