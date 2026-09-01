@@ -15,8 +15,6 @@ import {
 } from "@/content/projects";
 import { absoluteUrl, buildMetadata } from "@/lib/seo";
 
-const showProjectGallery = false;
-
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -167,7 +165,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </Container>
       </Section>
 
-      {showProjectGallery && project.gallery.length > 0 ? (
+      {project.gallery.length > 0 ? (
         <Section>
           <Container>
             <Eyebrow>Showcase</Eyebrow>
