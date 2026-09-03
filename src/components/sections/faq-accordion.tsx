@@ -19,22 +19,28 @@ export function FaqAccordion({
   return (
     <Accordion type="single" collapsible className="w-full">
       {items.map((item, index) => (
-        <AccordionItem key={item.question} value={`faq-${index}`}>
+        <AccordionItem
+          key={item.question}
+          value={`faq-${index}`}
+          className={
+            tone === "light" ? "border-canvas-foreground/10" : undefined
+          }
+        >
           <AccordionTrigger
             className={cn(
-              "text-base hover:no-underline",
+              "text-base font-medium hover:bg-transparent hover:no-underline",
               tone === "light"
-                ? "hover:bg-canvas-foreground/5 hover:text-brand"
-                : "hover:bg-white/8 hover:text-brand",
+                ? "text-canvas-foreground hover:text-brand"
+                : "text-foreground hover:text-brand",
             )}
           >
             {item.question}
           </AccordionTrigger>
           <AccordionContent
             className={cn(
-              "leading-relaxed",
+              "pr-10 text-[0.9375rem] leading-relaxed",
               tone === "light"
-                ? "text-canvas-foreground/70"
+                ? "text-canvas-foreground/65"
                 : "text-muted-foreground",
             )}
           >
