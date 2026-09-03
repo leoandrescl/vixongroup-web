@@ -11,7 +11,7 @@ export function FeaturedProjects() {
   const featured = getFeaturedProjects(3);
 
   return (
-    <Section>
+    <Section tone="surface">
       <Container>
         <Reveal>
           <Eyebrow>Casos destacados</Eyebrow>
