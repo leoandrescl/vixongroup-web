@@ -46,7 +46,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
   return (
     <>
-      <Section className="pb-12 pt-16 md:pt-24">
+      <Section className="py-0 pt-16 pb-8 md:pt-24 md:pb-8">
         <Container>
           <Link
             href="/portafolio"
@@ -94,7 +94,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </Container>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="py-8 md:py-8">
         <Container>
           <ViewTransition name={`project-${project.slug}`} share="morph" default="none">
             <div className="relative aspect-[21/9] overflow-hidden rounded-3xl ring-1 ring-white/10">
