@@ -296,7 +296,7 @@ function NosotrosVisual() {
         <div className="rounded-lg bg-brand/10 p-3 ring-1 ring-brand/20">
           <p className="text-[0.65rem] text-muted-foreground">Principio</p>
           <p className="mt-1 text-sm leading-snug">
-            Producto y marketing en la misma mesa, para que el trabajo avance sin fricciones.
+            Trabajamos contigo en lo que necesites: producto, marketing o ambos.
           </p>
         </div>
       </div>
