@@ -25,7 +25,7 @@ export default function PortafolioPage() {
         description="Casos que se pueden abrir en el navegador: SaaS, e-commerce, sitios a medida y paneles B2B. Filtra y entra al detalle."
         visual="portafolio"
       />
-      <Section tone="canvas">
+      <Section tone="surface">
         <Container>
           <ProjectGallery />
         </Container>
@@ -44,7 +44,6 @@ export default function PortafolioPage() {
       <CtaBanner
         title="¿Quieres lograr resultados parecidos? Cotiza aquí."
         cta="Cotizar ahora"
-        tone={hasTestimonials ? "light" : "dark"}
       />
     </>
   );

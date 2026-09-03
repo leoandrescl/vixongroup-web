@@ -20,7 +20,7 @@ export function ProjectCard({
       <Link
         href={`/portafolio/${project.slug}`}
         className={cn(
-          "group flex h-full flex-col overflow-hidden rounded-2xl bg-surface ring-1 ring-white/8 transition-[transform,box-shadow] duration-500 ease-out-expo hover:shadow-[0_24px_48px_-28px_rgb(0_163_173_/_0.45)] max-lg:hover:-translate-y-1",
+          "group flex h-full flex-col overflow-hidden rounded-2xl bg-background ring-1 ring-white/8 transition-[transform,box-shadow] duration-500 ease-out-expo hover:shadow-[0_24px_48px_-28px_rgb(0_163_173_/_0.45)] max-lg:hover:-translate-y-1",
           className,
         )}
       >
@@ -40,7 +40,7 @@ export function ProjectCard({
           <p className="text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase">
             {categoryLabels[project.category]}
           </p>
-          <h3 className="mt-2 flex items-center justify-between gap-2 text-lg font-semibold">
+          <h3 className="mt-2 flex items-center justify-between gap-2 text-lg font-semibold text-white">
             {project.client}
             <ArrowUpRight className="size-4 text-muted-foreground transition-colors duration-300 ease-out-expo group-hover:text-brand" />
           </h3>
