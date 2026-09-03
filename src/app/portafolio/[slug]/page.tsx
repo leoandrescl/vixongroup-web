@@ -15,7 +15,7 @@ import {
 } from "@/content/projects";
 import { absoluteUrl, buildMetadata } from "@/lib/seo";
 
-const showProjectGallery = false;
+const showProjectGallery = true;
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -172,21 +172,32 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <Container>
             <Eyebrow>Showcase</Eyebrow>
             <h2 className="mt-3 text-3xl font-semibold">Galería</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
-              {project.gallery.map((image) => (
-                <div
-                  key={image.src}
-                  className="relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-white/10"
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              ))}
+            <div className="mt-8 grid items-start gap-6 md:grid-cols-[1.4fr_0.7fr]">
+              {project.gallery.map((image) => {
+                const isMobile = image.src.includes("-mobile");
+                return (
+                  <div
+                    key={image.src}
+                    className={
+                      isMobile
+                        ? "relative mx-auto aspect-[9/19] w-full max-w-[280px] overflow-hidden rounded-2xl ring-1 ring-white/10"
+                        : "relative aspect-[16/10] overflow-hidden rounded-2xl ring-1 ring-white/10"
+                    }
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover object-top"
+                      sizes={
+                        isMobile
+                          ? "280px"
+                          : "(max-width: 768px) 100vw, 60vw"
+                      }
+                    />
+                  </div>
+                );
+              })}
             </div>
           </Container>
         </Section>

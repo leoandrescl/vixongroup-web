@@ -45,13 +45,17 @@ export const projects: Project[] = [
     liveUrl: "https://allisone.cl",
     featured: true,
     cover: {
-      src: "/portafolio/allisone-cover.jpg",
-      alt: "Home editorial de Allisone Store, joyería de lujo",
+      src: "/portafolio/allisone-desktop.jpg",
+      alt: "Vista de escritorio de Allisone Store",
     },
     gallery: [
       {
-        src: "/portafolio/allisone-gallery.jpg",
-        alt: "Página de contacto de Allisone Store",
+        src: "/portafolio/allisone-desktop.jpg",
+        alt: "Allisone Store en escritorio",
+      },
+      {
+        src: "/portafolio/allisone-mobile.jpg",
+        alt: "Allisone Store en móvil",
       },
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "WooCommerce API", "Framer Motion"],
@@ -72,10 +76,19 @@ export const projects: Project[] = [
     liveUrl: "https://dmc.imppulsor.com",
     featured: false,
     cover: {
-      src: "/portafolio/imppulsor-cover.jpg",
-      alt: "Acceso autenticado al Diagnóstico de Madurez Comercial de Imppulsor",
+      src: "/portafolio/imppulsor-desktop.jpg",
+      alt: "Vista de escritorio del acceso Imppulsor DMC",
     },
-    gallery: [],
+    gallery: [
+      {
+        src: "/portafolio/imppulsor-desktop.jpg",
+        alt: "Imppulsor DMC en escritorio",
+      },
+      {
+        src: "/portafolio/imppulsor-mobile.jpg",
+        alt: "Imppulsor DMC en móvil",
+      },
+    ],
     stack: ["PHP", "HTML", "CSS"],
     services: ["Software a medida", "Paneles internos", "Autenticación"],
     challenge:
@@ -94,13 +107,17 @@ export const projects: Project[] = [
     liveUrl: "https://layer07.cl",
     featured: false,
     cover: {
-      src: "/portafolio/layer07-cover.jpg",
-      alt: "Home de Layer07 con estética de terminal e ingeniería full stack",
+      src: "/portafolio/layer07-desktop.jpg",
+      alt: "Vista de escritorio de Layer07",
     },
     gallery: [
       {
-        src: "/portafolio/layer07-gallery.jpg",
-        alt: "Sección de servicios y casos en producción de Layer07",
+        src: "/portafolio/layer07-desktop.jpg",
+        alt: "Layer07 en escritorio",
+      },
+      {
+        src: "/portafolio/layer07-mobile.jpg",
+        alt: "Layer07 en móvil",
       },
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
@@ -121,13 +138,17 @@ export const projects: Project[] = [
     liveUrl: "https://pagate.cl",
     featured: true,
     cover: {
-      src: "/portafolio/pagate-cover.jpg",
-      alt: "Landing de Pagate: un link para vender productos digitales y agendar sesiones",
+      src: "/portafolio/pagate-desktop.jpg",
+      alt: "Vista de escritorio de Pagate",
     },
     gallery: [
       {
-        src: "/portafolio/pagate-gallery.jpg",
-        alt: "Flujos de Pagate para distintos oficios y pasos para lanzar la tienda",
+        src: "/portafolio/pagate-desktop.jpg",
+        alt: "Pagate en escritorio",
+      },
+      {
+        src: "/portafolio/pagate-mobile.jpg",
+        alt: "Pagate en móvil",
       },
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Mercado Pago", "Google Calendar"],
@@ -148,13 +169,17 @@ export const projects: Project[] = [
     liveUrl: "https://inmobiliariasanmateo.cl",
     featured: true,
     cover: {
-      src: "/portafolio/sanmateo-cover.jpg",
-      alt: "Home de San Mateo Gestión Inmobiliaria con buscador de propiedades",
+      src: "/portafolio/sanmateo-desktop.jpg",
+      alt: "Vista de escritorio de San Mateo Gestión Inmobiliaria",
     },
     gallery: [
       {
-        src: "/portafolio/sanmateo-gallery.jpg",
-        alt: "Listado de propiedades destacadas en venta con precios en UF y pesos",
+        src: "/portafolio/sanmateo-desktop.jpg",
+        alt: "San Mateo en escritorio",
+      },
+      {
+        src: "/portafolio/sanmateo-mobile.jpg",
+        alt: "San Mateo en móvil",
       },
     ],
     stack: ["WordPress", "PHP", "LiteSpeed"],
@@ -175,13 +200,17 @@ export const projects: Project[] = [
     liveUrl: "https://sorteoseguro.cl",
     featured: true,
     cover: {
-      src: "/portafolio/sorteo-cover.jpg",
-      alt: "Home de Sorteo Seguro con concursos inmobiliarios y vehiculares",
+      src: "/portafolio/sorteo-desktop.jpg",
+      alt: "Vista de escritorio de Sorteo Seguro",
     },
     gallery: [
       {
-        src: "/portafolio/sorteo-gallery.jpg",
-        alt: "Ficha de concurso inmobiliario con DigiTicket y llamado a participar",
+        src: "/portafolio/sorteo-desktop.jpg",
+        alt: "Sorteo Seguro en escritorio",
+      },
+      {
+        src: "/portafolio/sorteo-mobile.jpg",
+        alt: "Sorteo Seguro en móvil",
       },
     ],
     stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
