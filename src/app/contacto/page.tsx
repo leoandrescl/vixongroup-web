@@ -29,6 +29,7 @@ export default function ContactoPage() {
         eyebrow="Contacto"
         title="Cuéntanos el proyecto. Nosotros aterrizamos el siguiente paso."
         description="Una reunión corta basta para saber si encajamos. Completa el formulario o escribe por WhatsApp: eliges tú el canal."
+        visual="contacto"
       />
       <Section className="pt-0" tone="canvas">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">

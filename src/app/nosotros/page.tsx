@@ -22,6 +22,7 @@ export default function NosotrosPage() {
         eyebrow="Nosotros"
         title="Una agencia que se siente más equipo de producto que proveedor."
         description="Nacimos para cerrar la brecha entre quien construye el software y quien tiene que hacerlo crecer. Menos handoffs. Más resultados auditables."
+        visual="nosotros"
       />
 
       <Section className="pt-0">

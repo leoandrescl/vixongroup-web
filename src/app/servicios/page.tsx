@@ -27,6 +27,7 @@ export default function ServiciosPage() {
         eyebrow="Servicios"
         title="Oferta integral: construir el producto y hacerlo crecer."
         description="Dos fichas técnicas, un mismo estándar de calidad: rendimiento, medición y accountability. Elige un pilar o combina ambos en un solo equipo."
+        visual="servicios"
       />
 
       <Section id="software" className="scroll-mt-24 pt-0">
