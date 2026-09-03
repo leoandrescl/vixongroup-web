@@ -62,6 +62,33 @@ export const projects: Project[] = [
       "Construimos un SaaS con tienda en pagate.cl/usuario, checkout Mercado Pago, agenda con Google Calendar y Meet, y entrega de archivos o acceso sin operación manual.",
   },
   {
+    slug: "allisone",
+    client: "Allisone",
+    title: "Storefront editorial de joyería",
+    summary:
+      "Tienda headless en allisone.cl: curaduría de piezas, colecciones, carrito y checkout sincronizados con WooCommerce.",
+    category: "ecommerce",
+    year: 2026,
+    liveUrl: "https://allisone.cl",
+    featured: true,
+    cover: {
+      src: "/portafolio/allisone-cover.jpg",
+      alt: "Home editorial de Allisone Store, joyería de lujo",
+    },
+    gallery: [
+      {
+        src: "/portafolio/allisone-gallery.jpg",
+        alt: "Página de contacto de Allisone Store",
+      },
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "WooCommerce API", "Framer Motion"],
+    services: ["E-commerce", "Storefront headless", "UX"],
+    challenge:
+      "La marca necesitaba una vitrina editorial, no un catálogo genérico: piezas atemporales con catálogo vivo desde WooCommerce.",
+    solution:
+      "Storefront Next.js App Router con colecciones, ficha de producto, carrito, checkout y sync con la API de WooCommerce. Contacto y avisos con Resend.",
+  },
+  {
     slug: "sorteo-seguro",
     client: "Sorteo Seguro",
     title: "Plataforma de concursos con DigiTicket",
@@ -114,6 +141,33 @@ export const projects: Project[] = [
       "La inmobiliaria necesitaba un canal propio en Valparaíso: filtrar casa, depto o parcela, mostrar stock real y convertir visitas en consultas o publicaciones.",
     solution:
       "Sitio con buscador por tipo, operación y comuna, fichas con UF/CLP, simulador de crédito, blog y CTAs a WhatsApp, publicación de propiedad y contacto con asesores.",
+  },
+  {
+    slug: "layer07",
+    client: "layer07",
+    title: "Sitio de estudio de ingeniería",
+    summary:
+      "Web de marca en layer07.cl: capacidades, casos en producción y briefing técnico, con estética de terminal.",
+    category: "software",
+    year: 2026,
+    liveUrl: "https://layer07.cl",
+    featured: false,
+    cover: {
+      src: "/portafolio/layer07-cover.jpg",
+      alt: "Home de layer07 con estética de terminal e ingeniería full stack",
+    },
+    gallery: [
+      {
+        src: "/portafolio/layer07-gallery.jpg",
+        alt: "Sección de servicios y casos en producción de layer07",
+      },
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
+    services: ["Sitio web", "Identidad digital", "Performance"],
+    challenge:
+      "Hacía falta un sitio de estudio que explicara ingeniería —sistemas a medida, headless commerce e integraciones— sin caer en una landing genérica de agencia.",
+    solution:
+      "Next.js App Router con TypeScript y Tailwind: home inmersivo, servicios, casos en producción y formulario de contacto con Resend y validación en tiempo real.",
   },
   {
     slug: "imppulsor-dmc",

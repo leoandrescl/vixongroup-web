@@ -20,7 +20,7 @@ export default function PortafolioPage() {
       <PageHero
         eyebrow="Portafolio"
         title="Trabajo en producción, no mockups."
-        description="Cuatro casos que se pueden abrir en el navegador: producto SaaS, e-commerce, sitio inmobiliario y un panel B2B. Filtra y entra al detalle."
+        description="Casos que se pueden abrir en el navegador: SaaS, e-commerce, sitios a medida y paneles B2B. Filtra y entra al detalle."
         visual="portafolio"
       />
       <Section className="pt-0">
