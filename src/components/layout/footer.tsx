@@ -5,6 +5,7 @@ import {
   LinkedInIcon,
   YouTubeIcon,
 } from "@/components/icons/social";
+import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { footerNav, siteConfig } from "@/content/site";
@@ -22,9 +23,9 @@ export function Footer() {
     <footer className="site-footer border-t border-white/8 bg-footer text-foreground">
       <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="max-w-sm">
-          <p className="text-sm font-semibold tracking-[0.18em] uppercase">
-            {siteConfig.name}
-          </p>
+          <Link href="/" className="inline-flex items-center" aria-label="vixonstudio">
+            <BrandMark />
+          </Link>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
             Agencia tecnológica integral. Productos digitales que rinden y
             marketing que los hace crecer — con métricas, no con promesas.

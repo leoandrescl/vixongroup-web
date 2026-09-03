@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { BrandMark } from "@/components/layout/brand-mark";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import {
@@ -14,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { mainNav, siteConfig } from "@/content/site";
+import { mainNav } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 function isActivePath(pathname: string, href: string) {
@@ -70,11 +71,8 @@ export function Header() {
       onFocusCapture={() => setHidden(false)}
     >
       <Container className="flex h-16 items-center justify-between gap-4 md:h-[4.25rem]">
-        <Link
-          href="/"
-          className="text-sm font-semibold tracking-[0.18em] text-foreground uppercase"
-        >
-          {siteConfig.name}
+        <Link href="/" className="inline-flex items-center" aria-label="vixonstudio">
+          <BrandMark />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Principal">
@@ -122,8 +120,8 @@ export function Header() {
               className="w-[min(92vw,22rem)] gap-0 bg-background p-0 data-[side=right]:w-[min(92vw,22rem)]"
             >
               <SheetHeader className="border-b border-white/8 px-5 py-4 pr-12">
-                <SheetTitle className="text-left tracking-[0.16em] uppercase">
-                  {siteConfig.name}
+                <SheetTitle className="text-left">
+                  <BrandMark />
                 </SheetTitle>
               </SheetHeader>
               <nav
