@@ -11,7 +11,7 @@ const statIcons = [FolderKanban, Users, Timer, Handshake];
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-14 md:pt-24 md:pb-20">
+    <section className="relative overflow-hidden pt-16 pb-14 md:pt-24 md:pb-10">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.18),transparent_55%)]" />
       <Container className="relative grid items-center gap-12 lg:grid-cols-2">
         <div>

@@ -11,7 +11,7 @@ export function MethodologySteps() {
             {step.n}
           </p>
           <h3 className="mt-2 text-base font-semibold">{step.title}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-2 text-sm leading-relaxed text-current/65">
             {step.body}
           </p>
           {index < methodologySteps.length - 1 ? (

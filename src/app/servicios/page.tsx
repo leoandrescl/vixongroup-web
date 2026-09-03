@@ -30,19 +30,19 @@ export default function ServiciosPage() {
         visual="servicios"
       />
 
-      <Section id="software" className="scroll-mt-24 pt-0">
+      <Section id="software" tone="canvas" className="scroll-mt-24">
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <Eyebrow>Ficha técnica</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-canvas-foreground">
               Software y e-commerce
             </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
+            <p className="mt-4 leading-relaxed text-canvas-foreground/70">
               Alcance técnico para productos que tienen que vender, operar o
               escalar. Priorizamos arquitectura simple, velocidad real (LCP,
               INP) e integraciones que no se rompen en temporada alta.
             </p>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+            <ul className="mt-6 space-y-2 text-sm text-canvas-foreground/70">
               {softwareScope.map((item) => (
                 <li key={item} className="flex gap-2">
                   <span className="text-brand">▸</span>
@@ -51,7 +51,7 @@ export default function ServiciosPage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-3xl bg-surface p-8 ring-1 ring-white/8">
+          <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
             <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
               Tecnologías
             </p>
@@ -65,10 +65,10 @@ export default function ServiciosPage() {
                 </span>
               ))}
             </div>
-            <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-              Optimización de velocidad incluida en el Definition of Done:
-              presupuesto de JS, imágenes, edge cache y medición continua de
-              Core Web Vitals en producción.
+            <p className="mt-8 text-sm leading-relaxed text-canvas-foreground/65">
+              Optimización de velocidad incluida en cada entrega: presupuesto
+              de JS, imágenes, edge cache y medición continua de Core Web
+              Vitals en producción.
             </p>
           </div>
         </Container>
@@ -118,31 +118,29 @@ export default function ServiciosPage() {
         </Container>
       </Section>
 
-      <Section id="metodologia" className="scroll-mt-24">
+      <Section id="metodologia" tone="canvas" className="scroll-mt-24">
         <Container>
           <Eyebrow>Metodología</Eyebrow>
-          <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-canvas-foreground md:text-4xl">
             Un proceso claro. Resultados medibles.
           </h2>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-canvas-foreground/70">
             Auditoría, estrategia e implementación en un flujo de siete pasos.
             Cada etapa tiene un entregable y un criterio de salida.
           </p>
-          <div className="mt-12">
+          <div className="mt-12 text-canvas-foreground">
             <MethodologySteps />
           </div>
         </Container>
       </Section>
 
-      <Section tone="canvas">
+      <Section>
         <Container className="max-w-3xl">
           <Eyebrow>FAQ de servicios</Eyebrow>
-          <h2 className="mt-4 mb-8 text-3xl font-semibold tracking-tight text-canvas-foreground">
+          <h2 className="mt-4 mb-8 text-3xl font-semibold tracking-tight">
             Plazos, entregables y modalidad.
           </h2>
-          <div className="rounded-3xl bg-white p-4 text-canvas-foreground shadow-sm ring-1 ring-black/5 md:p-8">
-            <FaqAccordion items={servicesFaqs} tone="light" />
-          </div>
+          <FaqAccordion items={servicesFaqs} />
         </Container>
       </Section>
 

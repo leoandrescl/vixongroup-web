@@ -15,6 +15,8 @@ export const metadata = buildMetadata({
 });
 
 export default function PortafolioPage() {
+  const hasTestimonials = testimonials.length > 0;
+
   return (
     <>
       <PageHero
@@ -23,12 +25,12 @@ export default function PortafolioPage() {
         description="Casos que se pueden abrir en el navegador: SaaS, e-commerce, sitios a medida y paneles B2B. Filtra y entra al detalle."
         visual="portafolio"
       />
-      <Section className="pt-0">
+      <Section tone="canvas">
         <Container>
           <ProjectGallery />
         </Container>
       </Section>
-      {testimonials.length > 0 ? (
+      {hasTestimonials ? (
         <Section>
           <Container>
             <Eyebrow>Reseñas</Eyebrow>
@@ -42,6 +44,7 @@ export default function PortafolioPage() {
       <CtaBanner
         title="¿Quieres lograr resultados parecidos? Cotiza aquí."
         cta="Cotizar ahora"
+        tone={hasTestimonials ? "light" : "dark"}
       />
     </>
   );
