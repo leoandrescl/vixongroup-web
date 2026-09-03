@@ -132,7 +132,7 @@ function ServiciosVisual() {
         <div className="absolute -right-2 -bottom-5 w-32 rounded-2xl border border-white/10 bg-surface p-2 shadow-xl">
           <div className="rounded-xl bg-[#0a0e16] p-3">
             <p className="text-[0.6rem] text-muted-foreground">Entregables</p>
-            <p className="text-sm font-semibold text-brand">Con DoD claro</p>
+            <p className="text-sm font-semibold text-brand">Todo acordado</p>
           </div>
         </div>
       }
@@ -219,7 +219,7 @@ function PortafolioVisual() {
             <p className="text-[0.65rem] tracking-widest text-muted-foreground uppercase">
               Casos en producción
             </p>
-            <p className="text-2xl font-semibold text-brand">4 proyectos</p>
+            <p className="text-2xl font-semibold text-brand">Trabajo real</p>
           </div>
           <FolderKanban className="size-5 text-brand" aria-hidden />
         </div>
@@ -256,7 +256,7 @@ function NosotrosVisual() {
   return (
     <DeviceShell
       float={
-        <div className="absolute -right-2 -bottom-5 w-36 rounded-2xl border border-white/10 bg-surface p-2 shadow-xl">
+        <div className="absolute -right-2 -top-3 w-36 rounded-2xl border border-white/10 bg-surface p-2 shadow-xl">
           <div className="rounded-xl bg-[#0a0e16] p-3">
             <p className="text-[0.6rem] text-muted-foreground">Estándar</p>
             <p className="text-sm font-semibold text-brand">Calidad 2026</p>
@@ -281,7 +281,7 @@ function NosotrosVisual() {
             { label: "Ingeniería", value: "Producto" },
             { label: "Growth", value: "Pipeline" },
             { label: "UX / UI", value: "Sistemas" },
-            { label: "Ops", value: "DoD" },
+            { label: "Ops", value: "Calidad" },
           ].map((item, i) => (
             <div
               key={item.label}
@@ -296,7 +296,7 @@ function NosotrosVisual() {
         <div className="rounded-lg bg-brand/10 p-3 ring-1 ring-brand/20">
           <p className="text-[0.65rem] text-muted-foreground">Principio</p>
           <p className="mt-1 text-sm leading-snug">
-            Respondemos por el LCP y por el CAC — en el mismo tablero.
+            Respondemos por la velocidad del sitio y por el costo de adquirir clientes — en el mismo tablero.
           </p>
         </div>
       </div>
