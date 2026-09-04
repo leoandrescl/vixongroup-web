@@ -221,8 +221,8 @@ export function ServicePillars() {
                 className="flex items-start gap-3 lg:px-6 lg:first:pl-0 lg:last:pr-0"
               >
                 <item.icon
-                  className="mt-0.5 size-5 shrink-0 text-brand"
-                  strokeWidth={1.6}
+                  className="mt-0.5 size-10 shrink-0 text-brand"
+                  strokeWidth={1.5}
                   aria-hidden
                 />
                 <div>
