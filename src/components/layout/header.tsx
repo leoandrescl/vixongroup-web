@@ -72,7 +72,7 @@ export function Header() {
     >
       <Container className="flex h-16 items-center justify-between gap-4 md:h-[4.25rem]">
         <Link href="/" className="inline-flex items-center" aria-label="vixonstudio">
-          <BrandMark />
+          <BrandMark priority />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Principal">
