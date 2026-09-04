@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
-  BarChart3,
   Cloud,
   Code2,
   Globe,
@@ -14,9 +12,7 @@ import {
   PieChart,
   Server,
   Settings,
-  ShieldCheck,
   Sparkles,
-  TrendingUp,
   Users,
 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -26,7 +22,6 @@ import {
   marketingPillarItems,
   softwarePillarItems,
 } from "@/content/services";
-import { cn } from "@/lib/utils";
 
 /** Cyan (tech) vs emerald (marketing) — must stay distinct like the mock */
 const themes = {
@@ -64,11 +59,6 @@ const iconMap = {
 export function ServicePillars() {
   return (
     <Section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-8 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-[#00c8ea]/12 blur-[110px]" />
-        <div className="absolute right-[8%] bottom-20 h-56 w-56 rounded-full bg-[#00d9a5]/10 blur-[90px]" />
-      </div>
-
       <Container>
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-14">
           <Reveal>
@@ -108,48 +98,6 @@ export function ServicePillars() {
               items={softwarePillarItems}
               href="/servicios#software"
               cta="Ver servicios de tecnología"
-              imageSrc="/home/pillar-tech-devices.webp"
-              imageAlt="Laptop con código y smartphone VIXON"
-              chips={
-                <>
-                  <GlassChip
-                    accent={themes.tech.accent}
-                    className="hero-float absolute top-[8%] left-[4%] z-10 flex items-center gap-1.5"
-                  >
-                    <BarChart3
-                      className="size-3.5"
-                      style={{ color: themes.tech.accent }}
-                    />
-                    <span className="text-[0.62rem] font-medium text-white">
-                      Escalable
-                    </span>
-                  </GlassChip>
-                  <GlassChip
-                    accent={themes.tech.accent}
-                    className="hero-float absolute top-[20%] right-[2%] z-10 flex items-center gap-1.5 [animation-delay:0.5s]"
-                  >
-                    <ShieldCheck
-                      className="size-3.5"
-                      style={{ color: themes.tech.accent }}
-                    />
-                    <span className="text-[0.62rem] font-medium text-white">
-                      Seguro
-                    </span>
-                  </GlassChip>
-                  <GlassChip
-                    accent={themes.tech.accent}
-                    className="hero-float absolute top-[36%] left-[8%] z-10 flex items-center gap-1.5 [animation-delay:1s]"
-                  >
-                    <Code2
-                      className="size-3.5"
-                      style={{ color: themes.tech.accent }}
-                    />
-                    <span className="text-[0.62rem] font-medium text-white">
-                      A medida
-                    </span>
-                  </GlassChip>
-                </>
-              }
             />
           </Reveal>
 
@@ -169,24 +117,6 @@ export function ServicePillars() {
               items={marketingPillarItems}
               href="/servicios#marketing"
               cta="Ver servicios de marketing"
-              imageSrc="/home/pillar-marketing-phone.webp"
-              imageAlt="Smartphone con dashboard de marketing"
-              chips={
-                <GlassChip
-                  accent={themes.marketing.accent}
-                  className="hero-float absolute top-[4%] right-[2%] z-10 max-w-[9.5rem] p-2"
-                >
-                  <div className="flex items-start gap-1.5">
-                    <TrendingUp
-                      className="mt-0.5 size-3.5 shrink-0"
-                      style={{ color: themes.marketing.accent }}
-                    />
-                    <p className="text-[0.6rem] leading-snug font-medium text-white">
-                      Más alcance, Más clientes, Más ventas
-                    </p>
-                  </div>
-                </GlassChip>
-              }
             />
           </Reveal>
         </div>
@@ -203,9 +133,6 @@ function PillarCard({
   items,
   href,
   cta,
-  imageSrc,
-  imageAlt,
-  chips,
 }: {
   theme: keyof typeof themes;
   label: string;
@@ -218,9 +145,6 @@ function PillarCard({
   }[];
   href: string;
   cta: string;
-  imageSrc: string;
-  imageAlt: string;
-  chips: ReactNode;
 }) {
   const t = themes[theme];
 
@@ -228,22 +152,9 @@ function PillarCard({
     <article
       className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] bg-[#0c1422] p-6 sm:p-7 lg:p-8"
       style={{
-        boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35), 0 0 60px -28px rgb(${t.accentRgb} / 0.55)`,
+        boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35)`,
       }}
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-8 bottom-0 h-28 bg-linear-to-t to-transparent"
-        style={{
-          backgroundImage: `linear-gradient(to top, rgb(${t.accentRgb} / 0.16), transparent)`,
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-28 -right-16 size-72 rounded-full blur-3xl"
-        style={{ backgroundColor: `rgb(${t.accentRgb} / 0.14)` }}
-      />
-
       <div className="relative grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(13rem,0.95fr)] lg:items-stretch lg:gap-3">
         <div className="relative z-10 flex min-w-0 flex-col">
           <p
@@ -292,11 +203,10 @@ function PillarCard({
 
           <Link
             href={href}
-            className="mt-7 inline-flex h-11 w-fit items-center gap-2 rounded-full px-5 text-sm font-semibold transition-[transform,box-shadow,background-color] duration-300 ease-out-expo hover:-translate-y-px"
+            className="mt-7 inline-flex h-11 w-fit items-center gap-2 rounded-full px-5 text-sm font-semibold transition-[transform,background-color] duration-300 ease-out-expo hover:-translate-y-px"
             style={{
               backgroundColor: t.buttonBg,
               color: t.buttonText,
-              boxShadow: `0 12px 28px -12px rgb(${t.accentRgb} / 0.55)`,
             }}
           >
             {cta}
@@ -304,51 +214,12 @@ function PillarCard({
           </Link>
         </div>
 
-        <div className="relative min-h-[17.5rem] sm:min-h-[20rem] lg:min-h-full">
-          <div
-            className={cn(
-              "absolute inset-0",
-              theme === "tech"
-                ? "top-[4%] right-[-4%] bottom-[-2%] left-[-6%]"
-                : "top-[2%] right-[-2%] bottom-[-4%] left-[4%]",
-            )}
-          >
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              sizes="(min-width: 1024px) 320px, 360px"
-              className={cn(
-                "object-contain",
-                theme === "tech" ? "object-[center_bottom]" : "object-[center_bottom]",
-              )}
-            />
-          </div>
-          {chips}
-        </div>
+        {/* Reserved visual column — keeps text layout unchanged */}
+        <div
+          className="pointer-events-none relative min-h-[17.5rem] sm:min-h-[20rem] lg:min-h-full"
+          aria-hidden
+        />
       </div>
     </article>
-  );
-}
-
-function GlassChip({
-  className,
-  children,
-  accent,
-}: {
-  className?: string;
-  children: ReactNode;
-  accent: string;
-}) {
-  return (
-    <div
-      className={cn(
-        "rounded-lg bg-[#0a101c]/85 px-2.5 py-1.5 shadow-lg backdrop-blur-md",
-        className,
-      )}
-      style={{ border: `1px solid ${accent}66` }}
-    >
-      {children}
-    </div>
   );
 }
