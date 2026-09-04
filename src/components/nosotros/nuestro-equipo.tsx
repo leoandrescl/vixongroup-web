@@ -126,17 +126,17 @@ export function NuestroEquipo() {
               <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
                 {/* Halo difuminado detrás de la foto */}
                 <div
-                  className="pointer-events-none absolute -inset-3 -z-10 overflow-hidden rounded-[2rem] opacity-70 sm:-inset-4"
+                  className="pointer-events-none absolute -inset-4 -z-10 overflow-hidden opacity-60 sm:-inset-6"
                   aria-hidden
                 >
                   <Image
                     src={teamSectionCopy.photo.src}
                     alt=""
                     fill
-                    className="scale-110 object-cover object-[center_20%] blur-2xl"
+                    className="scale-110 object-cover object-[center_20%] blur-3xl"
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
-                  <div className="absolute inset-0 bg-background/40" />
+                  <div className="absolute inset-0 bg-background/50" />
                 </div>
 
                 <div className="team-photo-fade relative aspect-[4/5] overflow-hidden sm:aspect-[5/6] lg:aspect-[4/5]">
@@ -148,12 +148,21 @@ export function NuestroEquipo() {
                     sizes="(max-width: 1024px) 100vw, 45vw"
                   />
 
+                  {/* Gradientes de difuminado hacia el fondo */}
                   <div
-                    className="pointer-events-none absolute inset-0 bg-background/20"
+                    className="pointer-events-none absolute inset-y-0 left-0 w-[55%] bg-linear-to-r from-background from-5% via-background/85 via-40% to-transparent"
                     aria-hidden
                   />
                   <div
-                    className="pointer-events-none absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent"
+                    className="pointer-events-none absolute inset-y-0 right-0 w-[22%] bg-linear-to-l from-background/90 to-transparent"
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 top-0 h-[22%] bg-linear-to-b from-background to-transparent"
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-linear-to-t from-background via-background/70 to-transparent"
                     aria-hidden
                   />
 
