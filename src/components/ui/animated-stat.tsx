@@ -68,13 +68,16 @@ export function AnimatedStat({ value }: { value: string }) {
   }, [inView, target, decimals]);
 
   return (
-    <span ref={ref} className="tabular-nums">
+    <span
+      ref={ref}
+      className="tabular-nums"
+      aria-label={value}
+    >
       <span aria-hidden="true">
         {prefix}
         {display}
         {suffix}
       </span>
-      <span className="sr-only">{value}</span>
     </span>
   );
 }

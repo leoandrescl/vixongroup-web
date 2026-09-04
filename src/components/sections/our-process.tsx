@@ -361,7 +361,7 @@ export function OurProcess() {
               aria-hidden
             />
 
-            <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.1fr_0.85fr] lg:items-end lg:gap-8">
+            <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.1fr_0.85fr] lg:items-center lg:gap-8">
               <div>
                 <Eyebrow>Resultados que hablan</Eyebrow>
                 <h3 className="mt-3 text-2xl font-semibold tracking-tight text-balance md:text-[1.75rem]">
@@ -373,16 +373,23 @@ export function OurProcess() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-4 lg:gap-x-3">
+              <div className="grid grid-cols-2 divide-white/10 sm:grid-cols-4 sm:divide-x">
                 {processStats.map((stat) => {
                   const Icon = resultIcons[stat.icon];
                   return (
-                    <div key={stat.label} className="min-w-0">
-                      <Icon className="mb-2 size-5 text-brand" aria-hidden />
-                      <p className="text-2xl font-semibold tracking-tight text-brand md:text-[1.65rem]">
+                    <div
+                      key={stat.label}
+                      className="flex min-w-0 flex-col items-center px-3 py-2 text-center first:pl-0 last:pr-0 sm:px-4"
+                    >
+                      <Icon
+                        className="size-10 text-brand"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
+                      <p className="mt-3 text-4xl font-semibold tracking-tight text-brand md:text-[2.75rem] md:leading-none">
                         <AnimatedStat value={stat.value} />
                       </p>
-                      <p className="mt-1 text-xs leading-snug text-muted-foreground md:text-[0.7rem]">
+                      <p className="mt-2 text-xs leading-snug text-muted-foreground md:text-[0.7rem]">
                         {stat.label}
                       </p>
                     </div>
