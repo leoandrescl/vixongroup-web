@@ -5,29 +5,29 @@ export type FaqItem = {
 
 export const servicesFaqs: FaqItem[] = [
   {
-    question: "¿Cuánto tarda un proyecto típico?",
+    question: "¿Qué tipo de proyectos desarrollan?",
+    answer:
+      "Sitios y productos web, e-commerce, software a medida y plataformas digitales. También proyectos integrales que combinan producto con marketing: ads, SEO, analítica y CRO sobre la misma base técnica.",
+  },
+  {
+    question: "¿Trabajan solo con empresas grandes?",
+    answer:
+      "No. Trabajamos con startups, PYMEs y empresas en crecimiento. El criterio es el encaje: un objetivo claro, disposición a iterar y un alcance que podamos ejecutar con calidad.",
+  },
+  {
+    question: "¿Cuánto tiempo toma un proyecto?",
     answer:
       "Un sitio o tienda de alcance medio suele estar en 6–10 semanas. Software a medida y plataformas, 12–20 semanas según integraciones. En la primera reunión acotamos un rango con supuestos explícitos.",
   },
   {
-    question: "¿Qué incluyen los entregables?",
+    question: "¿También se encargan del marketing?",
     answer:
-      "Código en repositorio del cliente, entornos de preview, documentación de handoff, tablero de analítica y una ventana de soporte post-lanzamiento. El alcance exacto queda en la propuesta.",
+      "Sí. Tenemos un pilar de marketing digital (ads, SEO, contenido y analítica) que puede ir solo o acoplado al desarrollo. Preferimos medir pipeline y unidad económica, no solo tráfico.",
   },
   {
-    question: "¿Trabajan por proyecto o retainer?",
+    question: "¿Qué pasa después del lanzamiento?",
     answer:
-      "Ambos. Construimos el activo (web, tienda, plataforma) y, si tiene sentido, un retainer de growth, CRO y evolución del producto. No atamos el retainer si el cliente prefiere un equipo interno.",
-  },
-  {
-    question: "¿Cómo es la modalidad de trabajo?",
-    answer:
-      "Remoto, con rituales semanales, canal dedicado y demos. Usamos sprints cortos. El cliente tiene visibilidad del backlog; no hay “caja negra” de agencia.",
-  },
-  {
-    question: "¿Pueden integrarse con un equipo interno?",
-    answer:
-      "Sí. Muchas veces somos el refuerzo de ingeniería o de performance junto a un equipo in-house. Definimos RACI en la semana uno.",
+      "Incluimos una ventana de soporte post-lanzamiento. Luego puedes continuar con retainer de evolución y growth, o hacer handoff a tu equipo interno con documentación y repositorio propios.",
   },
 ];
 
@@ -53,3 +53,52 @@ export const contactFaqs: FaqItem[] = [
       "Sí. Operamos en remoto con clientes en Latam, España y US. Facturación y horarios se acuerdan en la propuesta.",
   },
 ];
+
+export const faqHighlights = [
+  {
+    title: "Enfoque en resultados",
+    body: "Priorizamos métricas de negocio, no entregables decorativos.",
+    icon: "trophy" as const,
+  },
+  {
+    title: "Equipo multidisciplinario",
+    body: "Diseño, ingeniería y growth en la misma mesa.",
+    icon: "team" as const,
+  },
+  {
+    title: "Metodología clara",
+    body: "Sprints cortos, demos y visibilidad del backlog.",
+    icon: "method" as const,
+  },
+  {
+    title: "Acompañamiento continuo",
+    body: "Soporte post-lanzamiento y evolución del producto.",
+    icon: "support" as const,
+  },
+] as const;
+
+export const faqContactPoints = [
+  {
+    title: "Reunión online o presencial",
+    body: "Elige el formato que te acomode",
+    icon: "calendar" as const,
+  },
+  {
+    title: "Propuesta personalizada",
+    body: "Alcance, plazos y supuestos explícitos",
+    icon: "proposal" as const,
+  },
+  {
+    title: "Sin compromiso",
+    body: "La primera conversación es gratuita",
+    icon: "check" as const,
+  },
+] as const;
+
+export const trustedBrands = [
+  { name: "San Mateo", short: "San Mateo" },
+  { name: "Sorteo Seguro", short: "Sorteo Seguro" },
+  { name: "Allisone", short: "Allisone" },
+  { name: "Imppulsor", short: "Imppulsor" },
+  { name: "Pagate", short: "Pagate" },
+] as const;

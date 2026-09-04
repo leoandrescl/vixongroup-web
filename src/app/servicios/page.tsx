@@ -1,10 +1,8 @@
-import { CtaBanner } from "@/components/sections/cta-banner";
-import { FaqAccordion } from "@/components/sections/faq-accordion";
+import { FaqSection } from "@/components/sections/faq-section";
 import { OurProcess } from "@/components/sections/our-process";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
-import { servicesFaqs } from "@/content/faqs";
 import {
   marketingScope,
   marketingTech,
@@ -120,21 +118,7 @@ export default function ServiciosPage() {
 
       <OurProcess />
 
-      <Section>
-        <Container className="max-w-3xl">
-          <Eyebrow>FAQ de servicios</Eyebrow>
-          <h2 className="mt-4 mb-8 text-3xl font-semibold tracking-tight">
-            Plazos, entregables y modalidad.
-          </h2>
-          <FaqAccordion items={servicesFaqs} />
-        </Container>
-      </Section>
-
-      <CtaBanner
-        title="¿Cotizamos tu alcance?"
-        description="Formulario o WhatsApp: elige el canal. Salimos de la primera llamada con un siguiente paso concreto."
-        cta="Pedir cotización"
-      />
+      <FaqSection />
     </>
   );
 }
