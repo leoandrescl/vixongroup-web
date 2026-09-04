@@ -96,7 +96,7 @@ export function NuestroEquipo() {
                         )}
                       >
                         <Icon
-                          className="size-5 text-brand drop-shadow-[0_0_10px_rgb(0_163_173_/_0.45)] transition-transform duration-500 ease-out-expo group-hover:scale-110"
+                          className="size-10 text-brand drop-shadow-[0_0_10px_rgb(0_163_173_/_0.45)] transition-transform duration-500 ease-out-expo group-hover:scale-110"
                           strokeWidth={1.6}
                           aria-hidden
                         />
@@ -156,7 +156,7 @@ export function NuestroEquipo() {
                           )}
                         >
                           <Icon
-                            className="size-4 text-brand drop-shadow-[0_0_8px_rgb(0_163_173_/_0.55)]"
+                            className="size-8 text-brand drop-shadow-[0_0_8px_rgb(0_163_173_/_0.55)]"
                             strokeWidth={1.75}
                             aria-hidden
                           />
@@ -224,7 +224,7 @@ export function NuestroEquipo() {
                         )}
                       >
                         <Icon
-                          className="size-6 text-brand drop-shadow-[0_0_10px_rgb(0_163_173_/_0.4)]"
+                          className="size-12 text-brand drop-shadow-[0_0_10px_rgb(0_163_173_/_0.4)]"
                           strokeWidth={1.6}
                           aria-hidden
                         />
