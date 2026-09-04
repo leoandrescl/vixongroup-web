@@ -197,7 +197,7 @@ export const projects: Project[] = [
     client: "San Mateo Gestión Inmobiliaria",
     title: "Sitio inmobiliario para la V Región",
     summary:
-      "Sitio web inmobiliario con catálogo de propiedades, búsqueda avanzada y generación de leads cualificados.",
+      "Sitio web inmobiliario con catálogo de propiedades, búsqueda avanzada y generación de leads.",
     category: "software",
     sector: "Inmobiliario",
     year: 2026,
