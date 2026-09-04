@@ -24,7 +24,7 @@ export async function POST(request: Request) {
   const to = process.env.CONTACT_TO ?? siteConfig.email;
   const from = process.env.RESEND_FROM ?? "Vixon Group <onboarding@resend.dev>";
   const resend = new Resend(apiKey);
-  const { name, email, company, interest, message } = parsed.data;
+  const { name, email, company, phone, interest, message } = parsed.data;
 
   const { error } = await resend.emails.send({
     from,
@@ -35,6 +35,7 @@ export async function POST(request: Request) {
       `Nombre: ${name}`,
       `Correo: ${email}`,
       `Empresa: ${company || "—"}`,
+      `Teléfono: ${phone || "—"}`,
       `Interés: ${interest}`,
       "",
       message,
