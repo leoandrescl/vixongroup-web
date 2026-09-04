@@ -23,17 +23,17 @@ const sectionStats = [
   {
     icon: BarChart3,
     value: "+120",
-    label: "Proyectos desarrollados",
+    labelLines: ["Proyectos", "desarrollados"] as const,
   },
   {
     icon: Users,
     value: "+80",
-    label: "Clientes satisfechos",
+    labelLines: ["Clientes", "satisfechos"] as const,
   },
   {
     icon: Star,
     value: "5+",
-    label: "Años de experiencia",
+    labelLines: ["Años de", "experiencia"] as const,
   },
 ] as const;
 
@@ -222,19 +222,26 @@ export function FeaturedProjects() {
                   <ArrowRight />
                 </Link>
               </Button>
-              <div className="flex flex-wrap gap-6 sm:justify-end sm:gap-8">
+              <div className="flex flex-wrap items-center sm:justify-end">
                 {sectionStats.map((stat) => (
-                  <div key={stat.label} className="flex items-start gap-2.5">
+                  <div
+                    key={stat.labelLines.join(" ")}
+                    className="flex items-center gap-2.5 border-white/15 px-4 first:pl-0 not-last:border-r sm:px-5"
+                  >
                     <stat.icon
-                      className="mt-0.5 size-4 shrink-0 text-brand"
+                      className="size-[1.3rem] shrink-0 text-brand"
                       aria-hidden
                     />
                     <div>
                       <p className="text-lg font-semibold tracking-tight text-white">
                         <AnimatedStat value={stat.value} />
                       </p>
-                      <p className="mt-0.5 max-w-[7.5rem] text-[0.7rem] leading-snug text-muted-foreground">
-                        {stat.label}
+                      <p className="mt-0.5 text-[0.7rem] leading-snug text-muted-foreground">
+                        {stat.labelLines.map((line) => (
+                          <span key={line} className="block">
+                            {line}
+                          </span>
+                        ))}
                       </p>
                     </div>
                   </div>
