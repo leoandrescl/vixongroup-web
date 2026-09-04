@@ -128,21 +128,9 @@ export function FaqSection({
           </Reveal>
 
           <Reveal delay={100}>
-            <aside className="relative isolate overflow-hidden rounded-[1.75rem] ring-1 ring-brand/35 shadow-[0_0_0_1px_rgb(0_163_173_/_0.12),0_24px_80px_-32px_rgb(0_163_173_/_0.45)]">
-              <Image
-                src="/portafolio/allisone-desktop.jpg"
-                alt=""
-                fill
-                className="object-cover object-center opacity-40"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                aria-hidden
-              />
+            <aside className="relative isolate overflow-hidden rounded-[1.75rem] bg-surface ring-1 ring-brand/35 shadow-[0_0_0_1px_rgb(0_163_173_/_0.12),0_24px_80px_-32px_rgb(0_163_173_/_0.45)]">
               <div
-                className="absolute inset-0 bg-linear-to-br from-[#0b0f19]/95 via-[#0b0f19]/88 to-[#0b0f19]/55"
-                aria-hidden
-              />
-              <div
-                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.18),transparent_55%)]"
+                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.14),transparent_55%)]"
                 aria-hidden
               />
 
