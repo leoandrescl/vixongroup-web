@@ -215,7 +215,7 @@ export function NuestroEquipo() {
                 aria-hidden
               />
 
-              <div className="relative grid gap-10 px-7 py-10 md:px-10 md:py-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-12 lg:px-12">
+              <div className="relative grid gap-10 px-5 py-7 md:px-7 md:py-9 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-12 lg:px-9">
                 <div>
                   <Eyebrow>{collaborationCopy.eyebrow}</Eyebrow>
                   <h2 className="mt-4 text-2xl font-semibold tracking-tight text-balance md:text-3xl">
