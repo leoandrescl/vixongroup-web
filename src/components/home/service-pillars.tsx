@@ -97,8 +97,8 @@ export function ServicePillars() {
               {highlights.map((item) => (
                 <div key={item.label} className="min-w-0">
                   <item.icon
-                    className="size-5 text-brand sm:size-[1.35rem]"
-                    strokeWidth={1.6}
+                    className="size-10 text-brand sm:size-[2.7rem]"
+                    strokeWidth={1.5}
                     aria-hidden
                   />
                   <p className="mt-3 text-[0.65rem] font-semibold tracking-[0.16em] text-foreground uppercase sm:text-xs">
@@ -122,11 +122,11 @@ export function ServicePillars() {
               />
               <div className="relative grid flex-1 gap-8 xl:grid-cols-[1fr_0.95fr] xl:items-center">
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-brand/12 px-2.5 py-1 ring-1 ring-brand/25">
-                    <span className="flex size-5 items-center justify-center rounded-full bg-brand text-[0.65rem] font-bold text-brand-foreground">
+                  <div className="inline-flex max-w-full items-center gap-2 whitespace-nowrap">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-brand text-[0.65rem] font-bold text-brand-foreground">
                       01
                     </span>
-                    <span className="pr-1 text-[0.65rem] font-semibold tracking-[0.16em] text-brand uppercase">
+                    <span className="text-[0.65rem] font-semibold tracking-[0.16em] text-brand uppercase">
                       Tecnología e ingeniería
                     </span>
                   </div>
@@ -171,11 +171,11 @@ export function ServicePillars() {
               />
               <div className="relative grid flex-1 gap-8 xl:grid-cols-[1fr_0.95fr] xl:items-center">
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-marketing/12 px-2.5 py-1 ring-1 ring-marketing/25">
-                    <span className="flex size-5 items-center justify-center rounded-full bg-marketing text-[0.65rem] font-bold text-marketing-foreground">
+                  <div className="inline-flex max-w-full items-center gap-2 whitespace-nowrap">
+                    <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-marketing text-[0.65rem] font-bold text-marketing-foreground">
                       02
                     </span>
-                    <span className="pr-1 text-[0.65rem] font-semibold tracking-[0.16em] text-marketing uppercase">
+                    <span className="text-[0.65rem] font-semibold tracking-[0.16em] text-marketing uppercase">
                       Marketing, growth y diseño
                     </span>
                   </div>
