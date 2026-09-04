@@ -155,7 +155,7 @@ function PillarCard({
         boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35)`,
       }}
     >
-      <div className="relative grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.35fr)_minmax(9rem,0.65fr)] lg:items-stretch lg:gap-3">
+      <div className="relative grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(7rem,0.5fr)] lg:items-stretch lg:gap-3">
         <div className="relative z-10 flex min-w-0 flex-col">
           <p
             className="text-[0.62rem] font-semibold tracking-[0.2em] uppercase sm:text-[0.65rem]"
@@ -166,7 +166,7 @@ function PillarCard({
           <h3 className="mt-3 text-[1.35rem] font-semibold tracking-tight sm:text-2xl lg:text-[1.55rem] lg:leading-snug">
             {title}
           </h3>
-          <p className="mt-3 text-[0.85rem] leading-relaxed text-white/70">
+          <p className="mt-3 text-[0.85rem] leading-relaxed text-white/70 lg:max-w-none lg:pr-2">
             {description}
           </p>
 
