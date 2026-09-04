@@ -11,11 +11,11 @@ export function BrandMark({
   return (
     <Image
       src="/logo.png"
-      alt="vixonstudio"
-      width={1420}
-      height={235}
+      alt="ViXON STUDIO"
+      width={1360}
+      height={862}
       priority={priority}
-      className={cn("h-7 w-auto md:h-8", className)}
+      className={cn("h-10 w-auto md:h-11", className)}
     />
   );
 }
