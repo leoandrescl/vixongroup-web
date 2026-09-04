@@ -243,20 +243,20 @@ export function TestimonialsSection({
         </p>
 
         <Reveal delay={160}>
-          <div className="mt-12 flex flex-col gap-5 border-t border-white/8 pt-8 md:mt-14 md:flex-row md:items-center md:gap-8">
-            <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase">
+          <div className="mt-12 flex flex-col items-center gap-5 border-t border-white/8 pt-8 text-center md:mt-14">
+            <p className="text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase">
               Marcas que confían en nosotros
             </p>
-            <ul className="flex min-w-0 flex-1 flex-wrap items-center gap-y-3">
+            <ul className="flex w-full flex-wrap items-center justify-center gap-y-3">
               {trustedBrands.map((brand) => (
                 <li
                   key={brand.name}
-                  className="border-white/15 px-4 text-sm font-semibold tracking-wide text-foreground/55 first:pl-0 not-last:border-r sm:px-6"
+                  className="flex min-w-[7.5rem] items-center justify-center border-white/15 px-4 text-center text-sm font-semibold tracking-wide text-foreground/55 not-last:border-r sm:min-w-[8.5rem] sm:px-6"
                 >
                   {brand.name}
                 </li>
               ))}
-              <li className="px-4 text-xs text-muted-foreground sm:px-6">
+              <li className="flex min-w-[7.5rem] items-center justify-center px-4 text-center text-xs text-muted-foreground sm:min-w-[8.5rem] sm:px-6">
                 Y muchos más…
               </li>
             </ul>
