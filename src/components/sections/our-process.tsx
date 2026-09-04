@@ -382,11 +382,11 @@ export function OurProcess() {
                       className="flex min-w-0 flex-col items-center px-3 py-2 text-center first:pl-0 last:pr-0 sm:px-4"
                     >
                       <Icon
-                        className="size-10 text-brand"
+                        className="size-8 text-brand"
                         strokeWidth={1.5}
                         aria-hidden
                       />
-                      <p className="mt-3 text-4xl font-semibold tracking-tight text-brand md:text-[2.75rem] md:leading-none">
+                      <p className="mt-2.5 text-2xl font-semibold tracking-tight text-white md:text-[1.65rem] md:leading-none">
                         <AnimatedStat value={stat.value} />
                       </p>
                       <p className="mt-2 text-xs leading-snug text-muted-foreground md:text-[0.7rem]">
