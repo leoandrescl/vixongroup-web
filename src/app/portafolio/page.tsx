@@ -1,10 +1,9 @@
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { PageHero } from "@/components/sections/page-hero";
-import { TestimonialSlider } from "@/components/sections/testimonial-slider";
+import { TestimonialsSection } from "@/components/sections/testimonial-slider";
 import { ProjectGallery } from "@/components/portafolio/project-gallery";
 import { Container } from "@/components/ui/container";
-import { Eyebrow, Section } from "@/components/ui/section";
-import { testimonials } from "@/content/testimonials";
+import { Section } from "@/components/ui/section";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -15,8 +14,6 @@ export const metadata = buildMetadata({
 });
 
 export default function PortafolioPage() {
-  const hasTestimonials = testimonials.length > 0;
-
   return (
     <>
       <PageHero
@@ -30,17 +27,7 @@ export default function PortafolioPage() {
           <ProjectGallery />
         </Container>
       </Section>
-      {hasTestimonials ? (
-        <Section>
-          <Container>
-            <Eyebrow>Reseñas</Eyebrow>
-            <h2 className="mt-4 mb-10 text-3xl font-semibold tracking-tight">
-              Opiniones ligadas a los casos.
-            </h2>
-            <TestimonialSlider items={testimonials} />
-          </Container>
-        </Section>
-      ) : null}
+      <TestimonialsSection moreHref="/contacto" />
       <CtaBanner
         title="¿Quieres lograr resultados parecidos? Cotiza aquí."
         cta="Cotizar ahora"

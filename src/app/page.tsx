@@ -1,16 +1,11 @@
-import { BlogSection } from "@/components/home/blog-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { HomeHero } from "@/components/home/home-hero";
 import { LogoRibbon } from "@/components/sections/logo-ribbon";
 import { MetricsBlock } from "@/components/home/metrics-block";
 import { ServicePillars } from "@/components/home/service-pillars";
-import { TestimonialSlider } from "@/components/sections/testimonial-slider";
+import { TestimonialsSection } from "@/components/sections/testimonial-slider";
 import { WhyUs } from "@/components/home/why-us";
-import { Reveal } from "@/components/motion/reveal";
-import { Container } from "@/components/ui/container";
-import { Eyebrow, Section } from "@/components/ui/section";
-import { testimonials } from "@/content/testimonials";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -28,22 +23,7 @@ export default function HomePage() {
       <MetricsBlock />
       <WhyUs />
       <FeaturedProjects />
-      {testimonials.length > 0 ? (
-        <Section>
-          <Container>
-            <Reveal>
-              <Eyebrow>Testimonios</Eyebrow>
-              <h2 className="mt-4 mb-10 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-                Clientes que validan el resultado, no el discurso.
-              </h2>
-            </Reveal>
-            <Reveal delay={80}>
-              <TestimonialSlider items={testimonials} />
-            </Reveal>
-          </Container>
-        </Section>
-      ) : null}
-      <BlogSection />
+      <TestimonialsSection />
       <CtaBanner
         title="¿Listo para llevar tu proyecto al siguiente nivel?"
         description="Cuéntanos el objetivo. En una reunión acotamos alcance, riesgos y el siguiente paso."
