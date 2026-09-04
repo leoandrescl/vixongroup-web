@@ -1,0 +1,11 @@
+---
+description: El usuario revisa en el navegador; el agente no abre localhost ni hace QA visual
+alwaysApply: true
+---
+
+# Revisión: la hace el usuario
+
+- No abras el navegador ni navegues a `localhost` / preview / deployment para “revisar” UI.
+- Concéntrate en el código y en lo que pidió el usuario.
+- Cuando termines el cambio (incluido commit/push si aplica), avisa de forma breve para que el usuario revise.
+- Solo usa el browser si el usuario lo pide explícitamente.

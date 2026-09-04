@@ -14,9 +14,13 @@ export type Project = {
   title: string;
   summary: string;
   category: ProjectCategory;
+  /** Label shown on featured cards (e.g. Inmobiliario). */
+  sector?: string;
   year: number;
   liveUrl?: string;
   featured: boolean;
+  /** Lower = earlier in featured grid. */
+  featuredOrder?: number;
   cover: {
     src: string;
     alt: string;
@@ -24,6 +28,8 @@ export type Project = {
   gallery: { src: string; alt: string }[];
   stack: string[];
   services: string[];
+  /** Pills on featured cards; falls back to stack. */
+  tags?: string[];
   metrics: { value: string; label: string }[];
   challenge: string;
   solution: string;
@@ -40,11 +46,13 @@ export const projects: Project[] = [
     client: "Allisone",
     title: "Storefront editorial de joyería",
     summary:
-      "Tienda headless en allisone.cl: curaduría de piezas, colecciones, carrito y checkout sincronizados con WooCommerce.",
+      "Tienda online de joyería con experiencia de compra premium, catálogo curado y checkout sincronizado.",
     category: "ecommerce",
+    sector: "E-commerce",
     year: 2026,
     liveUrl: "https://allisone.cl",
     featured: true,
+    featuredOrder: 3,
     cover: {
       src: "/portafolio/allisone-desktop.jpg",
       alt: "Vista de escritorio de Allisone Store",
@@ -61,11 +69,11 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "WooCommerce API", "Framer Motion"],
     services: ["E-commerce", "Storefront headless", "UX"],
+    tags: ["WooCommerce", "Diseño UX/UI", "Meta Ads", "Email Marketing"],
     metrics: [
-      { value: "1.2s", label: "LCP en móvil" },
-      { value: "+38%", label: "Tasa de conversión" },
-      { value: "-42%", label: "Abandono de carrito" },
-      { value: "98", label: "PageSpeed mobile" },
+      { value: "+150%", label: "Ventas online" },
+      { value: "+90%", label: "Conversión" },
+      { value: "+60%", label: "Clientes recurrentes" },
     ],
     challenge:
       "La marca necesitaba una vitrina editorial, no un catálogo genérico: piezas atemporales con catálogo vivo desde WooCommerce.",
@@ -156,6 +164,7 @@ export const projects: Project[] = [
     year: 2026,
     liveUrl: "https://pagate.cl",
     featured: true,
+    featuredOrder: 4,
     cover: {
       src: "/portafolio/pagate-desktop.jpg",
       alt: "Vista de escritorio de Pagate",
@@ -185,14 +194,16 @@ export const projects: Project[] = [
   },
   {
     slug: "san-mateo",
-    client: "San Mateo S.A.",
+    client: "San Mateo Gestión Inmobiliaria",
     title: "Sitio inmobiliario para la V Región",
     summary:
-      "Portal de inmobiliariasanmateo.cl: búsqueda de propiedades, fichas en UF y pesos, simulador de crédito y captación de mandantes.",
+      "Sitio web inmobiliario con catálogo de propiedades, búsqueda avanzada y generación de leads cualificados.",
     category: "software",
+    sector: "Inmobiliario",
     year: 2026,
     liveUrl: "https://inmobiliariasanmateo.cl",
     featured: true,
+    featuredOrder: 1,
     cover: {
       src: "/portafolio/sanmateo-desktop.jpg",
       alt: "Vista de escritorio de San Mateo Gestión Inmobiliaria",
@@ -209,11 +220,11 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "PHP", "LiteSpeed"],
     services: ["Sitio web", "Catálogo", "Captación de leads"],
+    tags: ["WordPress", "Diseño UX/UI", "SEO", "Integraciones"],
     metrics: [
-      { value: "+3.1×", label: "Consultas cualificadas" },
-      { value: "45s", label: "Tiempo medio de búsqueda" },
-      { value: "+28%", label: "Leads por WhatsApp" },
-      { value: "1.8s", label: "LCP en fichas" },
+      { value: "+180%", label: "Consultas online" },
+      { value: "+120%", label: "Visitas orgánicas" },
+      { value: "+3x", label: "Propiedades vendidas" },
     ],
     challenge:
       "La inmobiliaria necesitaba un canal propio en Valparaíso: filtrar casa, depto o parcela, mostrar stock real y convertir visitas en consultas o publicaciones.",
@@ -225,11 +236,13 @@ export const projects: Project[] = [
     client: "Sorteo Seguro",
     title: "Plataforma de concursos con DigiTicket",
     summary:
-      "Rediseño transaccional de sorteoseguro.cl: catálogo de concursos, packs, checkout y ticket digital numerado al instante.",
+      "Plataforma de sorteos digitales con sistema de tickets, pagos integrados y gestión de usuarios.",
     category: "ecommerce",
+    sector: "Plataforma digital",
     year: 2026,
     liveUrl: "https://sorteoseguro.cl",
     featured: true,
+    featuredOrder: 2,
     cover: {
       src: "/portafolio/sorteo-desktop.jpg",
       alt: "Vista de escritorio de Sorteo Seguro",
@@ -246,11 +259,11 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
     services: ["E-commerce", "Checkout", "UX"],
+    tags: ["WooCommerce", "Integraciones", "Automatización", "Meta Ads"],
     metrics: [
-      { value: "+52%", label: "Checkout completado" },
-      { value: "<5s", label: "Emisión DigiTicket" },
-      { value: "-31%", label: "Errores de pago" },
-      { value: "2.1×", label: "Packs promedio/orden" },
+      { value: "+250%", label: "Ventas online" },
+      { value: "+70.000", label: "Usuarios registrados" },
+      { value: "+4.8", label: "Rating" },
     ],
     challenge:
       "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único. El front y el checkout no acompañaban ese estándar.",
@@ -264,7 +277,10 @@ export function getProjectBySlug(slug: string) {
 }
 
 export function getFeaturedProjects(limit = 3) {
-  return projects.filter((project) => project.featured).slice(0, limit);
+  return projects
+    .filter((project) => project.featured)
+    .sort((a, b) => (a.featuredOrder ?? 99) - (b.featuredOrder ?? 99))
+    .slice(0, limit);
 }
 
 export function getAdjacentProjects(slug: string) {
