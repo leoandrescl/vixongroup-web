@@ -150,7 +150,7 @@ function PillarCard({
         className="pointer-events-none absolute -top-28 -right-16 size-72 rounded-full bg-brand/12 blur-3xl"
       />
 
-      <div className="relative grid flex-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(11rem,0.92fr)] lg:items-stretch lg:gap-4 xl:gap-6">
+      <div className="relative grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.08fr)_minmax(12.5rem,1fr)] lg:items-stretch lg:gap-3 xl:gap-5">
         <div className="flex min-w-0 flex-col">
           <p className="text-[0.62rem] font-semibold tracking-[0.2em] text-brand uppercase sm:text-[0.65rem]">
             {label}
@@ -187,15 +187,18 @@ function PillarCard({
             })}
           </ul>
 
-          <Button asChild className="mt-7 w-fit">
+          <Button
+            asChild
+            className="mt-7 w-fit bg-brand text-[#041018] hover:bg-brand/90 hover:text-[#041018]"
+          >
             <Link href={href}>
               {cta}
-              <ArrowRight />
+              <ArrowRight className="text-[#041018]" />
             </Link>
           </Button>
         </div>
 
-        <div className="relative min-h-[15rem] sm:min-h-[17rem] lg:min-h-0">
+        <div className="relative min-h-[16.5rem] sm:min-h-[19rem] lg:min-h-full lg:self-stretch">
           {visual}
         </div>
       </div>
@@ -224,27 +227,27 @@ function GlassChip({
 
 function TechVisual() {
   return (
-    <div className="absolute inset-0">
-      <div className="absolute inset-x-[-4%] top-[8%] bottom-[-2%]">
+    <div className="absolute inset-0 overflow-visible">
+      <div className="absolute -right-[6%] -bottom-[4%] left-[-8%] top-[10%] sm:top-[6%]">
         <Image
           src="/home/pillar-tech-devices.webp"
           alt=""
           fill
-          sizes="(min-width: 1024px) 280px, 340px"
-          className="object-contain object-bottom"
+          sizes="(min-width: 1024px) 340px, 380px"
+          className="object-contain object-[center_bottom] drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]"
           aria-hidden
         />
       </div>
 
-      <GlassChip className="hero-float absolute top-[2%] left-[2%] z-10 flex items-center gap-1.5">
+      <GlassChip className="hero-float absolute top-[8%] left-[4%] z-10 flex items-center gap-1.5">
         <BarChart3 className="size-3.5 text-brand" aria-hidden />
         <span className="text-[0.62rem] font-medium text-white">Escalable</span>
       </GlassChip>
-      <GlassChip className="hero-float absolute top-[14%] right-[0%] z-10 flex items-center gap-1.5 [animation-delay:0.5s]">
+      <GlassChip className="hero-float absolute top-[20%] right-[2%] z-10 flex items-center gap-1.5 [animation-delay:0.5s]">
         <ShieldCheck className="size-3.5 text-brand" aria-hidden />
         <span className="text-[0.62rem] font-medium text-white">Seguro</span>
       </GlassChip>
-      <GlassChip className="hero-float absolute top-[28%] left-[6%] z-10 flex items-center gap-1.5 [animation-delay:1s]">
+      <GlassChip className="hero-float absolute top-[36%] left-[8%] z-10 flex items-center gap-1.5 [animation-delay:1s]">
         <Code2 className="size-3.5 text-brand" aria-hidden />
         <span className="text-[0.62rem] font-medium text-white">A medida</span>
       </GlassChip>
@@ -254,19 +257,19 @@ function TechVisual() {
 
 function MarketingVisual() {
   return (
-    <div className="absolute inset-0">
-      <div className="absolute inset-x-[-2%] top-[4%] bottom-[-4%]">
+    <div className="absolute inset-0 overflow-visible">
+      <div className="absolute top-[6%] right-[-2%] bottom-[-6%] left-[8%] sm:left-[12%]">
         <Image
           src="/home/pillar-marketing-phone.webp"
           alt=""
           fill
-          sizes="(min-width: 1024px) 260px, 320px"
-          className="object-contain object-bottom"
+          sizes="(min-width: 1024px) 260px, 300px"
+          className="object-contain object-[center_bottom] drop-shadow-[0_18px_30px_rgba(0,0,0,0.45)]"
           aria-hidden
         />
       </div>
 
-      <GlassChip className="hero-float absolute top-[0%] right-[-2%] z-10 max-w-[9.25rem] p-2">
+      <GlassChip className="hero-float absolute top-[2%] right-[0%] z-10 max-w-[9.25rem] p-2">
         <div className="flex items-start gap-1.5">
           <TrendingUp
             className="mt-0.5 size-3.5 shrink-0 text-brand"
