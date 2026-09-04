@@ -57,13 +57,6 @@ export const footerNav = {
   ],
 } as const;
 
-export const homeStats = [
-  { value: "+120", label: "Proyectos" },
-  { value: "+80", label: "Clientes satisfechos" },
-  { value: "10+", label: "Años de experiencia" },
-  { value: "100%", label: "Comprometidos" },
-] as const;
-
 export const processStats = [
   {
     value: "+120",
