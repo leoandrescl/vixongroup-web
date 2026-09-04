@@ -11,7 +11,6 @@ import {
   Layers,
   ShieldCheck,
   Target,
-  TrendingUp,
   Users,
   Zap,
 } from "lucide-react";
@@ -264,39 +263,15 @@ function GlassChip({
 function SoftwareVisual() {
   return (
     <div className="relative mx-auto hidden h-[17.5rem] w-full max-w-[18rem] sm:block xl:mx-0 xl:max-w-none">
-      <div className="absolute inset-x-2 top-6 overflow-hidden rounded-2xl border border-white/12 bg-[#0a0e16] shadow-2xl shadow-black/50">
-        <div className="flex items-center gap-1.5 border-b border-white/8 px-3 py-2">
-          <span className="size-1.5 rounded-full bg-white/20" />
-          <span className="size-1.5 rounded-full bg-white/20" />
-          <span className="size-1.5 rounded-full bg-brand/80" />
-          <span className="ml-2 text-[0.55rem] text-muted-foreground">
-            app.vixongroup.com
-          </span>
-        </div>
-        <div className="relative aspect-16/10">
-          <Image
-            src="/portafolio/sorteo-desktop.jpg"
-            alt=""
-            fill
-            sizes="280px"
-            className="object-cover object-top"
-            aria-hidden
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-[#0a0e16]/70 via-transparent to-transparent" />
-        </div>
-      </div>
-
-      <div className="absolute right-1 bottom-0 w-[5.6rem] overflow-hidden rounded-[1.1rem] border border-white/15 bg-[#0a0e16] p-1 shadow-2xl shadow-black/60">
-        <div className="relative aspect-9/16 overflow-hidden rounded-[0.85rem]">
-          <Image
-            src="/portafolio/allisone-mobile.jpg"
-            alt=""
-            fill
-            sizes="90px"
-            className="object-cover object-top"
-            aria-hidden
-          />
-        </div>
+      <div className="absolute inset-x-0 top-5 bottom-2">
+        <Image
+          src="/home/service-laptop-code.webp"
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 280px, 300px"
+          className="object-contain object-center drop-shadow-[0_24px_40px_rgba(0,0,0,0.55)]"
+          aria-hidden
+        />
       </div>
 
       <GlassChip className="hero-float absolute top-0 left-0 flex items-center gap-2">
@@ -317,7 +292,7 @@ function SoftwareVisual() {
         </span>
       </GlassChip>
 
-      <GlassChip className="hero-float absolute bottom-10 left-0 flex items-center gap-2 [animation-delay:1.2s]">
+      <GlassChip className="hero-float absolute bottom-2 left-0 flex items-center gap-2 [animation-delay:1.2s]">
         <span className="flex size-7 items-center justify-center rounded-lg bg-brand/15 text-brand ring-1 ring-brand/25">
           <ShieldCheck className="size-3.5" aria-hidden />
         </span>
@@ -331,82 +306,17 @@ function SoftwareVisual() {
 
 function MarketingVisual() {
   return (
-    <div className="relative mx-auto hidden h-[17.5rem] w-full max-w-[16rem] sm:block xl:mx-0 xl:max-w-none">
-      <div className="absolute top-8 left-1/2 w-[7.2rem] -translate-x-1/2 overflow-hidden rounded-[1.35rem] border border-white/15 bg-[#0a0e16] p-1.5 shadow-2xl shadow-black/60">
-        <div className="relative aspect-9/16 overflow-hidden rounded-[1rem]">
-          <Image
-            src="/portafolio/sorteo-mobile.jpg"
-            alt=""
-            fill
-            sizes="115px"
-            className="object-cover object-top"
-            aria-hidden
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent px-2 pt-8 pb-2">
-            <div className="flex justify-center gap-1.5">
-              {["IG", "FB", "TT", "YT"].map((label) => (
-                <span
-                  key={label}
-                  className="rounded-full bg-white/12 px-1.5 py-0.5 text-[0.45rem] font-semibold tracking-wide text-white/85"
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <GlassChip className="hero-float absolute top-0 right-0 w-[8.2rem] p-2.5">
-        <div className="flex items-center justify-between gap-2">
-          <p className="text-[0.6rem] font-semibold text-foreground">Meta Ads</p>
-          <span className="text-[0.55rem] font-semibold text-brand">+120%</span>
-        </div>
-        <p className="mt-0.5 text-[0.7rem] font-semibold text-foreground">
-          ROAS 4.2x
-        </p>
-        <div className="mt-2 flex h-8 items-end gap-0.5">
-          {[35, 48, 42, 62, 55, 78, 70, 92].map((h, i) => (
-            <span
-              key={i}
-              className="hero-bar w-full rounded-sm bg-brand/80"
-              style={{
-                height: `${h}%`,
-                animationDelay: `${400 + i * 50}ms`,
-              }}
-            />
-          ))}
-        </div>
-      </GlassChip>
-
-      <GlassChip className="hero-float absolute top-[5.5rem] -left-1 w-[8rem] p-2.5 [animation-delay:0.7s]">
-        <p className="text-[0.6rem] font-semibold text-foreground">Google Ads</p>
-        <p className="mt-0.5 text-[0.7rem] font-semibold text-emerald-400">
-          Conversiones +185%
-        </p>
-        <svg
-          viewBox="0 0 100 28"
-          className="mt-2 h-6 w-full text-emerald-400"
+    <div className="relative mx-auto hidden h-[17.5rem] w-full max-w-[18rem] sm:block xl:mx-0 xl:max-w-none">
+      <div className="absolute inset-x-0 top-2 bottom-0">
+        <Image
+          src="/home/service-marketing-growth.webp"
+          alt=""
+          fill
+          sizes="(min-width: 1280px) 280px, 300px"
+          className="object-contain object-center drop-shadow-[0_24px_40px_rgba(0,0,0,0.55)]"
           aria-hidden
-        >
-          <path
-            d="M2 22 C18 20, 28 12, 40 14 S62 24, 74 10 S90 4, 98 6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.2"
-            strokeLinecap="round"
-          />
-        </svg>
-      </GlassChip>
-
-      <GlassChip className="hero-float absolute right-0 bottom-2 flex items-center gap-2 [animation-delay:1.3s]">
-        <span className="flex size-7 items-center justify-center rounded-lg bg-marketing/15 text-marketing ring-1 ring-marketing/25">
-          <TrendingUp className="size-3.5" aria-hidden />
-        </span>
-        <span className="text-[0.65rem] font-medium text-foreground">
-          Crecimiento sostenible
-        </span>
-      </GlassChip>
+        />
+      </div>
     </div>
   );
 }
