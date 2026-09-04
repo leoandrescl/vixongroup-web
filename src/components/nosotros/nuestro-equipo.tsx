@@ -124,50 +124,20 @@ export function NuestroEquipo() {
 
             <Reveal delay={100} className="lg:sticky lg:top-28">
               <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
-                {/* Halo difuminado detrás de la foto */}
-                <div
-                  className="pointer-events-none absolute -inset-4 -z-10 overflow-hidden opacity-60 sm:-inset-6"
-                  aria-hidden
-                >
-                  <Image
-                    src={teamSectionCopy.photo.src}
-                    alt=""
-                    fill
-                    className="scale-110 object-cover object-[center_20%] blur-3xl"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                  />
-                  <div className="absolute inset-0 bg-background/50" />
-                </div>
-
-                <div className="team-photo-fade relative aspect-[4/5] overflow-hidden sm:aspect-[5/6] lg:aspect-[4/5]">
-                  <Image
-                    src={teamSectionCopy.photo.src}
-                    alt={teamSectionCopy.photo.alt}
-                    fill
-                    className="object-cover object-[center_20%]"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                  />
-
-                  {/* Gradientes de difuminado hacia el fondo */}
-                  <div
-                    className="pointer-events-none absolute inset-y-0 left-0 w-[55%] bg-linear-to-r from-background from-5% via-background/85 via-40% to-transparent"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-y-0 right-0 w-[22%] bg-linear-to-l from-background/90 to-transparent"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-x-0 top-0 h-[22%] bg-linear-to-b from-background to-transparent"
-                    aria-hidden
-                  />
-                  <div
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-linear-to-t from-background via-background/70 to-transparent"
-                    aria-hidden
-                  />
+                <div className="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5]">
+                  {/* Solo máscara de opacidad: la foto se funde con el fondo */}
+                  <div className="team-photo-fade absolute inset-0">
+                    <Image
+                      src={teamSectionCopy.photo.src}
+                      alt={teamSectionCopy.photo.alt}
+                      fill
+                      className="object-cover object-[center_20%]"
+                      sizes="(max-width: 1024px) 100vw, 45vw"
+                    />
+                  </div>
 
                   <p
-                    className="pointer-events-none absolute top-1/2 right-3 hidden -translate-y-1/2 select-none text-[0.65rem] font-semibold tracking-[0.35em] text-brand/50 uppercase [writing-mode:vertical-rl] sm:right-5 sm:block md:text-xs"
+                    className="pointer-events-none absolute top-1/2 right-2 z-10 hidden -translate-y-1/2 select-none text-[0.65rem] font-semibold tracking-[0.35em] text-brand/45 uppercase [writing-mode:vertical-rl] sm:right-3 sm:block md:text-xs"
                     aria-hidden
                   >
                     {teamSectionCopy.photoTags.join(" · ")}
