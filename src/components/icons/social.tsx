@@ -43,3 +43,11 @@ export function YouTubeIcon(props: SVGProps<SVGSVGElement>) {
     </Icon>
   );
 }
+
+export function XIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <Icon {...props}>
+      <path d="M18.9 1.5h3.4l-7.45 8.52L24 22.5h-6.95l-5.44-7.12L5.3 22.5H1.88l7.97-9.11L0 1.5h7.13l4.92 6.5L18.9 1.5Zm-1.2 18.9h1.88L6.4 3.42H4.38L17.7 20.4Z" />
+    </Icon>
+  );
+}
