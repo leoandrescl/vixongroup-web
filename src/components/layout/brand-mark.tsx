@@ -15,7 +15,7 @@ export function BrandMark({
       width={1360}
       height={862}
       priority={priority}
-      className={cn("h-10 w-auto md:h-11", className)}
+      className={cn("h-12 w-auto md:h-[3.3rem]", className)}
     />
   );
 }
