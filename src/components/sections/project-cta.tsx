@@ -53,6 +53,23 @@ export function ProjectCta() {
               aria-hidden
             />
 
+            <div className="mb-8 text-right lg:absolute lg:top-12 lg:right-12 lg:z-10 lg:mb-0">
+              <ul className="space-y-1">
+                {verticals.map((item) => (
+                  <li
+                    key={item}
+                    className="text-[0.7rem] font-normal tracking-[0.22em] text-foreground/70 uppercase"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <span
+                className="mt-3 ml-auto block h-px w-10 bg-brand"
+                aria-hidden
+              />
+            </div>
+
             <div className="relative grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_auto_minmax(0,0.85fr)] lg:items-center lg:gap-12">
               <div className="max-w-xl">
                 <Eyebrow>Hablemos de tu proyecto</Eyebrow>
@@ -89,12 +106,12 @@ export function ProjectCta() {
                 aria-hidden
               />
 
-              <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-stretch lg:justify-center lg:gap-10">
+              <div className="flex flex-col justify-center">
                 <ul className="space-y-5">
                   {promises.map(({ icon: Icon, label }) => (
-                    <li key={label} className="flex items-start gap-3">
+                    <li key={label} className="flex items-start gap-3.5">
                       <Icon
-                        className="mt-0.5 size-5 shrink-0 text-brand"
+                        className="mt-0.5 size-7 shrink-0 text-brand"
                         aria-hidden
                       />
                       <span className="text-sm font-medium leading-snug text-foreground/90 md:text-[0.95rem]">
@@ -103,23 +120,6 @@ export function ProjectCta() {
                     </li>
                   ))}
                 </ul>
-
-                <div className="shrink-0 sm:text-right lg:mt-2 lg:self-end lg:text-right">
-                  <ul className="space-y-1.5">
-                    {verticals.map((item) => (
-                      <li
-                        key={item}
-                        className="text-[0.7rem] font-semibold tracking-[0.22em] text-foreground/75 uppercase"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <span
-                    className="mt-3 ml-auto block h-px w-10 bg-brand"
-                    aria-hidden
-                  />
-                </div>
               </div>
             </div>
           </div>

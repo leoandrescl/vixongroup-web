@@ -1,5 +1,5 @@
-import { CtaBanner } from "@/components/sections/cta-banner";
 import { PageHero } from "@/components/sections/page-hero";
+import { ProjectCta } from "@/components/sections/project-cta";
 import { TestimonialsSection } from "@/components/sections/testimonial-slider";
 import { ProjectGallery } from "@/components/portafolio/project-gallery";
 import { Container } from "@/components/ui/container";
@@ -28,10 +28,7 @@ export default function PortafolioPage() {
         </Container>
       </Section>
       <TestimonialsSection moreHref="/contacto" />
-      <CtaBanner
-        title="¿Quieres lograr resultados parecidos? Cotiza aquí."
-        cta="Cotizar ahora"
-      />
+      <ProjectCta />
     </>
   );
 }
