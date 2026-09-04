@@ -46,49 +46,51 @@ export function HomeHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[78%_50%] max-md:object-[70%_45%]"
+          className="object-cover object-[78%_36%] max-md:object-[70%_32%]"
           aria-hidden
         />
         <div className="absolute inset-0 bg-linear-to-r from-background from-0% via-background/88 via-34% to-background/10 to-70% max-md:via-background/80 max-md:to-background/45" />
         <div className="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-background to-transparent" />
       </div>
 
-      <Container className="relative z-10 flex flex-1 flex-col justify-between gap-6 py-8 md:py-7 lg:py-8">
-        <div className="max-w-lg lg:max-w-xl">
-          <Eyebrow className="hero-fade flex items-center gap-2">
-            <span
-              className="size-1.5 shrink-0 rounded-full bg-brand shadow-[0_0_10px_rgb(0_163_173_/_0.8)]"
-              aria-hidden
+      <Container className="relative z-10 flex flex-1 flex-col gap-6 py-8 md:py-7 lg:py-8">
+        <div className="flex flex-1 flex-col justify-center">
+          <div className="max-w-lg lg:max-w-xl">
+            <Eyebrow className="hero-fade flex items-center gap-2">
+              <span
+                className="size-1.5 shrink-0 rounded-full bg-brand shadow-[0_0_10px_rgb(0_163_173_/_0.8)]"
+                aria-hidden
+              />
+              Agencia tecnológica + Growth
+            </Eyebrow>
+            <HeroWords
+              words="Tecnología que funciona. Marketing que la hace"
+              accent="crecer."
+              className="mt-3 text-[1.85rem] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.55rem] lg:leading-[1.08]"
             />
-            Agencia tecnológica + Growth
-          </Eyebrow>
-          <HeroWords
-            words="Tecnología que funciona. Marketing que la hace"
-            accent="crecer."
-            className="mt-3 text-[1.85rem] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.55rem] lg:leading-[1.08]"
-          />
-          <p className="hero-fade hero-fade-2 mt-3 max-w-md text-sm leading-relaxed text-foreground/80 md:text-[0.95rem]">
-            Diseñamos, desarrollamos y hacemos crecer productos digitales.
-            Unimos tecnología, diseño y marketing para convertir ideas en
-            negocios digitales que funcionan.
-          </p>
-          <div className="hero-fade hero-fade-3 mt-5 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <Link href="/contacto">
-                Hablemos de tu proyecto
-                <ArrowRight />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/portafolio">
-                <Play className="size-4 fill-current" />
-                Ver proyectos
-              </Link>
-            </Button>
+            <p className="hero-fade hero-fade-2 mt-3 max-w-md text-sm leading-relaxed text-foreground/80 md:text-[0.95rem]">
+              Diseñamos, desarrollamos y hacemos crecer productos digitales.
+              Unimos tecnología, diseño y marketing para convertir ideas en
+              negocios digitales que funcionan.
+            </p>
+            <div className="hero-fade hero-fade-3 mt-5 flex flex-wrap gap-3">
+              <Button asChild size="lg">
+                <Link href="/contacto">
+                  Hablemos de tu proyecto
+                  <ArrowRight />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/portafolio">
+                  <Play className="size-4 fill-current" />
+                  Ver proyectos
+                </Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        <div className="pointer-events-none h-28 sm:h-32 md:hidden" aria-hidden />
+          <div className="pointer-events-none h-28 sm:h-32 md:hidden" aria-hidden />
+        </div>
 
         <div className="hero-fade hero-fade-4 border-t border-white/10 pt-4">
           <div className="grid grid-cols-2 gap-y-3 md:grid-cols-4 md:divide-x md:divide-white/10">
