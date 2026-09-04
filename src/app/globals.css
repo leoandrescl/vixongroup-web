@@ -248,6 +248,42 @@
   transform: translate3d(0, 0, 0);
 }
 
+/* Foto de equipo: bordes difuminados hacia el fondo */
+.team-photo-fade {
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 12%,
+      #000 88%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 10%,
+      #000 68%,
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 12%,
+      #000 88%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 10%,
+      #000 68%,
+      transparent 100%
+    );
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
 .site-header {
   view-transition-name: site-header;
   transition:

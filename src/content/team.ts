@@ -98,7 +98,7 @@ export const teamCapabilities = [
   },
   {
     title: "Diseño & UX/UI",
-    body: "Interfaces claras, sistemas de diseño y experiencia de producto.",
+    body: "Interfaces claras y experiencias de producto que convierten.",
     icon: "design" as const,
   },
   {
@@ -113,12 +113,12 @@ export const teamCapabilities = [
   },
   {
     title: "Infraestructura",
-    body: "Cloud, seguridad, observabilidad y despliegue continuo.",
+    body: "Cloud, seguridad y despliegue continuo sin sorpresas.",
     icon: "cloud" as const,
   },
   {
     title: "Estrategia",
-    body: "Roadmap, priorización y interlocución de negocio.",
+    body: "Roadmap, priorización e interlocución de negocio.",
     icon: "users" as const,
   },
 ] as const;
@@ -166,8 +166,8 @@ export const collaborationSteps = [
 
 export const teamSectionCopy = {
   eyebrow: "Nuestro equipo",
-  titleBefore: "Personas que convierten ideas en ",
-  titleAccent: "proyectos reales.",
+  titleBefore: "Personas que convierten ",
+  titleAccent: "ideas en proyectos reales.",
   description:
     "Un equipo multidisciplinario de desarrolladores, diseñadores, marketers y estrategas trabajando juntos para construir soluciones digitales que impulsan resultados.",
   cta: "Conoce más sobre nosotros",
@@ -176,6 +176,7 @@ export const teamSectionCopy = {
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
     alt: "Equipo de Vixon Group colaborando en un espacio de trabajo",
   },
+  photoTags: ["Tecnología", "Diseño", "Marketing", "Innovación"] as const,
 } as const;
 
 export const collaborationCopy = {
