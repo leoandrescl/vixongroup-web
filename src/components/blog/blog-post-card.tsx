@@ -73,13 +73,10 @@ export function BlogPostCard({
               {post.readingMinutes} min de lectura
             </span>
           </div>
-          <Link
-            href={`/blog/${post.slug}`}
-            className="inline-flex items-center gap-1 text-sm font-semibold text-brand transition-opacity duration-300 ease-out-expo hover:opacity-80"
-          >
+          <span className="relative z-10 inline-flex items-center gap-1 text-sm font-semibold text-brand">
             Leer más
             <ArrowRight className="size-3.5" />
-          </Link>
+          </span>
         </div>
       </div>
     </article>
