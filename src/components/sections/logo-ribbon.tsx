@@ -4,9 +4,9 @@ export function LogoRibbon() {
   const logos = [...techLogos, ...techLogos];
 
   return (
-    <section className="overflow-hidden border-y border-white/8 bg-background/80 py-8 backdrop-blur-sm">
-      <div className="mb-5 px-5">
-        <p className="text-center text-xs font-semibold tracking-[0.2em] text-brand/80 uppercase">
+    <section className="overflow-hidden border-y border-white/8 bg-background/80 py-5 backdrop-blur-sm">
+      <div className="mb-4 px-5">
+        <p className="text-center text-[0.65rem] font-semibold tracking-[0.2em] text-brand/80 uppercase">
           Tecnología que usamos todos los días
         </p>
       </div>

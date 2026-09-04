@@ -38,8 +38,7 @@ const capabilityStrip = [
 
 export function HomeHero() {
   return (
-    <section className="relative isolate overflow-hidden">
-      {/* Full-bleed plate — covers the whole hero width */}
+    <section className="relative isolate flex h-auto min-h-0 flex-col overflow-hidden md:h-[min(32rem,calc(100svh-12.5rem))] lg:h-[min(34rem,calc(100svh-12.5rem))]">
       <div className="absolute inset-0 z-0">
         <Image
           src="/home/hero-devices.webp"
@@ -47,28 +46,27 @@ export function HomeHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[72%_center] max-md:object-[60%_30%]"
+          className="object-cover object-[78%_42%] max-md:object-[55%_28%]"
           aria-hidden
         />
-        {/* Readability scrim on the copy side */}
-        <div className="absolute inset-0 bg-linear-to-r from-background from-0% via-background/88 via-35% to-background/20 to-70% max-lg:via-background/80 max-lg:to-background/55" />
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-background to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-background from-0% via-background/90 via-32% to-background/15 to-68% max-md:via-background/85 max-md:to-background/50" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-background to-transparent" />
       </div>
 
-      <Container className="relative z-10 py-10 md:py-12 lg:py-14">
-        <div className="max-w-xl">
+      <Container className="relative z-10 flex flex-1 flex-col justify-between gap-6 py-8 md:py-7 lg:py-8">
+        <div className="max-w-lg lg:max-w-xl">
           <Eyebrow className="hero-fade">Agencia tecnológica + Growth</Eyebrow>
           <HeroWords
             words="Tecnología que funciona. Marketing que la hace"
             accent="crecer."
-            className="mt-4 text-[2rem] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]"
+            className="mt-3 text-[1.85rem] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.55rem] lg:leading-[1.08]"
           />
-          <p className="hero-fade hero-fade-2 mt-4 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
+          <p className="hero-fade hero-fade-2 mt-3 max-w-md text-sm leading-relaxed text-muted-foreground md:text-[0.95rem]">
             Diseñamos, construimos y hacemos crecer productos digitales de alto
             rendimiento — con métricas de ventas, leads y velocidad, no de
             vanidad.
           </p>
-          <div className="hero-fade hero-fade-3 mt-6 flex flex-wrap gap-3">
+          <div className="hero-fade hero-fade-3 mt-5 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <Link href="/contacto">
                 Hablemos de tu proyecto
@@ -84,25 +82,25 @@ export function HomeHero() {
           </div>
         </div>
 
-        {/* Keep a bit of stage visible on small screens without stacking a second image */}
-        <div className="pointer-events-none h-36 sm:h-40 md:h-28 lg:h-16" aria-hidden />
+        {/* Mobile only: short stage peek so devices remain visible */}
+        <div className="pointer-events-none h-28 sm:h-32 md:hidden" aria-hidden />
 
-        <div className="hero-fade hero-fade-4 border-t border-white/10 pt-5">
-          <div className="grid grid-cols-2 gap-y-4 md:grid-cols-4 md:divide-x md:divide-white/10">
+        <div className="hero-fade hero-fade-4 border-t border-white/10 pt-4">
+          <div className="grid grid-cols-2 gap-y-3 md:grid-cols-4 md:divide-x md:divide-white/10">
             {capabilityStrip.map((item) => (
               <div
                 key={item.label}
-                className="flex items-start gap-2.5 md:px-5 md:first:pl-0 md:last:pr-0"
+                className="flex items-start gap-2 md:px-4 md:first:pl-0 md:last:pr-0"
               >
                 <item.icon
-                  className="mt-0.5 size-4 shrink-0 text-brand md:size-5"
+                  className="mt-0.5 size-4 shrink-0 text-brand"
                   aria-hidden
                 />
                 <div>
-                  <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-foreground uppercase">
+                  <p className="text-[0.6rem] font-semibold tracking-[0.16em] text-foreground uppercase">
                     {item.label}
                   </p>
-                  <p className="mt-0.5 text-xs text-muted-foreground">
+                  <p className="mt-0.5 text-[0.7rem] text-muted-foreground">
                     {item.detail}
                   </p>
                 </div>
