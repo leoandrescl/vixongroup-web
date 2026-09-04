@@ -23,15 +23,8 @@ const benefitIcons: Record<(typeof contactBenefits)[number]["icon"], LucideIcon>
 export function ContactHero() {
   return (
     <section className="relative isolate overflow-hidden bg-background">
-      <p
-        className="pointer-events-none absolute top-1/2 left-3 z-10 hidden -translate-y-1/2 select-none text-[0.58rem] font-medium tracking-[0.42em] text-foreground/25 uppercase [writing-mode:vertical-rl] rotate-180 lg:left-5 lg:block xl:left-8"
-        aria-hidden
-      >
-        {contactHero.spine.join(" · ")}
-      </p>
-
       <Container className="relative z-10 grid items-start gap-10 py-14 md:py-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 lg:py-20 xl:gap-14">
-        <div className="flex min-w-0 flex-col gap-8 lg:pl-8 xl:pl-12">
+        <div className="flex min-w-0 flex-col gap-8">
           <div className="hero-fade ml-auto w-full max-w-md sm:max-w-lg lg:max-w-[28rem]">
             <Eyebrow>{contactHero.eyebrow}</Eyebrow>
             <HeroWords

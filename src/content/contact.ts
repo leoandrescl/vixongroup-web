@@ -4,7 +4,6 @@ export const contactHero = {
   accent: "próximo paso.",
   description:
     "Cuéntanos qué quieres desarrollar, mejorar o hacer crecer. Te ayudamos a encontrar la mejor solución, sin compromiso.",
-  spine: ["Ideas", "Proyectos", "Personas", "Resultados"],
   image: {
     src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
     alt: "Laptop abierta sobre un escritorio en una oficina moderna",
