@@ -38,10 +38,7 @@ const sectionStats = [
 ] as const;
 
 const trustedBrands = [
-  {
-    name: "San Mateo",
-    subtitle: "Gestión inmobiliaria",
-  },
+  { name: "San Mateo" },
   { name: "Sorteo Seguro" },
   { name: "Allisone" },
   { name: "Pagate" },
@@ -267,15 +264,8 @@ export function FeaturedProjects() {
                   key={brand.name}
                   className="flex items-center border-white/15 px-4 first:pl-0 not-last:border-r sm:px-5 md:px-6"
                 >
-                  <span className="flex flex-col items-start">
-                    <span className="text-sm font-semibold tracking-wide whitespace-nowrap text-white/70 transition-colors duration-300 hover:text-white md:text-[0.95rem]">
-                      {brand.name}
-                    </span>
-                    {"subtitle" in brand && brand.subtitle ? (
-                      <span className="mt-0.5 text-[0.55rem] font-medium tracking-[0.14em] text-white/35 uppercase">
-                        {brand.subtitle}
-                      </span>
-                    ) : null}
+                  <span className="text-sm font-semibold tracking-wide whitespace-nowrap text-white/70 transition-colors duration-300 hover:text-white md:text-[0.95rem]">
+                    {brand.name}
                   </span>
                 </li>
               ))}
