@@ -1,3 +1,4 @@
+import { BlogSection } from "@/components/home/blog-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { HomeHero } from "@/components/home/home-hero";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <WhyUs />
       <FeaturedProjects />
       <TestimonialsSection />
+      <BlogSection />
       <CtaBanner
         title="¿Listo para llevar tu proyecto al siguiente nivel?"
         description="Cuéntanos el objetivo. En una reunión acotamos alcance, riesgos y el siguiente paso."
