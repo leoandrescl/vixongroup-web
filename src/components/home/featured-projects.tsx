@@ -229,7 +229,7 @@ export function FeaturedProjects() {
                     className="flex items-center gap-2.5 border-white/15 px-4 first:pl-0 not-last:border-r sm:px-5"
                   >
                     <stat.icon
-                      className="size-[1.3rem] shrink-0 text-brand"
+                      className="size-8 shrink-0 text-brand"
                       aria-hidden
                     />
                     <div>
