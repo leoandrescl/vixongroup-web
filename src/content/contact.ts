@@ -5,8 +5,10 @@ export const contactHero = {
   description:
     "Cuéntanos qué quieres desarrollar, mejorar o hacer crecer. Te ayudamos a encontrar la mejor solución, sin compromiso.",
   spine: ["Ideas", "Proyectos", "Personas", "Resultados"],
-  background:
-    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=80",
+  image: {
+    src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80",
+    alt: "Laptop abierta sobre un escritorio en una oficina moderna",
+  },
 } as const;
 
 export const contactBenefits = [
@@ -36,22 +38,22 @@ export const contactTrust = [
   {
     icon: "shield" as const,
     title: "Confidencialidad",
-    body: "Tu información está segura con nosotros.",
+    lines: ["Tu información está segura", "con nosotros."],
   },
   {
     icon: "clock" as const,
     title: "Respuesta rápida",
-    body: "Te contactaremos en menos de 24 horas.",
+    lines: ["Te contactaremos en menos", "de 24 horas."],
   },
   {
     icon: "chart" as const,
     title: "Enfoque en resultados",
-    body: "Hablamos de negocio, no de promesas.",
+    lines: ["Hablamos de negocio,", "no de promesas."],
   },
   {
     icon: "users" as const,
     title: "Un equipo real",
-    body: "Personas expertas que te acompañan de principio a fin.",
+    lines: ["Personas expertas que te acompañan", "de principio a fin."],
   },
 ] as const;
 

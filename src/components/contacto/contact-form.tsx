@@ -208,41 +208,47 @@ export function ContactForm({ className }: { className?: string }) {
           ) : null}
         </div>
 
-        <div className="mt-5 flex items-start gap-3">
-          <input
-            id="consent"
-            name="consent"
-            type="checkbox"
-            value="on"
-            className="mt-0.5 size-4 shrink-0 cursor-pointer rounded border-white/20 bg-white/5 text-brand accent-brand"
-            aria-invalid={Boolean(fieldErrors.consent)}
-          />
-          <Label
-            htmlFor="consent"
-            className="cursor-pointer text-xs leading-relaxed font-normal text-muted-foreground"
-          >
-            {contactFormCopy.consent}
-          </Label>
-        </div>
-        {fieldErrors.consent ? (
-          <p className="mt-1 text-xs text-destructive">{fieldErrors.consent}</p>
-        ) : null}
-
         {status.type === "error" ? (
           <p className="mt-4 text-sm text-destructive" role="alert">
             {status.message}
           </p>
         ) : null}
 
-        <Button
-          type="submit"
-          size="lg"
-          className="mt-6 w-full"
-          disabled={status.type === "loading"}
-        >
-          {status.type === "loading" ? "Enviando…" : contactFormCopy.submit}
-          <ArrowRight />
-        </Button>
+        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-5">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-start gap-3">
+              <input
+                id="consent"
+                name="consent"
+                type="checkbox"
+                value="on"
+                className="mt-0.5 size-4 shrink-0 cursor-pointer rounded border-white/20 bg-white/5 text-brand accent-brand"
+                aria-invalid={Boolean(fieldErrors.consent)}
+              />
+              <Label
+                htmlFor="consent"
+                className="cursor-pointer text-xs leading-relaxed font-normal text-muted-foreground"
+              >
+                {contactFormCopy.consent}
+              </Label>
+            </div>
+            {fieldErrors.consent ? (
+              <p className="mt-1 text-xs text-destructive">
+                {fieldErrors.consent}
+              </p>
+            ) : null}
+          </div>
+
+          <Button
+            type="submit"
+            size="lg"
+            className="w-full shrink-0 sm:w-auto sm:min-w-[11.5rem]"
+            disabled={status.type === "loading"}
+          >
+            {status.type === "loading" ? "Enviando…" : contactFormCopy.submit}
+            <ArrowRight />
+          </Button>
+        </div>
       </div>
     </form>
   );
