@@ -38,11 +38,14 @@ const sectionStats = [
 ] as const;
 
 const trustedBrands = [
-  "San Mateo",
-  "Sorteo Seguro",
-  "Allisone",
-  "Pagate",
-  "Layer07",
+  {
+    name: "San Mateo",
+    subtitle: "Gestión inmobiliaria",
+  },
+  { name: "Sorteo Seguro" },
+  { name: "Allisone" },
+  { name: "Pagate" },
+  { name: "Layer07" },
 ] as const;
 
 function DeviceMockup({ project }: { project: Project }) {
@@ -253,22 +256,31 @@ export function FeaturedProjects() {
         </div>
 
         <Reveal delay={160}>
-          <div className="mt-14 flex flex-col gap-8 border-t border-white/8 pt-10 lg:flex-row lg:items-center lg:justify-between">
-            <div className="min-w-0 flex-1">
-              <p className="text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase">
-                Marcas que confían en nosotros
-              </p>
-              <ul className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-4 md:gap-x-10">
-                {trustedBrands.map((brand) => (
-                  <li
-                    key={brand}
-                    className="text-sm font-semibold tracking-wide text-white/35 transition-colors duration-300 hover:text-white/55 md:text-[0.95rem]"
-                  >
-                    {brand}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="mt-14 flex flex-col gap-6 border-t border-white/8 pt-10 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+            <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
+              Marcas que confían en nosotros
+            </p>
+
+            <ul className="flex min-w-0 flex-1 flex-wrap items-center justify-start gap-y-3 lg:justify-center">
+              {trustedBrands.map((brand) => (
+                <li
+                  key={brand.name}
+                  className="flex items-center border-white/15 px-4 first:pl-0 not-last:border-r sm:px-5 md:px-6"
+                >
+                  <span className="flex flex-col items-start">
+                    <span className="text-sm font-semibold tracking-wide whitespace-nowrap text-white/70 transition-colors duration-300 hover:text-white md:text-[0.95rem]">
+                      {brand.name}
+                    </span>
+                    {"subtitle" in brand && brand.subtitle ? (
+                      <span className="mt-0.5 text-[0.55rem] font-medium tracking-[0.14em] text-white/35 uppercase">
+                        {brand.subtitle}
+                      </span>
+                    ) : null}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
             <Button asChild size="lg" className="shrink-0 self-start lg:self-center">
               <Link href="/contacto">
                 Hablemos de tu proyecto
