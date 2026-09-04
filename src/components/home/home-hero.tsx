@@ -1,30 +1,60 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, FolderKanban, Handshake, Timer, Users } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Cloud,
+  Code2,
+  Play,
+  ShoppingCart,
+  TrendingUp,
+} from "lucide-react";
 import { HeroWords } from "@/components/motion/hero-words";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Eyebrow } from "@/components/ui/section";
-import { homeStats } from "@/content/site";
 
-const statIcons = [FolderKanban, Users, Timer, Handshake];
+const capabilityStrip = [
+  {
+    icon: Code2,
+    label: "Software",
+    detail: "Desarrollo a medida",
+  },
+  {
+    icon: ShoppingCart,
+    label: "E-commerce",
+    detail: "Venta & conversión",
+  },
+  {
+    icon: TrendingUp,
+    label: "Growth",
+    detail: "Performance marketing",
+  },
+  {
+    icon: BarChart3,
+    label: "Data",
+    detail: "Medición & optimización",
+  },
+] as const;
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden pt-16 pb-14 md:pt-24 md:pb-10">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.18),transparent_55%)]" />
-      <Container className="relative grid items-center gap-12 lg:grid-cols-2">
+    <section className="relative overflow-hidden pt-14 pb-12 md:pt-20 md:pb-16">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.22),transparent_52%)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(ellipse_at_center,rgb(0_163_173_/_0.12),transparent_65%)]" />
+
+      <Container className="relative grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
         <div>
-          <Eyebrow className="hero-fade">Agencia tecnológica integral</Eyebrow>
+          <Eyebrow className="hero-fade">Agencia tecnológica + Growth</Eyebrow>
           <HeroWords
             words="Tecnología que funciona. Marketing que la hace"
             accent="crecer."
-            className="mt-5 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+            className="mt-5 max-w-xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.35rem] lg:leading-[1.08]"
           />
           <p className="hero-fade hero-fade-2 mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-            Diseñamos y construimos productos digitales de alto rendimiento, y
-            los conectamos a estrategias de growth que se miden en ventas,
-            leads y velocidad — no en vanidad.
+            Diseñamos, construimos y hacemos crecer productos digitales de alto
+            rendimiento — con métricas de ventas, leads y velocidad, no de
+            vanidad.
           </p>
           <div className="hero-fade hero-fade-3 mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
@@ -34,107 +64,50 @@ export function HomeHero() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/portafolio">Ver proyectos</Link>
+              <Link href="/portafolio">
+                <Play className="size-4 fill-current" />
+                Ver proyectos
+              </Link>
             </Button>
           </div>
         </div>
-        <div className="hero-fade hero-fade-2">
-          <DeviceShowcase />
+
+        <div className="hero-fade hero-fade-2 relative">
+          <div className="pointer-events-none absolute top-1/2 left-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand/20 blur-3xl" />
+          <Image
+            src="/home/hero-devices.webp"
+            alt="Laptop y móvil mostrando Sorteo Seguro, un caso de e-commerce del portafolio Vixon Studio"
+            width={1536}
+            height={1024}
+            priority
+            sizes="(max-width: 1024px) 100vw, 54vw"
+            className="hero-float relative z-10 mx-auto h-auto w-full max-w-2xl drop-shadow-[0_30px_80px_rgba(0,163,173,0.25)]"
+          />
         </div>
       </Container>
-      <Container className="hero-fade hero-fade-4 relative mt-14 grid grid-cols-2 gap-6 border-t border-white/8 pt-8 md:grid-cols-4">
-        {homeStats.map((stat, index) => {
-          const Icon = statIcons[index];
-          return (
-            <div key={stat.label} className="flex items-start gap-3">
-              {Icon ? (
-                <Icon className="mt-0.5 size-5 text-brand" aria-hidden />
-              ) : null}
+
+      <Container className="hero-fade hero-fade-4 relative mt-12 md:mt-16">
+        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 md:grid-cols-4">
+          {capabilityStrip.map((item) => (
+            <div
+              key={item.label}
+              className="flex items-start gap-3 bg-background/80 px-4 py-5 backdrop-blur-sm md:px-5"
+            >
+              <item.icon className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden />
               <div>
-                <p className="text-xl font-semibold">
-                  <AnimatedStat value={stat.value} />
+                <p className="text-[0.65rem] font-semibold tracking-[0.16em] text-foreground uppercase">
+                  {item.label}
                 </p>
-                <p className="text-xs text-muted-foreground">{stat.label}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{item.detail}</p>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
+        <p className="mt-4 flex items-center gap-2 text-[0.65rem] tracking-[0.14em] text-muted-foreground uppercase">
+          <Cloud className="size-3.5 text-brand" aria-hidden />
+          Stack cloud, producto y growth listo para producción
+        </p>
       </Container>
     </section>
-  );
-}
-
-function DeviceShowcase() {
-  return (
-    <div className="hero-float relative mx-auto w-full max-w-lg">
-      <div className="rounded-2xl border border-white/10 bg-surface p-3 shadow-2xl shadow-black/40">
-        <div className="flex items-center gap-1.5 px-2 pb-3">
-          <span className="size-2.5 rounded-full bg-white/15" />
-          <span className="size-2.5 rounded-full bg-white/15" />
-          <span className="size-2.5 rounded-full bg-brand/80" />
-        </div>
-        <div className="grid gap-3 rounded-xl bg-[#0a0e16] p-4">
-          <div className="flex items-end justify-between">
-            <div>
-              <p className="text-[0.65rem] tracking-widest text-muted-foreground uppercase">
-                Revenue
-              </p>
-              <p className="text-2xl font-semibold text-brand">+38.4%</p>
-            </div>
-            <p className="text-xs text-muted-foreground">LCP 1.9s</p>
-          </div>
-          <div className="flex h-24 items-end gap-1.5">
-            {[40, 55, 42, 70, 62, 88, 76, 94].map((h, i) => (
-              <div
-                key={i}
-                className="flex flex-1 items-end"
-                style={{ height: `${h}%` }}
-              >
-                <div
-                  className="hero-bar h-full w-full rounded-sm bg-brand/80"
-                  style={{
-                    opacity: 0.45 + i * 0.07,
-                    animationDelay: `${620 + i * 55}ms`,
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { label: "ROAS", value: "4.7x" },
-              { label: "Conv.", value: "3.1%" },
-              { label: "NPS", value: "72" },
-            ].map((kpi) => (
-              <div
-                key={kpi.label}
-                className="rounded-lg bg-white/5 px-2 py-2"
-              >
-                <p className="text-[0.6rem] text-muted-foreground">{kpi.label}</p>
-                <p className="text-sm font-semibold">{kpi.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="absolute -right-2 -bottom-6 w-28 rounded-2xl border border-white/10 bg-surface p-2 shadow-xl md:w-32">
-        <div className="rounded-xl bg-[#0a0e16] p-3">
-          <p className="text-[0.6rem] text-muted-foreground">Campañas</p>
-          <p className="text-sm font-semibold text-marketing">Activas 12</p>
-          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10">
-            <div
-              className="hero-bar-x h-full w-2/3 rounded-full bg-marketing"
-              style={{ animationDelay: "0.9s" }}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="absolute -bottom-4 -left-3 hidden w-36 rounded-2xl border border-white/10 bg-surface p-3 shadow-xl sm:block">
-        <div className="flex items-center gap-2 text-xs">
-          <CheckCircle2 className="size-4 text-brand" />
-          Core Web Vitals
-        </div>
-      </div>
-    </div>
   );
 }
