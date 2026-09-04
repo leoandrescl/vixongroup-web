@@ -1,19 +1,19 @@
 export const softwareScope = [
-  "Web y e-commerce de alto rendimiento",
-  "Software a medida y paneles internos",
-  "APIs, integraciones y automatización",
-  "Infraestructura cloud y observabilidad",
-  "Optimización de velocidad (Core Web Vitals)",
-  "Headless CMS y contenidos desacoplados",
+  "Sitios web y e-commerce",
+  "Software a medida",
+  "APIs e integraciones",
+  "Infraestructura cloud",
+  "Optimización de velocidad",
+  "Mantención y soporte",
 ];
 
 export const marketingScope = [
-  "Estrategia de growth y posicionamiento",
-  "Performance ads (Meta, Google, LinkedIn)",
-  "SEO técnico y de contenidos",
-  "CRO y experimentación continua",
-  "Analítica, atribución y tableros",
-  "Branding, UI y sistemas de diseño",
+  "Estrategia digital",
+  "Meta Ads y Google Ads",
+  "SEO y contenido",
+  "Analítica y medición",
+  "Optimización de conversión (CRO)",
+  "Branding y diseño",
 ];
 
 export const softwareTech = [
