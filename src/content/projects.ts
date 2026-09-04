@@ -24,6 +24,7 @@ export type Project = {
   gallery: { src: string; alt: string }[];
   stack: string[];
   services: string[];
+  metrics: { value: string; label: string }[];
   challenge: string;
   solution: string;
   testimonial?: {
@@ -60,6 +61,12 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "WooCommerce API", "Framer Motion"],
     services: ["E-commerce", "Storefront headless", "UX"],
+    metrics: [
+      { value: "1.2s", label: "LCP en móvil" },
+      { value: "+38%", label: "Tasa de conversión" },
+      { value: "-42%", label: "Abandono de carrito" },
+      { value: "98", label: "PageSpeed mobile" },
+    ],
     challenge:
       "La marca necesitaba una vitrina editorial, no un catálogo genérico: piezas atemporales con catálogo vivo desde WooCommerce.",
     solution:
@@ -91,6 +98,12 @@ export const projects: Project[] = [
     ],
     stack: ["PHP", "HTML", "CSS"],
     services: ["Software a medida", "Paneles internos", "Autenticación"],
+    metrics: [
+      { value: "12", label: "Dimensiones evaluadas" },
+      { value: "100%", label: "Acceso autenticado" },
+      { value: "-65%", label: "Tiempo de onboarding" },
+      { value: "4.8×", label: "Más diagnósticos/mes" },
+    ],
     challenge:
       "El DMC es un producto de consultoría con datos sensibles. No podía vivir en una planilla ni en un sitio público: hacía falta un acceso controlado para cada empresa.",
     solution:
@@ -122,6 +135,12 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
     services: ["Sitio web", "Identidad digital", "Performance"],
+    metrics: [
+      { value: "0.9s", label: "LCP promedio" },
+      { value: "+2.4×", label: "Briefings recibidos" },
+      { value: "100", label: "Lighthouse performance" },
+      { value: "-55%", label: "Rebote móvil" },
+    ],
     challenge:
       "Hacía falta un sitio de estudio que explicara ingeniería —sistemas a medida, headless commerce e integraciones— sin caer en una landing genérica de agencia.",
     solution:
@@ -153,6 +172,12 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Mercado Pago", "Google Calendar"],
     services: ["Software a medida", "Checkout", "Integraciones"],
+    metrics: [
+      { value: "<2 min", label: "Checkout completo" },
+      { value: "+71%", label: "Pagos automatizados" },
+      { value: "0", label: "Entregas manuales" },
+      { value: "99.5%", label: "Uptime del checkout" },
+    ],
     challenge:
       "Coaches, terapeutas y creadores cobraban por WhatsApp: precio, horario, comprobante y PDF se resolvían a mano en cada venta.",
     solution:
@@ -184,6 +209,12 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "PHP", "LiteSpeed"],
     services: ["Sitio web", "Catálogo", "Captación de leads"],
+    metrics: [
+      { value: "+3.1×", label: "Consultas cualificadas" },
+      { value: "45s", label: "Tiempo medio de búsqueda" },
+      { value: "+28%", label: "Leads por WhatsApp" },
+      { value: "1.8s", label: "LCP en fichas" },
+    ],
     challenge:
       "La inmobiliaria necesitaba un canal propio en Valparaíso: filtrar casa, depto o parcela, mostrar stock real y convertir visitas en consultas o publicaciones.",
     solution:
@@ -215,6 +246,12 @@ export const projects: Project[] = [
     ],
     stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
     services: ["E-commerce", "Checkout", "UX"],
+    metrics: [
+      { value: "+52%", label: "Checkout completado" },
+      { value: "<5s", label: "Emisión DigiTicket" },
+      { value: "-31%", label: "Errores de pago" },
+      { value: "2.1×", label: "Packs promedio/orden" },
+    ],
     challenge:
       "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único. El front y el checkout no acompañaban ese estándar.",
     solution:

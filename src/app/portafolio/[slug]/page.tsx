@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { Reveal } from "@/components/motion/reveal";
 import { CtaBanner } from "@/components/sections/cta-banner";
+import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -138,6 +140,37 @@ export default async function CaseStudyPage({ params }: PageProps) {
           </div>
         </Container>
       </Section>
+
+      {project.metrics.length > 0 ? (
+        <Section tone="canvas">
+          <Container>
+            <Reveal>
+              <Eyebrow>Impacto</Eyebrow>
+              <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-canvas-foreground">
+                Métricas del caso
+              </h2>
+              <p className="mt-3 max-w-2xl text-canvas-foreground/70">
+                KPIs de rendimiento, conversión y operación ligados a este
+                entregable.
+              </p>
+            </Reveal>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {project.metrics.map((item, index) => (
+                <Reveal key={item.label} delay={index * 70}>
+                  <div className="h-full rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5 transition-transform duration-500 ease-out-expo hover:-translate-y-1">
+                    <p className="text-3xl font-semibold text-brand">
+                      <AnimatedStat value={item.value} />
+                    </p>
+                    <p className="mt-2 text-sm text-canvas-foreground/65">
+                      {item.label}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Container>
+        </Section>
+      ) : null}
 
       <Section tone="canvas">
         <Container className="grid gap-10 md:grid-cols-2">
