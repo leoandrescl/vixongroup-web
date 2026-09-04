@@ -89,3 +89,100 @@ export const valueProps = [
     body: "LCP, conversión, CAC y retención. Si no se puede medir, no entra al roadmap como éxito.",
   },
 ] as const;
+
+export const teamCapabilities = [
+  {
+    title: "Desarrollo",
+    body: "Software a medida, web y e-commerce de alto rendimiento.",
+    icon: "code" as const,
+  },
+  {
+    title: "Diseño & UX/UI",
+    body: "Interfaces claras, sistemas de diseño y experiencia de producto.",
+    icon: "design" as const,
+  },
+  {
+    title: "Marketing & Growth",
+    body: "Adquisición, CRO y campañas conectadas al producto.",
+    icon: "megaphone" as const,
+  },
+  {
+    title: "Data & Analytics",
+    body: "Tracking fiable, atribución y tableros para decidir.",
+    icon: "chart" as const,
+  },
+  {
+    title: "Infraestructura",
+    body: "Cloud, seguridad, observabilidad y despliegue continuo.",
+    icon: "cloud" as const,
+  },
+  {
+    title: "Estrategia",
+    body: "Roadmap, priorización y interlocución de negocio.",
+    icon: "users" as const,
+  },
+] as const;
+
+export const teamStats = [
+  {
+    value: "+80",
+    label: "Clientes satisfechos",
+    icon: "clients" as const,
+  },
+  {
+    value: "+120",
+    label: "Proyectos desarrollados",
+    icon: "projects" as const,
+  },
+  {
+    value: "5+",
+    label: "Años de experiencia",
+    icon: "experience" as const,
+  },
+  {
+    value: "100%",
+    label: "Comprometidos con tu éxito",
+    icon: "commitment" as const,
+  },
+] as const;
+
+export const collaborationSteps = [
+  {
+    title: "Primera reunión",
+    body: "Entendemos tu idea, objetivos y contexto de negocio.",
+    icon: "meeting" as const,
+  },
+  {
+    title: "Propuesta a medida",
+    body: "Alcance, enfoque técnico y plan de trabajo claros.",
+    icon: "proposal" as const,
+  },
+  {
+    title: "Comenzamos",
+    body: "Ejecutamos con demos frecuentes y métricas a la vista.",
+    icon: "launch" as const,
+  },
+] as const;
+
+export const teamSectionCopy = {
+  eyebrow: "Nuestro equipo",
+  titleBefore: "Personas que convierten ideas en ",
+  titleAccent: "proyectos reales.",
+  description:
+    "Un equipo multidisciplinario de desarrolladores, diseñadores, marketers y estrategas trabajando juntos para construir soluciones digitales que impulsan resultados.",
+  cta: "Conoce más sobre nosotros",
+  ctaHref: "#historia",
+  photo: {
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80",
+    alt: "Equipo de Vixon Group colaborando en un espacio de trabajo",
+  },
+} as const;
+
+export const collaborationCopy = {
+  eyebrow: "Trabajemos juntos",
+  title: "¿Tienes un proyecto en mente?",
+  description:
+    "Cuéntanos tu idea y veamos cómo podemos llevarla al siguiente nivel.",
+  cta: "Hablemos de tu proyecto",
+  ctaHref: "/contacto",
+} as const;

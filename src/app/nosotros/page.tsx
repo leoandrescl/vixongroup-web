@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { LinkedInIcon } from "@/components/icons/social";
 import { Reveal } from "@/components/motion/reveal";
-import { CtaBanner } from "@/components/sections/cta-banner";
+import { NuestroEquipo } from "@/components/nosotros/nuestro-equipo";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
-import { manifesto, team, valueProps } from "@/content/team";
+import { manifesto, valueProps } from "@/content/team";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -25,7 +24,7 @@ export default function NosotrosPage() {
         visual="nosotros"
       />
 
-      <Section tone="canvas">
+      <Section id="historia" tone="canvas">
         <Container className="grid gap-10 lg:grid-cols-2">
           <Reveal>
             <Eyebrow>Historia y visión</Eyebrow>
@@ -60,7 +59,7 @@ export default function NosotrosPage() {
         </Container>
       </Section>
 
-      <Section tone="surface">
+      <Section id="manifiesto" tone="surface">
         <Container>
           <Eyebrow>Manifiesto y principios</Eyebrow>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight">
@@ -104,52 +103,7 @@ export default function NosotrosPage() {
         </Container>
       </Section>
 
-      <Section>
-        <Container>
-          <Eyebrow>Equipo</Eyebrow>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-            Perfiles que firman el trabajo.
-          </h2>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, index) => (
-              <Reveal key={member.name} delay={index * 70}>
-                <article className="h-full overflow-hidden rounded-3xl bg-surface ring-1 ring-white/8 transition-transform duration-500 ease-out-expo hover:-translate-y-1">
-                  <div className="relative aspect-[3/4]">
-                    <Image
-                      src={member.photo.src}
-                      alt={member.photo.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-semibold">{member.name}</h3>
-                    <p className="text-sm text-brand">{member.role}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {member.bio}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-4 inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-300 ease-out-expo hover:text-brand"
-                    >
-                      <LinkedInIcon className="size-4" />
-                      LinkedIn
-                    </a>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <CtaBanner
-        title="¿Hablamos de cómo encajaríamos con tu equipo?"
-        cta="Ir a contacto"
-      />
+      <NuestroEquipo />
     </>
   );
 }
