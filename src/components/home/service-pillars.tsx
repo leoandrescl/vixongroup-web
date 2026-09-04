@@ -16,6 +16,7 @@ import {
   Settings,
   ShieldCheck,
   Sparkles,
+  TrendingUp,
   Users,
 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
@@ -40,7 +41,8 @@ const iconMap = {
   pie: PieChart,
   cog: Settings,
 } as const satisfies Record<
-  (typeof softwarePillarItems)[number]["icon"] | (typeof marketingPillarItems)[number]["icon"],
+  | (typeof softwarePillarItems)[number]["icon"]
+  | (typeof marketingPillarItems)[number]["icon"],
   LucideIcon
 >;
 
@@ -48,36 +50,35 @@ export function ServicePillars() {
   return (
     <Section className="relative overflow-hidden">
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-10 left-1/2 h-80 w-[46rem] -translate-x-1/2 rounded-full bg-brand/14 blur-[110px]" />
-        <div className="absolute right-[6%] bottom-16 h-64 w-64 rounded-full bg-brand/10 blur-[90px]" />
-        <div className="absolute bottom-32 left-[10%] h-52 w-52 rounded-full bg-brand/8 blur-[80px]" />
+        <div className="absolute top-8 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-brand/12 blur-[110px]" />
+        <div className="absolute right-[8%] bottom-20 h-56 w-56 rounded-full bg-brand/10 blur-[90px]" />
       </div>
 
       <Container>
-        <div className="grid items-start gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+        <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-14">
           <Reveal>
             <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.22em] text-brand uppercase">
-              <Sparkles className="size-3.5" aria-hidden />
+              <Sparkles className="size-3.5 fill-brand/30" aria-hidden />
               Nuestros pilares
             </p>
-            <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-tight text-balance md:text-4xl lg:text-[2.55rem] lg:leading-[1.15]">
+            <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-balance md:text-4xl lg:text-[2.6rem] lg:leading-[1.12]">
               Dos áreas, un mismo objetivo:{" "}
               <span className="text-brand">tu crecimiento.</span>
             </h2>
           </Reveal>
 
-          <Reveal delay={80}>
-            <p className="border-l border-brand/45 pl-5 text-sm leading-relaxed text-muted-foreground md:pl-6 md:text-[0.95rem] lg:mt-10">
+          <Reveal delay={70}>
+            <p className="border-l-2 border-brand/50 pl-5 text-sm leading-relaxed text-foreground/80 md:text-[0.95rem]">
               Combinamos tecnología y marketing para ofrecer soluciones
               integrales que impulsan tu negocio{" "}
-              <span className="font-medium text-foreground">
+              <span className="font-semibold text-foreground">
                 desde la idea hasta los resultados.
               </span>
             </p>
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:mt-14 lg:grid-cols-2">
+        <div className="mt-12 grid gap-5 lg:mt-14 lg:grid-cols-2 lg:gap-6">
           <Reveal delay={40}>
             <PillarCard
               label="Tecnología & desarrollo"
@@ -95,7 +96,7 @@ export function ServicePillars() {
             />
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={110}>
             <PillarCard
               label="Marketing, growth & diseño"
               title={
@@ -139,41 +140,45 @@ function PillarCard({
   visual: ReactNode;
 }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] bg-surface/75 p-6 shadow-[0_0_0_1px_rgb(0_163_173_/_0.18),0_28px_80px_-36px_rgb(0_163_173_/_0.45)] ring-1 ring-brand/25 backdrop-blur-md transition-transform duration-500 ease-out-expo hover:-translate-y-1 sm:p-8">
+    <article className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] bg-[#0c1422] p-6 ring-1 ring-brand/30 shadow-[0_0_60px_-28px_rgb(0_163_173_/_0.55)] sm:p-7 lg:p-8">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 -right-20 size-64 rounded-full bg-brand/16 blur-3xl"
+        className="pointer-events-none absolute inset-x-8 bottom-0 h-24 bg-linear-to-t from-brand/15 to-transparent"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-28 -right-16 size-72 rounded-full bg-brand/12 blur-3xl"
       />
 
-      <div className="relative grid flex-1 gap-8 xl:grid-cols-[1.05fr_0.95fr] xl:items-center">
+      <div className="relative grid flex-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(11rem,0.92fr)] lg:items-stretch lg:gap-4 xl:gap-6">
         <div className="flex min-w-0 flex-col">
-          <p className="text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
+          <p className="text-[0.62rem] font-semibold tracking-[0.2em] text-brand uppercase sm:text-[0.65rem]">
             {label}
           </p>
-          <h3 className="mt-3 text-2xl font-semibold tracking-tight text-balance md:text-[1.65rem] md:leading-snug">
+          <h3 className="mt-3 text-[1.35rem] font-semibold tracking-tight text-balance sm:text-2xl lg:text-[1.55rem] lg:leading-snug">
             {title}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-3 text-[0.85rem] leading-relaxed text-white/70">
             {description}
           </p>
 
-          <ul className="mt-6 space-y-3.5">
+          <ul className="mt-5 space-y-3">
             {items.map((item) => {
               const Icon = iconMap[item.icon];
               return (
-                <li key={item.title} className="flex gap-3">
-                  <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-lg ring-1 ring-brand/40">
+                <li key={item.title} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full border border-brand/55 text-brand sm:size-10">
                     <Icon
-                      className="size-5 text-brand"
-                      strokeWidth={1.6}
+                      className="size-[1.15rem] sm:size-5"
+                      strokeWidth={1.5}
                       aria-hidden
                     />
                   </span>
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold text-foreground">
+                  <div className="min-w-0 pt-0.5">
+                    <p className="text-[0.9rem] font-semibold text-foreground">
                       {item.title}
                     </p>
-                    <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
+                    <p className="mt-0.5 text-[0.72rem] leading-snug text-white/55">
                       {item.detail}
                     </p>
                   </div>
@@ -182,7 +187,7 @@ function PillarCard({
             })}
           </ul>
 
-          <Button asChild className="mt-8 w-fit">
+          <Button asChild className="mt-7 w-fit">
             <Link href={href}>
               {cta}
               <ArrowRight />
@@ -190,7 +195,9 @@ function PillarCard({
           </Button>
         </div>
 
-        {visual}
+        <div className="relative min-h-[15rem] sm:min-h-[17rem] lg:min-h-0">
+          {visual}
+        </div>
       </div>
     </article>
   );
@@ -206,7 +213,7 @@ function GlassChip({
   return (
     <div
       className={cn(
-        "rounded-xl border border-brand/25 bg-[#0b1220]/75 px-2.5 py-1.5 shadow-[0_16px_36px_-22px_rgba(0,163,173,0.55)] backdrop-blur-md",
+        "rounded-lg border border-brand/40 bg-[#0a101c]/80 px-2.5 py-1.5 shadow-[0_12px_28px_-18px_rgb(0_163_173_/_0.7)] backdrop-blur-md",
         className,
       )}
     >
@@ -217,37 +224,29 @@ function GlassChip({
 
 function TechVisual() {
   return (
-    <div className="relative mx-auto h-[16.5rem] w-full max-w-[19rem] sm:h-[18rem] xl:mx-0 xl:max-w-none">
-      <div className="absolute inset-x-0 top-4 bottom-0">
+    <div className="absolute inset-0">
+      <div className="absolute inset-x-[-4%] top-[8%] bottom-[-2%]">
         <Image
           src="/home/pillar-tech-devices.webp"
           alt=""
           fill
-          sizes="(min-width: 1280px) 320px, 300px"
-          className="object-contain object-bottom drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+          sizes="(min-width: 1024px) 280px, 340px"
+          className="object-contain object-bottom"
           aria-hidden
         />
       </div>
 
-      <GlassChip className="hero-float absolute top-0 left-0 flex items-center gap-1.5">
+      <GlassChip className="hero-float absolute top-[2%] left-[2%] z-10 flex items-center gap-1.5">
         <BarChart3 className="size-3.5 text-brand" aria-hidden />
-        <span className="text-[0.65rem] font-medium text-foreground">
-          Escalable
-        </span>
+        <span className="text-[0.62rem] font-medium text-white">Escalable</span>
       </GlassChip>
-
-      <GlassChip className="hero-float absolute top-10 right-0 flex items-center gap-1.5 [animation-delay:0.55s]">
+      <GlassChip className="hero-float absolute top-[14%] right-[0%] z-10 flex items-center gap-1.5 [animation-delay:0.5s]">
         <ShieldCheck className="size-3.5 text-brand" aria-hidden />
-        <span className="text-[0.65rem] font-medium text-foreground">
-          Seguro
-        </span>
+        <span className="text-[0.62rem] font-medium text-white">Seguro</span>
       </GlassChip>
-
-      <GlassChip className="hero-float absolute top-[5.25rem] left-1 flex items-center gap-1.5 [animation-delay:1.1s]">
+      <GlassChip className="hero-float absolute top-[28%] left-[6%] z-10 flex items-center gap-1.5 [animation-delay:1s]">
         <Code2 className="size-3.5 text-brand" aria-hidden />
-        <span className="text-[0.65rem] font-medium text-foreground">
-          A medida
-        </span>
+        <span className="text-[0.62rem] font-medium text-white">A medida</span>
       </GlassChip>
     </div>
   );
@@ -255,22 +254,25 @@ function TechVisual() {
 
 function MarketingVisual() {
   return (
-    <div className="relative mx-auto h-[16.5rem] w-full max-w-[14rem] sm:h-[18rem] xl:mx-0 xl:max-w-none">
-      <div className="absolute inset-x-2 top-6 bottom-0 sm:inset-x-4">
+    <div className="absolute inset-0">
+      <div className="absolute inset-x-[-2%] top-[4%] bottom-[-4%]">
         <Image
           src="/home/pillar-marketing-phone.webp"
           alt=""
           fill
-          sizes="(min-width: 1280px) 240px, 220px"
-          className="object-contain object-bottom drop-shadow-[0_24px_40px_rgba(0,0,0,0.45)]"
+          sizes="(min-width: 1024px) 260px, 320px"
+          className="object-contain object-bottom"
           aria-hidden
         />
       </div>
 
-      <GlassChip className="hero-float absolute top-0 right-0 max-w-[9.5rem] p-2.5">
-        <div className="flex items-start gap-2">
-          <BarChart3 className="mt-0.5 size-3.5 shrink-0 text-brand" aria-hidden />
-          <p className="text-[0.65rem] leading-snug font-medium text-foreground">
+      <GlassChip className="hero-float absolute top-[0%] right-[-2%] z-10 max-w-[9.25rem] p-2">
+        <div className="flex items-start gap-1.5">
+          <TrendingUp
+            className="mt-0.5 size-3.5 shrink-0 text-brand"
+            aria-hidden
+          />
+          <p className="text-[0.6rem] leading-snug font-medium text-white">
             Más alcance, Más clientes, Más ventas
           </p>
         </div>
