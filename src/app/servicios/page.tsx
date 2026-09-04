@@ -1,6 +1,6 @@
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { FaqAccordion } from "@/components/sections/faq-accordion";
-import { MethodologySteps } from "@/components/sections/methodology-steps";
+import { OurProcess } from "@/components/sections/our-process";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -118,21 +118,7 @@ export default function ServiciosPage() {
         </Container>
       </Section>
 
-      <Section id="metodologia" tone="canvas" className="scroll-mt-24">
-        <Container>
-          <Eyebrow>Metodología</Eyebrow>
-          <h2 className="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-canvas-foreground md:text-4xl">
-            Un proceso claro. Resultados medibles.
-          </h2>
-          <p className="mt-4 max-w-2xl text-canvas-foreground/70">
-            Auditoría, estrategia e implementación en un flujo de siete pasos.
-            Cada etapa tiene un entregable y un criterio de salida.
-          </p>
-          <div className="mt-12 text-canvas-foreground">
-            <MethodologySteps />
-          </div>
-        </Container>
-      </Section>
+      <OurProcess />
 
       <Section>
         <Container className="max-w-3xl">

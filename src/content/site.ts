@@ -64,6 +64,29 @@ export const homeStats = [
   { value: "100%", label: "Comprometidos" },
 ] as const;
 
+export const processStats = [
+  {
+    value: "+120",
+    label: "Proyectos desarrollados",
+    icon: "projects" as const,
+  },
+  {
+    value: "+80",
+    label: "Clientes satisfechos",
+    icon: "clients" as const,
+  },
+  {
+    value: "10+",
+    label: "Años de experiencia",
+    icon: "experience" as const,
+  },
+  {
+    value: "100%",
+    label: "Comprometidos con tu éxito",
+    icon: "commitment" as const,
+  },
+] as const;
+
 export const whyUsPillars = [
   {
     title: "Ingeniería con criterio comercial",
@@ -86,38 +109,39 @@ export const whyUsPillars = [
 export const methodologySteps = [
   {
     n: "01",
-    title: "Entendemos",
-    body: "Diagnóstico de negocio, stack y fricción real del usuario.",
+    title: "Estrategia",
+    body: "Analizamos tu negocio, mercado y oportunidades.",
+    visual: "strategy" as const,
   },
   {
     n: "02",
-    title: "Diseñamos",
-    body: "Arquitectura, UX y plan de medición antes de escribir código.",
+    title: "Diseño",
+    body: "Creamos experiencias que conectan y convierten.",
+    visual: "design" as const,
   },
   {
     n: "03",
-    title: "Construimos",
-    body: "Sprints con entregables visibles y calidad de producción.",
+    title: "Desarrollo",
+    body: "Construimos soluciones escalables y seguras.",
+    visual: "dev" as const,
   },
   {
     n: "04",
-    title: "Lanzamos",
-    body: "Go-live controlado, observabilidad y plan de contingencia.",
+    title: "Lanzamiento",
+    body: "Ponemos tu proyecto en producción.",
+    visual: "launch" as const,
   },
   {
     n: "05",
-    title: "Medimos",
-    body: "KPIs de producto, adquisición y conversión en un mismo tablero.",
+    title: "Growth",
+    body: "Implementamos estrategias de marketing para escalar.",
+    visual: "growth" as const,
   },
   {
     n: "06",
-    title: "Optimizamos",
-    body: "Iteramos sobre evidencia: LCP, CRO y unit economics.",
-  },
-  {
-    n: "07",
-    title: "Escalamos",
-    body: "Infra, contenido y media cuando el sistema ya convierte.",
+    title: "Optimización",
+    body: "Medimos, analizamos y mejoramos continuamente.",
+    visual: "optimize" as const,
   },
 ] as const;
 
