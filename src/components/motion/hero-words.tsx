@@ -24,7 +24,7 @@ export function HeroWords({
       ))}
       {accent ? (
         <span
-          className="hero-word text-brand"
+          className="hero-word bg-linear-to-r from-brand to-sky-400 bg-clip-text text-transparent"
           style={{ animationDelay: `${parts.length * 40}ms` }}
         >
           {accent}

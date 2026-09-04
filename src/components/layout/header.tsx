@@ -83,9 +83,9 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-[0.7rem] font-semibold tracking-[0.16em] uppercase transition-colors duration-300 ease-out-expo",
+                  "relative text-[0.7rem] font-semibold tracking-[0.16em] uppercase transition-colors duration-300 ease-out-expo",
                   active
-                    ? "text-brand"
+                    ? "text-brand after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:bg-brand after:content-['']"
                     : "text-foreground/70 hover:text-foreground",
                 )}
                 aria-current={active ? "page" : undefined}
