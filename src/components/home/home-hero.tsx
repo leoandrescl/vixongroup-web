@@ -41,7 +41,7 @@ export function HomeHero() {
     <section className="relative isolate flex h-auto min-h-0 flex-col overflow-hidden md:h-[min(32rem,calc(100svh-12.5rem))] lg:h-[min(34rem,calc(100svh-12.5rem))]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home/hero-banner.webp"
+          src="/home/img-hero-home.jpg"
           alt=""
           fill
           priority
