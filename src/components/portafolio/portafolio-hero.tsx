@@ -94,7 +94,7 @@ export function PortafolioHero() {
                 )}
               >
                 <item.icon
-                  className="size-5 shrink-0 text-brand"
+                  className="size-[2rem] shrink-0 text-brand"
                   strokeWidth={1.6}
                   aria-hidden
                 />
