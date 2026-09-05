@@ -26,8 +26,6 @@ const promises = [
   },
 ] as const;
 
-const verticals = ["Tecnología", "Diseño", "Marketing", "Innovación"] as const;
-
 export function ProjectCta() {
   return (
     <section className="relative overflow-hidden py-10 md:py-12">
@@ -42,23 +40,6 @@ export function ProjectCta() {
                 sizes="(max-width: 80rem) 100vw, 80rem"
                 className="object-cover object-center"
                 priority={false}
-              />
-            </div>
-
-            <div className="mb-8 text-right lg:absolute lg:top-12 lg:right-12 lg:z-10 lg:mb-0">
-              <ul className="space-y-1">
-                {verticals.map((item) => (
-                  <li
-                    key={item}
-                    className="text-[0.7rem] font-normal tracking-[0.22em] text-foreground/70 uppercase"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <span
-                className="mt-3 ml-auto block h-px w-10 bg-brand"
-                aria-hidden
               />
             </div>
 
