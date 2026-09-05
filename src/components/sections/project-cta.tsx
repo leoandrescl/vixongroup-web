@@ -62,7 +62,7 @@ export function ProjectCta() {
               />
             </div>
 
-            <div className="relative grid gap-10 text-left lg:grid-cols-[minmax(0,1.15fr)_auto_minmax(0,0.85fr)] lg:items-center lg:gap-12">
+            <div className="relative grid gap-10 text-left lg:grid-cols-[minmax(0,1.15fr)_auto_minmax(0,0.85fr)] lg:items-start lg:gap-12">
               <div className="max-w-xl text-left">
                 <Eyebrow>Hablemos de tu proyecto</Eyebrow>
                 <h2 className="mt-4 text-3xl font-semibold tracking-tight text-balance md:text-4xl lg:text-[2.65rem] lg:leading-[1.15]">
