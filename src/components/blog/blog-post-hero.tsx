@@ -28,7 +28,7 @@ export function BlogPostHero({ post }: { post: BlogPost }) {
       </div>
 
       <Container className="relative z-10 flex flex-1 flex-col justify-center py-16 md:py-20 lg:py-24">
-        <div className="max-w-xl lg:max-w-2xl">
+        <div className="flex max-w-xl flex-col items-start lg:max-w-2xl">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium text-brand transition-colors duration-300 ease-out-expo hover:text-brand/80"
@@ -39,7 +39,7 @@ export function BlogPostHero({ post }: { post: BlogPost }) {
 
           <span
             className={cn(
-              "mt-6 inline-flex rounded-full px-3 py-1 text-[0.65rem] font-semibold tracking-[0.14em] uppercase",
+              "mt-5 inline-flex rounded-full px-3 py-1 text-[0.65rem] font-semibold tracking-[0.14em] uppercase",
               badge.className,
             )}
           >
