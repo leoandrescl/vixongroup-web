@@ -129,8 +129,20 @@ export function FaqSection({
 
           <Reveal delay={100}>
             <aside className="relative isolate overflow-hidden rounded-[1.75rem] bg-surface ring-1 ring-brand/35 shadow-[0_0_0_1px_rgb(0_163_173_/_0.12),0_24px_80px_-32px_rgb(0_163_173_/_0.45)]">
+              <Image
+                src="/home/img-faq.jpg"
+                alt=""
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                aria-hidden
+              />
               <div
-                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.14),transparent_55%)]"
+                className="absolute inset-0 bg-linear-to-br from-[#0b0f19]/92 via-[#0b0f19]/78 to-[#0b0f19]/45"
+                aria-hidden
+              />
+              <div
+                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.16),transparent_55%)]"
                 aria-hidden
               />
 
