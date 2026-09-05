@@ -43,8 +43,6 @@ export function ProjectCta() {
                 className="object-cover object-center"
                 priority={false}
               />
-              <div className="absolute inset-0 bg-[#05080f]/55" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgb(0_163_173_/_0.22),transparent_50%)]" />
             </div>
 
             <div className="mb-8 text-right lg:absolute lg:top-12 lg:right-12 lg:z-10 lg:mb-0">
