@@ -352,6 +352,45 @@ export const projects: Project[] = [
     solution:
       "Plataforma DigiTicket en gsdigital.cl sobre WordPress/WooCommerce: catálogo de concursos, G-Pass, checkout con Mercado Pago y TUU (Webpay), y emisión del ticket digital al instante.",
   },
+  {
+    slug: "vixon",
+    client: "Vixon",
+    title: "Plataforma de concursos con DigiTicket",
+    summary:
+      "Plataforma de sorteos digitales en vixon.cl con sistema de tickets, pagos integrados y gestión de usuarios — misma arquitectura DigiTicket que Sorteo Seguro.",
+    category: "ecommerce",
+    sector: "Plataforma digital",
+    year: 2026,
+    liveUrl: "https://vixon.cl",
+    featured: true,
+    featuredOrder: 7,
+    cover: {
+      src: "/portafolio/vixon-desktop.jpg",
+      alt: "Vista de escritorio de Vixon",
+    },
+    gallery: [
+      {
+        src: "/portafolio/vixon-desktop.jpg",
+        alt: "Vixon en escritorio",
+      },
+      {
+        src: "/portafolio/vixon-mobile.jpg",
+        alt: "Vixon en móvil",
+      },
+    ],
+    stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
+    services: ["E-commerce", "Checkout", "UX"],
+    tags: ["WooCommerce", "Integraciones", "Automatización", "Meta Ads"],
+    metrics: [
+      { value: "+250%", label: "Ventas online" },
+      { value: "+70.000", label: "Usuarios registrados" },
+      { value: "+4.8", label: "Rating" },
+    ],
+    challenge:
+      "Como en Sorteo Seguro, el negocio depende de confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único por operación.",
+    solution:
+      "Tema WordPress a medida sobre WooCommerce: catálogo de concursos, packs, checkout con Mercado Pago y TUU (Webpay), y emisión del DigiTicket tras el pago — misma base funcional que Sorteo Seguro.",
+  },
 ];
 
 export function getProjectBySlug(slug: string) {

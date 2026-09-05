@@ -65,6 +65,7 @@ export const trustedBrands = [
   { name: "San Mateo", projectSlug: "san-mateo" },
   { name: "Sorteo Seguro", projectSlug: "sorteo-seguro" },
   { name: "Gana Seguro", projectSlug: "gana-seguro" },
+  { name: "Vixon", projectSlug: "vixon" },
   { name: "Allisone", projectSlug: "allisone" },
   { name: "Imppulsor", projectSlug: "imppulsor-dmc" },
   { name: "Pagate", projectSlug: "pagate" },

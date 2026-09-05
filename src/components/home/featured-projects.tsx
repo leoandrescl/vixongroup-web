@@ -41,6 +41,7 @@ const trustedBrands = [
   { name: "San Mateo" },
   { name: "Sorteo Seguro" },
   { name: "Gana Seguro" },
+  { name: "Vixon" },
   { name: "Allisone" },
   { name: "Pagate" },
   { name: "Studio Vixon" },

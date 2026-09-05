@@ -99,6 +99,7 @@ export const trustedBrands = [
   { name: "San Mateo", short: "San Mateo" },
   { name: "Sorteo Seguro", short: "Sorteo Seguro" },
   { name: "Gana Seguro", short: "Gana Seguro" },
+  { name: "Vixon", short: "Vixon" },
   { name: "Allisone", short: "Allisone" },
   { name: "Imppulsor", short: "Imppulsor" },
   { name: "Pagate", short: "Pagate" },
