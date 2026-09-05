@@ -137,14 +137,6 @@ export function FaqSection({
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 aria-hidden
               />
-              <div
-                className="absolute inset-0 bg-linear-to-br from-[#0b0f19]/92 via-[#0b0f19]/78 to-[#0b0f19]/45"
-                aria-hidden
-              />
-              <div
-                className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgb(0_163_173_/_0.16),transparent_55%)]"
-                aria-hidden
-              />
 
               <div className="relative flex h-full min-h-[28rem] flex-col p-7 md:p-8">
                 <p className="text-xs font-semibold tracking-[0.22em] text-brand uppercase">
