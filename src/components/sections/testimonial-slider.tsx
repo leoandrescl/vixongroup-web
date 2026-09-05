@@ -135,17 +135,8 @@ export function TestimonialsSection({
   const visibleItems = items.slice(index, index + visibleCount);
 
   return (
-    <Section className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute top-16 left-[18%] size-[30rem] -translate-x-1/2 rounded-full bg-brand/12 blur-[130px]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute right-[-4rem] bottom-32 size-[24rem] rounded-full bg-brand/8 blur-[110px]"
-        aria-hidden
-      />
-
-      <Container className="relative">
+    <Section>
+      <Container>
         <Reveal>
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-xl">

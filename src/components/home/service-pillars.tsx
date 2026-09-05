@@ -59,7 +59,7 @@ const iconMap = {
 
 export function ServicePillars() {
   return (
-    <Section className="relative overflow-hidden">
+    <Section>
       <Container>
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-14">
           <Reveal>

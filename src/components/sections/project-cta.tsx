@@ -30,7 +30,7 @@ const verticals = ["Tecnología", "Diseño", "Marketing", "Innovación"] as cons
 
 export function ProjectCta() {
   return (
-    <section className="relative overflow-hidden py-12 md:py-16">
+    <section className="relative overflow-hidden py-10 md:py-12">
       <Container className="relative">
         <Reveal>
           <div className="relative overflow-hidden rounded-[1.75rem] border border-brand/40 p-7 shadow-[0_0_0_1px_rgb(0_163_173_/_0.15),0_0_60px_-20px_rgb(0_163_173_/_0.45)] md:p-10 lg:p-12">

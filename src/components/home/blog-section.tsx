@@ -38,13 +38,8 @@ export function BlogSection() {
   }, [active]);
 
   return (
-    <Section className="relative overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute top-24 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-brand/10 blur-[120px]" />
-        <div className="absolute right-0 bottom-0 size-[22rem] rounded-full bg-brand/8 blur-[100px]" />
-      </div>
-
-      <Container className="relative">
+    <Section>
+      <Container>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
           <Reveal className="max-w-xl">
             <Eyebrow>Blog</Eyebrow>

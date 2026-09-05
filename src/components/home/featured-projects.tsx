@@ -185,20 +185,8 @@ export function FeaturedProjects() {
   const featured = getFeaturedProjects(3);
 
   return (
-    <Section className="relative overflow-hidden">
-      <div
-        className="pointer-events-none absolute inset-0"
-        aria-hidden
-        style={{
-          background: `
-            radial-gradient(ellipse 50% 40% at 15% 20%, rgb(0 163 173 / 0.12), transparent 60%),
-            radial-gradient(ellipse 45% 35% at 85% 55%, rgb(0 163 173 / 0.1), transparent 55%),
-            linear-gradient(115deg, transparent 40%, rgb(0 163 173 / 0.04) 50%, transparent 60%)
-          `,
-        }}
-      />
-
-      <Container className="relative">
+    <Section>
+      <Container>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <Reveal className="max-w-xl">
             <Eyebrow>Proyectos destacados</Eyebrow>
@@ -251,7 +239,7 @@ export function FeaturedProjects() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {featured.map((project, index) => (
             <Reveal key={project.slug} delay={index * 90}>
               <FeaturedProjectCard project={project} />
@@ -260,7 +248,7 @@ export function FeaturedProjects() {
         </div>
 
         <Reveal delay={160}>
-          <div className="mt-14 flex flex-col gap-6 border-t border-white/8 pt-10 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+          <div className="mt-10 flex flex-col gap-6 border-t border-white/8 pt-8 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
             <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
               Marcas que confían en nosotros
             </p>

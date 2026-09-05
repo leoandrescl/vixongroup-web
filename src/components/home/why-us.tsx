@@ -13,7 +13,7 @@ export function WhyUs() {
             Cuatro pilares técnicos y comerciales. Sin teatro.
           </h2>
         </Reveal>
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
           {whyUsPillars.map((pillar, index) => (
             <Reveal key={pillar.title} delay={index * 70}>
               <article className="h-full rounded-3xl bg-surface p-7 ring-1 ring-white/8 transition-transform duration-500 ease-out-expo hover:-translate-y-1">
