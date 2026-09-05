@@ -30,28 +30,22 @@ const verticals = ["Tecnología", "Diseño", "Marketing", "Innovación"] as cons
 
 export function ProjectCta() {
   return (
-    <section className="relative overflow-hidden bg-[#05080f] py-16 md:py-24">
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <Image
-          src="/home/project-cta-bg.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover object-[center_65%] opacity-45 saturate-50"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-[#05080f]/72" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_55%_90%,rgb(0_163_173_/_0.35),transparent_55%)]" />
-        <div className="absolute inset-0 bg-linear-to-t from-[#05080f] via-transparent to-[#05080f]/80" />
-      </div>
-
+    <section className="relative overflow-hidden bg-background py-16 md:py-24">
       <Container className="relative">
         <Reveal>
-          <div className="relative overflow-hidden rounded-[1.75rem] border border-brand/40 bg-[#070d16]/72 p-7 shadow-[0_0_0_1px_rgb(0_163_173_/_0.15),0_0_60px_-20px_rgb(0_163_173_/_0.45)] backdrop-blur-md md:p-10 lg:p-12">
-            <div
-              className="pointer-events-none absolute -top-24 left-1/3 size-72 rounded-full bg-brand/10 blur-[90px]"
-              aria-hidden
-            />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-brand/40 p-7 shadow-[0_0_0_1px_rgb(0_163_173_/_0.15),0_0_60px_-20px_rgb(0_163_173_/_0.45)] md:p-10 lg:p-12">
+            <div className="pointer-events-none absolute inset-0" aria-hidden>
+              <Image
+                src="/home/img-hablemos_de_tu_proyecto.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 80rem) 100vw, 80rem"
+                className="object-cover object-center"
+                priority={false}
+              />
+              <div className="absolute inset-0 bg-[#05080f]/55" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgb(0_163_173_/_0.22),transparent_50%)]" />
+            </div>
 
             <div className="mb-8 text-right lg:absolute lg:top-12 lg:right-12 lg:z-10 lg:mb-0">
               <ul className="space-y-1">
