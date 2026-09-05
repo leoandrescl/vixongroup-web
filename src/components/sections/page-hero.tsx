@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import {
   CheckCircle2,
   Code2,
-  FolderKanban,
   Layers,
   Mail,
   MessageCircle,
@@ -14,11 +13,7 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/section";
 import { cn } from "@/lib/utils";
 
-export type PageHeroVisual =
-  | "servicios"
-  | "portafolio"
-  | "nosotros"
-  | "contacto";
+export type PageHeroVisual = "servicios" | "nosotros" | "contacto";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -94,8 +89,6 @@ function HeroVisual({ kind }: { kind: PageHeroVisual }) {
   switch (kind) {
     case "servicios":
       return <ServiciosVisual />;
-    case "portafolio":
-      return <PortafolioVisual />;
     case "nosotros":
       return <NosotrosVisual />;
     case "contacto":
@@ -188,64 +181,6 @@ function ServiciosVisual() {
           <p className="mt-2 text-[0.7rem] text-muted-foreground">
             Auditoría → estrategia → implementación
           </p>
-        </div>
-      </div>
-    </DeviceShell>
-  );
-}
-
-function PortafolioVisual() {
-  const cases = [
-    { name: "Pagate", tag: "SaaS", metric: "Live" },
-    { name: "Sorteo Seguro", tag: "E-commerce", metric: "Live" },
-    { name: "San Mateo", tag: "Inmobiliaria", metric: "Live" },
-    { name: "Imppulsor DMC", tag: "Panel B2B", metric: "Privado" },
-  ];
-
-  return (
-    <DeviceShell
-      float={
-        <div className="absolute -bottom-4 -left-3 hidden w-40 rounded-2xl border border-white/10 bg-surface p-3 shadow-xl sm:block">
-          <div className="flex items-center gap-2 text-xs">
-            <CheckCircle2 className="size-4 text-brand" />
-            Sitios abiertos en vivo
-          </div>
-        </div>
-      }
-    >
-      <div className="grid gap-3">
-        <div className="flex items-end justify-between">
-          <div>
-            <p className="text-[0.65rem] tracking-widest text-muted-foreground uppercase">
-              Casos en producción
-            </p>
-            <p className="text-2xl font-semibold text-brand">Trabajo real</p>
-          </div>
-          <FolderKanban className="size-5 text-brand" aria-hidden />
-        </div>
-        <div className="grid gap-2">
-          {cases.map((item, i) => (
-            <div
-              key={item.name}
-              className="hero-bar flex items-center justify-between rounded-lg bg-white/5 px-3 py-2"
-              style={{ animationDelay: `${480 + i * 70}ms` }}
-            >
-              <div>
-                <p className="text-sm font-medium">{item.name}</p>
-                <p className="text-[0.65rem] text-muted-foreground">{item.tag}</p>
-              </div>
-              <span
-                className={cn(
-                  "rounded-full px-2 py-0.5 text-[0.6rem] font-semibold",
-                  item.metric === "Live"
-                    ? "bg-brand/15 text-brand"
-                    : "bg-white/10 text-muted-foreground",
-                )}
-              >
-                {item.metric}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </DeviceShell>
