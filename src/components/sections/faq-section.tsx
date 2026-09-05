@@ -21,6 +21,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/motion/reveal";
+import { BrandsMarquee } from "@/components/sections/brands-marquee";
 import {
   faqContactPoints,
   faqHighlights,
@@ -227,20 +228,13 @@ export function FaqSection({
         </Reveal>
 
         <Reveal delay={80}>
-          <div className="mt-10 flex flex-col gap-6 border-t border-white/8 pt-8 md:mt-12 md:flex-row md:items-center md:justify-between md:gap-8">
-            <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase">
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 md:mt-12 md:flex-row md:items-center md:gap-5">
+            <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase whitespace-nowrap">
               Marcas que confían en nosotros
             </p>
-            <ul className="flex flex-wrap items-center gap-x-8 gap-y-3 md:flex-1 md:justify-center">
-              {trustedBrands.map((brand) => (
-                <li
-                  key={brand.name}
-                  className="text-sm font-semibold tracking-wide text-foreground/40"
-                >
-                  {brand.short}
-                </li>
-              ))}
-            </ul>
+            <BrandsMarquee
+              brands={trustedBrands.map((b) => ({ name: b.short }))}
+            />
             <Button
               asChild
               variant="outline"

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
+import { BrandsMarquee } from "@/components/sections/brands-marquee";
 import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -234,23 +235,11 @@ export function TestimonialsSection({
         </p>
 
         <Reveal delay={160}>
-          <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 sm:mt-12 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 sm:mt-12 sm:flex-row sm:items-center sm:gap-5">
             <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.2em] text-brand uppercase whitespace-nowrap">
               Marcas que confían en nosotros
             </p>
-            <ul className="flex min-w-0 flex-1 flex-nowrap items-center justify-start gap-0 overflow-x-auto sm:justify-center [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {trustedBrands.map((brand) => (
-                <li
-                  key={brand.name}
-                  className="flex shrink-0 items-center border-white/15 px-4 text-sm font-semibold tracking-wide whitespace-nowrap text-foreground/55 first:pl-0 not-last:border-r sm:px-5 md:px-6"
-                >
-                  {brand.name}
-                </li>
-              ))}
-              <li className="flex shrink-0 items-center px-4 text-xs whitespace-nowrap text-muted-foreground sm:px-5 md:px-6">
-                Y muchos más…
-              </li>
-            </ul>
+            <BrandsMarquee brands={trustedBrands} showMoreLabel />
           </div>
         </Reveal>
       </Container>

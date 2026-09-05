@@ -7,6 +7,7 @@ import {
   Users,
 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { BrandsMarquee } from "@/components/sections/brands-marquee";
 import { Tilt } from "@/components/motion/tilt";
 import { AnimatedStat } from "@/components/ui/animated-stat";
 import { Button } from "@/components/ui/button";
@@ -251,23 +252,12 @@ export function FeaturedProjects() {
         </div>
 
         <Reveal delay={160}>
-          <div className="mt-10 flex flex-col gap-6 border-t border-white/8 pt-8 sm:gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 sm:gap-5 lg:flex-row lg:items-center lg:gap-5">
             <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
               Marcas que confían en nosotros
             </p>
 
-            <ul className="flex min-w-0 flex-1 flex-wrap items-center justify-start gap-y-3 lg:justify-center">
-              {trustedBrands.map((brand) => (
-                <li
-                  key={brand.name}
-                  className="flex items-center border-white/15 px-4 first:pl-0 not-last:border-r sm:px-5 md:px-6"
-                >
-                  <span className="text-sm font-semibold tracking-wide whitespace-nowrap text-white/70 transition-colors duration-300 hover:text-white md:text-[0.95rem]">
-                    {brand.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <BrandsMarquee brands={trustedBrands} />
 
             <Button asChild size="lg" className="shrink-0 self-start lg:self-center">
               <Link href="/contacto">
