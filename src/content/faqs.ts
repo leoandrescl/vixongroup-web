@@ -98,7 +98,9 @@ export const faqContactPoints = [
 export const trustedBrands = [
   { name: "San Mateo", short: "San Mateo" },
   { name: "Sorteo Seguro", short: "Sorteo Seguro" },
+  { name: "Gana Seguro", short: "Gana Seguro" },
   { name: "Allisone", short: "Allisone" },
   { name: "Imppulsor", short: "Imppulsor" },
   { name: "Pagate", short: "Pagate" },
+  { name: "Studio Vixon", short: "Studio Vixon" },
 ] as const;

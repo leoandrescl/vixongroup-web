@@ -64,7 +64,9 @@ export const testimonials: Testimonial[] = [
 export const trustedBrands = [
   { name: "San Mateo", projectSlug: "san-mateo" },
   { name: "Sorteo Seguro", projectSlug: "sorteo-seguro" },
+  { name: "Gana Seguro", projectSlug: "gana-seguro" },
   { name: "Allisone", projectSlug: "allisone" },
   { name: "Imppulsor", projectSlug: "imppulsor-dmc" },
   { name: "Pagate", projectSlug: "pagate" },
+  { name: "Studio Vixon", projectSlug: "studio-vixon" },
 ] as const;

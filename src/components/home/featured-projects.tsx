@@ -40,8 +40,10 @@ const sectionStats = [
 const trustedBrands = [
   { name: "San Mateo" },
   { name: "Sorteo Seguro" },
+  { name: "Gana Seguro" },
   { name: "Allisone" },
   { name: "Pagate" },
+  { name: "Studio Vixon" },
   { name: "Layer07" },
 ] as const;
 

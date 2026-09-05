@@ -81,17 +81,33 @@ export default async function CaseStudyPage({ params }: PageProps) {
               }),
             }}
           />
-          {project.liveUrl ? (
-            <Button asChild variant="outline" className="mt-8">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver sitio
-                <ExternalLink />
-              </a>
-            </Button>
+          {project.liveUrl || project.repoUrl ? (
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.liveUrl ? (
+                <Button asChild variant="outline">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver sitio
+                    <ExternalLink />
+                  </a>
+                </Button>
+              ) : null}
+              {project.repoUrl ? (
+                <Button asChild variant="outline">
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver en GitHub
+                    <ExternalLink />
+                  </a>
+                </Button>
+              ) : null}
+            </div>
           ) : null}
           <ViewTransition name={`project-${project.slug}`} share="morph" default="none">
             <div className="relative mt-12 aspect-[21/9] overflow-hidden rounded-3xl ring-1 ring-white/10">

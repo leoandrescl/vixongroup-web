@@ -18,6 +18,8 @@ export type Project = {
   sector?: string;
   year: number;
   liveUrl?: string;
+  /** Optional public repository (e.g. GitHub). */
+  repoUrl?: string;
   featured: boolean;
   /** Lower = earlier in featured grid. */
   featuredOrder?: number;
@@ -269,6 +271,86 @@ export const projects: Project[] = [
       "El negocio vive de la confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único. El front y el checkout no acompañaban ese estándar.",
     solution:
       "Mu-plugins a medida sobre WordPress/WooCommerce: home, fichas, carrito, checkout invitado, packs con Mercado Pago y TUU (Webpay), y emisión del DigiTicket tras el pago.",
+  },
+  {
+    slug: "studio-vixon",
+    client: "Studio Vixon",
+    title: "Sitio corporativo de la agencia",
+    summary:
+      "Web de marca en studiovixon.com: oferta integral de producto y growth, casos en producción, blog y captación de leads.",
+    category: "software",
+    sector: "Agencia",
+    year: 2026,
+    liveUrl: "https://studiovixon.com",
+    repoUrl: "https://github.com/leoandrescl/vixongroup-web",
+    featured: true,
+    featuredOrder: 5,
+    cover: {
+      src: "/portafolio/studiovixon-desktop.jpg",
+      alt: "Vista de escritorio de Studio Vixon",
+    },
+    gallery: [
+      {
+        src: "/portafolio/studiovixon-desktop.jpg",
+        alt: "Studio Vixon en escritorio",
+      },
+      {
+        src: "/portafolio/studiovixon-mobile.jpg",
+        alt: "Studio Vixon en móvil",
+      },
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Resend"],
+    services: ["Sitio web", "Identidad digital", "Performance", "SEO"],
+    tags: ["Next.js", "Diseño UX/UI", "SEO", "Growth"],
+    metrics: [
+      { value: "1.1s", label: "LCP promedio" },
+      { value: "100", label: "Lighthouse SEO" },
+      { value: "+2.8×", label: "Leads cualificados" },
+      { value: "0", label: "Layout shift (CLS)" },
+    ],
+    challenge:
+      "La agencia necesitaba un activo propio que demostrara el estándar 2026: performance, storytelling de casos y un camino claro a cotización — sin parecer una plantilla genérica.",
+    solution:
+      "Next.js App Router con TypeScript y Tailwind: hero cinematográfico, oferta dual (producto + growth), portafolio dinámico, blog, formulario con Resend y despliegue en Vercel. Código abierto en GitHub.",
+  },
+  {
+    slug: "gana-seguro",
+    client: "Gana Seguro",
+    title: "Plataforma de concursos con DigiTicket",
+    summary:
+      "Plataforma de sorteos digitales con sistema de tickets, pagos integrados y gestión de usuarios — misma arquitectura que Sorteo Seguro.",
+    category: "ecommerce",
+    sector: "Plataforma digital",
+    year: 2026,
+    liveUrl: "https://ganaseguro.cl",
+    featured: true,
+    featuredOrder: 6,
+    cover: {
+      src: "/portafolio/ganaseguro-desktop.jpg",
+      alt: "Vista de escritorio de Gana Seguro",
+    },
+    gallery: [
+      {
+        src: "/portafolio/ganaseguro-desktop.jpg",
+        alt: "Gana Seguro en escritorio",
+      },
+      {
+        src: "/portafolio/ganaseguro-mobile.jpg",
+        alt: "Gana Seguro en móvil",
+      },
+    ],
+    stack: ["WordPress", "WooCommerce", "Mercado Pago", "TUU", "PHP", "LiteSpeed"],
+    services: ["E-commerce", "Checkout", "UX"],
+    tags: ["WooCommerce", "Integraciones", "Automatización", "Meta Ads"],
+    metrics: [
+      { value: "+250%", label: "Ventas online" },
+      { value: "+70.000", label: "Usuarios registrados" },
+      { value: "+4.8", label: "Rating" },
+    ],
+    challenge:
+      "Como en Sorteo Seguro, el negocio depende de confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único por operación.",
+    solution:
+      "Réplica de la arquitectura DigiTicket sobre WordPress/WooCommerce: catálogo de concursos, packs, checkout con Mercado Pago y TUU (Webpay), y emisión del ticket digital al instante.",
   },
 ];
 
