@@ -318,11 +318,11 @@ export const projects: Project[] = [
     client: "Gana Seguro",
     title: "Plataforma de concursos con DigiTicket",
     summary:
-      "Plataforma de sorteos digitales con sistema de tickets, pagos integrados y gestión de usuarios — misma arquitectura que Sorteo Seguro.",
+      "Plataforma de sorteos digitales en gsdigital.cl: G-Pass, pagos integrados y gestión de usuarios — misma arquitectura DigiTicket que Sorteo Seguro.",
     category: "ecommerce",
     sector: "Plataforma digital",
     year: 2026,
-    liveUrl: "https://ganaseguro.cl",
+    liveUrl: "https://gsdigital.cl",
     featured: true,
     featuredOrder: 6,
     cover: {
@@ -348,9 +348,9 @@ export const projects: Project[] = [
       { value: "+4.8", label: "Rating" },
     ],
     challenge:
-      "Como en Sorteo Seguro, el negocio depende de confianza y de un flujo de compra largo: bases notariales, packs, pasarelas y un ticket único por operación.",
+      "Como en Sorteo Seguro, el negocio depende de confianza y de un flujo de compra largo: bases notariales, G-Pass, pasarelas y un ticket único por operación.",
     solution:
-      "Réplica de la arquitectura DigiTicket sobre WordPress/WooCommerce: catálogo de concursos, packs, checkout con Mercado Pago y TUU (Webpay), y emisión del ticket digital al instante.",
+      "Plataforma DigiTicket en gsdigital.cl sobre WordPress/WooCommerce: catálogo de concursos, G-Pass, checkout con Mercado Pago y TUU (Webpay), y emisión del ticket digital al instante.",
   },
 ];
 
