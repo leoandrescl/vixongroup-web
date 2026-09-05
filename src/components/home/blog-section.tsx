@@ -40,20 +40,19 @@ export function BlogSection() {
   return (
     <Section>
       <Container>
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-          <Reveal className="max-w-xl">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-x-10 lg:gap-y-5">
+          <Reveal className="max-w-xl lg:col-start-1 lg:row-start-1">
             <Eyebrow>Blog</Eyebrow>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-4xl">
               Noticias que impulsan tu{" "}
               <span className="text-brand">próximo proyecto.</span>
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-              Tendencias, actualizaciones y oportunidades del mundo digital,
-              para que tomes mejores decisiones.
-            </p>
           </Reveal>
 
-          <Reveal delay={80} className="flex shrink-0 lg:pt-1">
+          <Reveal
+            delay={80}
+            className="flex shrink-0 lg:col-start-2 lg:row-start-1 lg:justify-self-end lg:self-start lg:pt-1"
+          >
             <Button asChild variant="outline" size="lg">
               <Link href="/blog">
                 Ver todas las noticias
@@ -61,36 +60,46 @@ export function BlogSection() {
               </Link>
             </Button>
           </Reveal>
-        </div>
 
-        <Reveal delay={100}>
-          <div
-            className="mt-8 flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            role="tablist"
-            aria-label="Filtrar por categoría"
+          <Reveal className="max-w-xl lg:col-start-1 lg:row-start-2">
+            <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
+              Tendencias, actualizaciones y oportunidades del mundo digital,
+              para que tomes mejores decisiones.
+            </p>
+          </Reveal>
+
+          <Reveal
+            delay={100}
+            className="lg:col-start-2 lg:row-start-2 lg:justify-self-end"
           >
-            {filters.map((filter) => {
-              const isActive = active === filter.id;
-              return (
-                <button
-                  key={filter.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => setActive(filter.id)}
-                  className={cn(
-                    "shrink-0 cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-[color,background-color,border-color,box-shadow] duration-300 ease-out-expo",
-                    isActive
-                      ? "border-brand bg-brand text-brand-foreground shadow-[0_10px_24px_-12px_rgb(0_163_173_/_0.7)]"
-                      : "border-white/15 bg-transparent text-foreground/85 hover:border-brand/50 hover:bg-brand/10",
-                  )}
-                >
-                  {filter.label}
-                </button>
-              );
-            })}
-          </div>
-        </Reveal>
+            <div
+              className="flex max-w-full gap-2 overflow-x-auto pb-1 lg:flex-wrap lg:justify-end lg:overflow-visible [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              role="tablist"
+              aria-label="Filtrar por categoría"
+            >
+              {filters.map((filter) => {
+                const isActive = active === filter.id;
+                return (
+                  <button
+                    key={filter.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setActive(filter.id)}
+                    className={cn(
+                      "shrink-0 cursor-pointer rounded-full border px-4 py-2 text-sm font-medium transition-[color,background-color,border-color,box-shadow] duration-300 ease-out-expo",
+                      isActive
+                        ? "border-brand bg-brand text-brand-foreground shadow-[0_10px_24px_-12px_rgb(0_163_173_/_0.7)]"
+                        : "border-white/15 bg-transparent text-foreground/85 hover:border-brand/50 hover:bg-brand/10",
+                    )}
+                  >
+                    {filter.label}
+                  </button>
+                );
+              })}
+            </div>
+          </Reveal>
+        </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {posts.map((post, index) => (
