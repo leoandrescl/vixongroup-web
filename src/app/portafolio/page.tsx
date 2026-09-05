@@ -17,7 +17,7 @@ export default function PortafolioPage() {
   return (
     <>
       <PortafolioHero />
-      <Section tone="surface">
+      <Section id="proyectos" tone="surface" className="scroll-mt-24">
         <Container>
           <ProjectGallery />
         </Container>

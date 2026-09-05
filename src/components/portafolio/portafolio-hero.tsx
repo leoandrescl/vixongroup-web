@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { HeroWords } from "@/components/motion/hero-words";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/section";
 
@@ -24,13 +27,25 @@ export function PortafolioHero() {
         <div className="max-w-lg lg:max-w-xl">
           <Eyebrow className="hero-fade">Portafolio</Eyebrow>
           <HeroWords
-            words="Trabajo en producción, no mockups."
+            words="Trabajo en producción,"
+            accent="no mockups."
             className="mt-3 text-[1.85rem] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.55rem] lg:leading-[1.08]"
           />
           <p className="hero-fade hero-fade-2 mt-3 max-w-md text-sm leading-relaxed text-foreground/80 md:text-[0.95rem]">
-            Casos que se pueden abrir en el navegador: SaaS, e-commerce, sitios
-            a medida y paneles B2B. Filtra y entra al detalle.
+            Casos reales que ya están generando resultados. Plataformas,
+            e-commerce, sitios corporativos, SaaS y soluciones a medida.
           </p>
+          <div className="hero-fade hero-fade-3 mt-5 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link href="#proyectos">
+                Ver nuestros proyectos
+                <ArrowRight />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/contacto">Hablemos de tu proyecto</Link>
+            </Button>
+          </div>
         </div>
 
         <div
