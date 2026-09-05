@@ -20,7 +20,7 @@ const social = [
 
 export function Footer() {
   return (
-    <footer className="site-footer border-t border-white/8 bg-footer text-foreground">
+    <footer className="site-footer border-t border-white/8 bg-background text-foreground">
       <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div className="max-w-sm">
           <Link href="/" className="inline-flex items-center" aria-label="vixonstudio">

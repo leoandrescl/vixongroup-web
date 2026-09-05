@@ -185,7 +185,7 @@ export function FeaturedProjects() {
   const featured = getFeaturedProjects(3);
 
   return (
-    <Section tone="dark" className="relative overflow-hidden">
+    <Section className="relative overflow-hidden">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden
