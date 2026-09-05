@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
@@ -98,6 +99,8 @@ export function ServicePillars() {
               items={softwarePillarItems}
               href="/servicios#software"
               cta="Ver servicios de tecnología"
+              backgroundSrc="/home/img-servicios-01.jpg"
+              backgroundAlt="Laptop y smartphone mostrando desarrollo y diseño digital"
             />
           </Reveal>
 
@@ -117,6 +120,8 @@ export function ServicePillars() {
               items={marketingPillarItems}
               href="/servicios#marketing"
               cta="Ver servicios de marketing"
+              backgroundSrc="/home/img-servicios-02.jpg"
+              backgroundAlt="Smartphone con métricas de marketing digital"
             />
           </Reveal>
         </div>
@@ -133,6 +138,8 @@ function PillarCard({
   items,
   href,
   cta,
+  backgroundSrc,
+  backgroundAlt,
 }: {
   theme: keyof typeof themes;
   label: string;
@@ -145,18 +152,34 @@ function PillarCard({
   }[];
   href: string;
   cta: string;
+  backgroundSrc: string;
+  backgroundAlt: string;
 }) {
   const t = themes[theme];
 
   return (
     <article
-      className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] bg-[#0c1422] p-6 sm:p-7 lg:p-8"
+      className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] p-6 sm:p-7 lg:p-8"
       style={{
         boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35)`,
       }}
     >
-      <div className="relative grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(7rem,0.5fr)] lg:items-stretch lg:gap-3">
-        <div className="relative z-10 flex min-w-0 flex-col">
+      <Image
+        src={backgroundSrc}
+        alt={backgroundAlt}
+        fill
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        className="object-cover object-[78%_center] max-md:object-[70%_center]"
+        priority={false}
+      />
+      {/* Soft left scrim so copy stays readable over the photo */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#0c1422]/92 via-[#0c1422]/55 to-transparent max-md:from-[#0c1422]/95 max-md:via-[#0c1422]/70"
+      />
+
+      <div className="relative z-10 grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(7rem,0.5fr)] lg:items-stretch lg:gap-3">
+        <div className="relative flex min-w-0 flex-col">
           <p
             className="text-[0.62rem] font-semibold tracking-[0.2em] uppercase sm:text-[0.65rem]"
             style={{ color: t.accent }}
@@ -214,7 +237,7 @@ function PillarCard({
           </Link>
         </div>
 
-        {/* Reserved visual column — keeps text layout unchanged */}
+        {/* Reserved visual column — devices live in the background photo */}
         <div
           className="pointer-events-none relative min-h-[17.5rem] sm:min-h-[20rem] lg:min-h-full"
           aria-hidden
