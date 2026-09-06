@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 
 export function ServiciosCtaBanner() {
   return (
-    <section className="pb-10 md:pb-12">
+    <section className="pb-5 md:pb-6">
       <Container>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#070b14] px-5 py-5 shadow-[0_0_50px_-28px_rgb(0_200_234_/_0.45)] sm:px-6 sm:py-5 md:rounded-[1.25rem] md:px-7">

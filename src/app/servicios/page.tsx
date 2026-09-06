@@ -5,6 +5,7 @@ import { ServiciosCtaBanner } from "@/components/servicios/servicios-cta-banner"
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { ServiciosIa } from "@/components/servicios/servicios-ia";
 import { ServiciosProcess } from "@/components/servicios/servicios-process";
+import { ServiciosProjectCta } from "@/components/servicios/servicios-project-cta";
 import { ServiciosTech } from "@/components/servicios/servicios-tech";
 import { buildMetadata } from "@/lib/seo";
 
@@ -26,6 +27,7 @@ export default function ServiciosPage() {
       <ServiciosProcess />
       <FeaturedProjects showTrustedBrands={false} />
       <ServiciosCtaBanner />
+      <ServiciosProjectCta />
     </>
   );
 }
