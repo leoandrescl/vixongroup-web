@@ -1,6 +1,6 @@
 import { FaqSection } from "@/components/sections/faq-section";
 import { OurProcess } from "@/components/sections/our-process";
-import { PageHero } from "@/components/sections/page-hero";
+import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
 import {
@@ -21,12 +21,7 @@ export const metadata = buildMetadata({
 export default function ServiciosPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Servicios"
-        title="Oferta integral: construir el producto y hacerlo crecer."
-        description="Dos fichas técnicas, un mismo estándar de calidad: rendimiento, medición y accountability. Elige un pilar o combina ambos en un solo equipo."
-        visual="servicios"
-      />
+      <ServiciosHero />
 
       <Section id="software" tone="canvas" className="scroll-mt-24">
         <Container className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
