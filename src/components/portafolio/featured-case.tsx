@@ -127,7 +127,7 @@ export function FeaturedCase() {
                 }
               >
                 <item.icon
-                  className="mt-0.5 size-5 shrink-0 text-brand"
+                  className="mt-0.5 size-[2rem] shrink-0 text-brand"
                   strokeWidth={1.6}
                   aria-hidden
                 />
