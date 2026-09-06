@@ -53,7 +53,11 @@ export function ServiciosCatalog() {
               Puedes contratar un servicio específico o una solución completa.
               Nos adaptamos a tus objetivos.
             </p>
-            <Button asChild variant="outline" className="mt-5 border-brand text-brand hover:bg-brand/10">
+            <Button
+              asChild
+              variant="outline"
+              className="mt-5 border-brand text-brand hover:bg-brand/10"
+            >
               <Link href="/contacto">
                 Conversemos tu proyecto
                 <ArrowRight />
@@ -67,59 +71,64 @@ export function ServiciosCatalog() {
             const Icon = iconMap[service.icon];
             return (
               <Reveal key={service.n} delay={index * 40}>
-                <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-black/6 bg-white p-5 shadow-[0_12px_40px_-28px_rgba(15,23,42,0.35)] sm:p-6">
-                  <div className="relative z-10 flex items-start gap-3 pr-10">
-                    <span
-                      className="flex size-10 shrink-0 items-center justify-center rounded-xl text-white"
-                      style={{ backgroundColor: service.iconBg }}
-                    >
-                      <Icon className="size-5" strokeWidth={1.75} aria-hidden />
-                    </span>
-                    <h3 className="pt-1.5 text-[0.95rem] font-semibold tracking-tight text-slate-900 leading-snug">
-                      {service.title}
-                    </h3>
-                    <span className="absolute top-0 right-0 rounded-full bg-[#e8f7fb] px-2 py-0.5 text-[0.65rem] font-semibold tracking-wide text-brand tabular-nums">
-                      {service.n}
-                    </span>
-                  </div>
+                <article className="relative aspect-square overflow-hidden rounded-2xl border border-black/6 bg-white shadow-[0_12px_40px_-28px_rgba(15,23,42,0.35)]">
+                  {/* Full-bleed service art (already includes white bg) */}
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-right-bottom"
+                    aria-hidden
+                  />
 
-                  <p className="relative z-10 mt-3 max-w-[58%] text-sm leading-relaxed text-slate-600">
-                    {service.description}
-                  </p>
-
-                  <ul className="relative z-10 mt-4 max-w-[58%] space-y-2">
-                    {service.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex gap-2 text-[0.8rem] leading-snug text-slate-600"
+                  <div className="relative z-10 flex h-full flex-col p-5 sm:p-6">
+                    <div className="flex items-start gap-2.5 pr-9">
+                      <span
+                        className="flex size-9 shrink-0 items-center justify-center rounded-full text-white sm:size-10"
+                        style={{ backgroundColor: service.iconBg }}
                       >
-                        <Check
-                          className="mt-0.5 size-3.5 shrink-0 text-brand"
-                          strokeWidth={2.5}
+                        <Icon
+                          className="size-4 sm:size-5"
+                          strokeWidth={1.75}
                           aria-hidden
                         />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                      </span>
+                      <h3 className="pt-1 text-[0.9rem] font-semibold tracking-tight text-slate-900 leading-snug sm:text-[0.95rem]">
+                        {service.title}
+                      </h3>
+                      <span className="absolute top-5 right-5 flex size-7 items-center justify-center rounded-full bg-[#e8f7fb] text-[0.65rem] font-semibold tracking-wide text-brand tabular-nums sm:top-6 sm:right-6">
+                        {service.n}
+                      </span>
+                    </div>
 
-                  <Link
-                    href="#"
-                    className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand transition-colors hover:text-brand/80"
-                  >
-                    Ver más
-                    <ArrowRight className="size-3.5" />
-                  </Link>
+                    <p className="mt-3 max-w-[62%] text-[0.8rem] leading-relaxed text-slate-600 sm:text-sm">
+                      {service.description}
+                    </p>
 
-                  <div className="pointer-events-none absolute inset-y-3 right-0 w-[46%] sm:inset-y-4 sm:w-[48%]">
-                    <Image
-                      src={service.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 1280px) 200px, (min-width: 640px) 40vw, 45vw"
-                      className="object-contain object-right-bottom"
-                      aria-hidden
-                    />
+                    <ul className="mt-3 max-w-[62%] space-y-1.5 sm:mt-4 sm:space-y-2">
+                      {service.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex gap-1.5 text-[0.72rem] leading-snug text-slate-600 sm:gap-2 sm:text-[0.78rem]"
+                        >
+                          <Check
+                            className="mt-0.5 size-3.5 shrink-0 text-brand"
+                            strokeWidth={2.5}
+                            aria-hidden
+                          />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      href="#"
+                      className="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-brand transition-colors hover:text-brand/80"
+                    >
+                      Ver más
+                      <ArrowRight className="size-3.5" />
+                    </Link>
                   </div>
                 </article>
               </Reveal>
