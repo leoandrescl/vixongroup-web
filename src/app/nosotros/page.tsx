@@ -2,6 +2,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { NosotrosHero } from "@/components/nosotros/nosotros-hero";
 import { NuestraHistoria } from "@/components/nosotros/nuestra-historia";
 import { NuestroEquipo } from "@/components/nosotros/nuestro-equipo";
+import { NuestroProposito } from "@/components/nosotros/nuestro-proposito";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { manifesto, valueProps } from "@/content/team";
@@ -19,6 +20,7 @@ export default function NosotrosPage() {
     <>
       <NosotrosHero />
       <NuestraHistoria />
+      <NuestroProposito />
 
       <Section id="manifiesto" tone="surface">
         <Container>

@@ -23,7 +23,7 @@ export function NuestraHistoria() {
             innovar y destacar en un mundo cada vez más competitivo.
           </p>
           <Button asChild size="lg" className="mt-8">
-            <Link href="#manifiesto">
+            <Link href="#proposito">
               Conoce nuestra historia
               <ArrowRight />
             </Link>
