@@ -105,7 +105,7 @@ export function ServiciosProcess() {
 
                       {showArrow ? (
                         <ArrowRight
-                          className="pointer-events-none absolute top-1/2 -right-2.5 z-10 hidden size-3.5 -translate-y-1/2 text-[#00c8ea] lg:block"
+                          className="pointer-events-none absolute top-1/2 -right-3.2 z-10 hidden size-3.5 -translate-y-1/2 text-[#00c8ea] lg:block"
                           strokeWidth={2.5}
                           aria-hidden
                         />
