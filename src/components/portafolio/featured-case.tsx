@@ -78,7 +78,7 @@ export function FeaturedCase() {
               {highlights.map((item) => (
                 <li key={item.title} className="flex flex-col gap-2">
                   <item.icon
-                    className="size-5 text-brand"
+                    className="size-[2rem] text-brand"
                     strokeWidth={1.6}
                     aria-hidden
                   />
