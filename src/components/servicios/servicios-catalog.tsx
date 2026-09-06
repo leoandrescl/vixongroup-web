@@ -66,7 +66,7 @@ export function ServiciosCatalog() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {serviceCatalog.map((service, index) => {
             const Icon = iconMap[service.icon];
             return (
