@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/motion/reveal";
 import { NosotrosHero } from "@/components/nosotros/nosotros-hero";
 import { NuestraHistoria } from "@/components/nosotros/nuestra-historia";
+import { NuestraTrayectoria } from "@/components/nosotros/nuestra-trayectoria";
 import { NuestroEquipo } from "@/components/nosotros/nuestro-equipo";
 import { NuestroProposito } from "@/components/nosotros/nuestro-proposito";
 import { Container } from "@/components/ui/container";
@@ -21,6 +22,7 @@ export default function NosotrosPage() {
       <NosotrosHero />
       <NuestraHistoria />
       <NuestroProposito />
+      <NuestraTrayectoria />
 
       <Section id="manifiesto" tone="surface">
         <Container>
