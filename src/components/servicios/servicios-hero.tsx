@@ -112,10 +112,10 @@ export function ServiciosHero() {
                   aria-hidden
                 />
                 <div>
-                  <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-brand uppercase">
+                  <p className="text-[0.85rem] font-semibold tracking-[0.08em] text-brand uppercase">
                     {item.label}
                   </p>
-                  <p className="mt-0.5 text-[0.95rem] text-foreground/75">
+                  <p className="mt-0.5 text-[0.85rem] text-foreground/75">
                     {item.detail}
                   </p>
                 </div>
