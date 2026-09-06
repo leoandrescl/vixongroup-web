@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
+import { NosotrosHero } from "@/components/nosotros/nosotros-hero";
 import { NuestroEquipo } from "@/components/nosotros/nuestro-equipo";
-import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { manifesto, valueProps } from "@/content/team";
@@ -17,12 +17,7 @@ export const metadata = buildMetadata({
 export default function NosotrosPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Nosotros"
-        title="Una agencia que se siente más equipo de producto que proveedor."
-        description="Nacimos para cerrar la brecha entre quien construye el software y quien tiene que hacerlo crecer. Menos handoffs. Más resultados auditables."
-        visual="nosotros"
-      />
+      <NosotrosHero />
 
       <Section id="historia" tone="canvas">
         <Container className="grid gap-10 lg:grid-cols-2">
