@@ -79,7 +79,7 @@ export function ServiciosCatalog() {
                       alt=""
                       fill
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className="object-contain object-right-bottom"
+                      className="left-[20px]! object-contain object-right-bottom"
                       aria-hidden
                     />
                   </div>
