@@ -276,18 +276,7 @@ export function FeaturedProjects({
               </Button>
             </div>
           </Reveal>
-        ) : (
-          <Reveal delay={160}>
-            <div className="mt-10 flex justify-start border-t border-white/8 pt-8 sm:justify-end">
-              <Button asChild size="lg">
-                <Link href="/contacto">
-                  Hablemos de tu proyecto
-                  <ArrowRight />
-                </Link>
-              </Button>
-            </div>
-          </Reveal>
-        )}
+        ) : null}
       </Container>
     </Section>
   );

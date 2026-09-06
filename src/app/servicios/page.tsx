@@ -1,6 +1,7 @@
 import { FeaturedProjects } from "@/components/home/featured-projects";
 import { ServicePillars } from "@/components/home/service-pillars";
 import { ServiciosCatalog } from "@/components/servicios/servicios-catalog";
+import { ServiciosCtaBanner } from "@/components/servicios/servicios-cta-banner";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { ServiciosIa } from "@/components/servicios/servicios-ia";
 import { ServiciosProcess } from "@/components/servicios/servicios-process";
@@ -24,6 +25,7 @@ export default function ServiciosPage() {
       <ServiciosTech />
       <ServiciosProcess />
       <FeaturedProjects showTrustedBrands={false} />
+      <ServiciosCtaBanner />
     </>
   );
 }
