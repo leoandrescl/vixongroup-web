@@ -108,14 +108,14 @@ export function ServiciosHero() {
                 className="flex items-start gap-2 md:px-4 md:first:pl-0 md:last:pr-0"
               >
                 <item.icon
-                  className="mt-0.5 size-4 shrink-0 text-brand"
+                  className="mt-0.5 size-8 shrink-0 text-brand"
                   aria-hidden
                 />
                 <div>
-                  <p className="text-[0.6rem] font-semibold tracking-[0.16em] text-brand uppercase">
+                  <p className="text-[0.95rem] font-semibold tracking-[0.08em] text-brand uppercase">
                     {item.label}
                   </p>
-                  <p className="mt-0.5 text-[0.7rem] text-foreground/75">
+                  <p className="mt-0.5 text-[0.95rem] text-foreground/75">
                     {item.detail}
                   </p>
                 </div>
