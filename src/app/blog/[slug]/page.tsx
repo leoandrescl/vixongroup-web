@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { BlogAuthorCard } from "@/components/blog/blog-author-card";
 import { BlogPostBody } from "@/components/blog/blog-post-body";
 import { BlogPostHero } from "@/components/blog/blog-post-hero";
 import { BlogRecommendedSection } from "@/components/blog/blog-recommended";
@@ -54,11 +53,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               <BlogPostBody body={post.body} />
             </Reveal>
 
-            <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
+            <aside className="lg:sticky lg:top-28 lg:self-start">
               <Reveal delay={80}>
-                <BlogAuthorCard author={post.author} />
-              </Reveal>
-              <Reveal delay={120}>
                 <BlogRelatedPosts posts={related} />
               </Reveal>
             </aside>
