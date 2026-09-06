@@ -1,9 +1,9 @@
 import { FaqSection } from "@/components/sections/faq-section";
-import { OurProcess } from "@/components/sections/our-process";
 import { ServicePillars } from "@/components/home/service-pillars";
 import { ServiciosCatalog } from "@/components/servicios/servicios-catalog";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { ServiciosIa } from "@/components/servicios/servicios-ia";
+import { ServiciosProcess } from "@/components/servicios/servicios-process";
 import { ServiciosTech } from "@/components/servicios/servicios-tech";
 import { buildMetadata } from "@/lib/seo";
 
@@ -22,7 +22,7 @@ export default function ServiciosPage() {
       <ServiciosCatalog />
       <ServiciosIa />
       <ServiciosTech />
-      <OurProcess />
+      <ServiciosProcess />
       <FaqSection />
     </>
   );
