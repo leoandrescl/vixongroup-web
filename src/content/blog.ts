@@ -98,7 +98,13 @@ export type BlogPost = {
   category: BlogCategory;
   date: string;
   readingMinutes: number;
+  /** Full-bleed hero / OG image */
   cover: {
+    src: string;
+    alt: string;
+  };
+  /** Card / listing thumbnail; falls back to cover */
+  thumbnail?: {
     src: string;
     alt: string;
   };
@@ -106,6 +112,10 @@ export type BlogPost = {
   author: BlogAuthor;
   body: BlogPostBody;
 };
+
+export function getBlogThumbnail(post: BlogPost) {
+  return post.thumbnail ?? post.cover;
+}
 
 export const defaultBlogAuthor: BlogAuthor = {
   name: "Sebastián Vilches",
@@ -133,8 +143,12 @@ export const blogPosts: BlogPost[] = [
     date: "2026-08-12",
     readingMinutes: 5,
     cover: {
-      src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80",
-      alt: "Ejecutivo de tecnología presentando en escenario",
+      src: "/blog/img-blog-01.jpg",
+      alt: "Mark Zuckerberg presentando novedades de Meta Ads",
+    },
+    thumbnail: {
+      src: "/blog/img-blog-01-miniatura.jpg",
+      alt: "Mark Zuckerberg presentando novedades de Meta Ads",
     },
     featured: true,
     author: defaultBlogAuthor,
@@ -205,8 +219,12 @@ export const blogPosts: BlogPost[] = [
     date: "2026-08-08",
     readingMinutes: 4,
     cover: {
-      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80",
-      alt: "Equipo trabajando con dashboards de marketing digital",
+      src: "/blog/img-blog-02.jpg",
+      alt: "Sundar Pichai presentando novedades de Google Ads",
+    },
+    thumbnail: {
+      src: "/blog/img-blog-02-miniatura.jpg",
+      alt: "Sundar Pichai presentando novedades de Google Ads",
     },
     featured: true,
     author: defaultBlogAuthor,
@@ -271,8 +289,12 @@ export const blogPosts: BlogPost[] = [
     date: "2026-08-01",
     readingMinutes: 6,
     cover: {
-      src: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80",
-      alt: "Visual abstracto de inteligencia artificial",
+      src: "/blog/img-blog-03.jpg",
+      alt: "Inteligencia artificial aplicada al marketing digital",
+    },
+    thumbnail: {
+      src: "/blog/img-blog-03-miniatura.jpg",
+      alt: "Inteligencia artificial aplicada al marketing digital",
     },
     featured: true,
     author: defaultBlogAuthor,

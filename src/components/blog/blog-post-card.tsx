@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Clock } from "lucide-react";
 import {
   blogCategoryBadge,
   formatBlogDate,
+  getBlogThumbnail,
   type BlogPost,
 } from "@/content/blog";
 import { cn } from "@/lib/utils";
@@ -18,6 +19,7 @@ export function BlogPostCard({
   heading?: "h2" | "h3";
 }) {
   const badge = blogCategoryBadge[post.category];
+  const thumb = getBlogThumbnail(post);
 
   return (
     <article
@@ -27,8 +29,8 @@ export function BlogPostCard({
       )}
     >
       <Image
-        src={post.cover.src}
-        alt={post.cover.alt}
+        src={thumb.src}
+        alt={thumb.alt}
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
         className="object-cover transition-transform duration-700 ease-out-expo group-hover:scale-[1.04]"
