@@ -10,6 +10,7 @@ import {
   RefreshCw,
   Settings,
   ShieldCheck,
+  Sparkles,
   Star,
   Trophy,
   Users,
@@ -134,24 +135,37 @@ export function ServiciosProcess() {
         </div>
 
         <Reveal delay={110}>
-          <div className="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-6 backdrop-blur-md md:mt-14 md:rounded-3xl md:px-7 md:py-7">
-            <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10">
-              <div className="shrink-0 lg:max-w-[16rem] xl:max-w-[18rem]">
-                <Eyebrow className="text-[#00c8ea]">Nuestro compromiso</Eyebrow>
-                <h3 className="mt-3 text-xl font-semibold tracking-tight text-balance md:text-2xl">
+          <div className="mt-12 flex flex-col gap-5 md:mt-14 lg:flex-row lg:items-center lg:gap-5">
+            <div className="flex min-w-0 flex-1 flex-col gap-6 rounded-2xl border border-white/12 bg-[#070b14] px-5 py-5 sm:px-6 sm:py-6 md:rounded-[1.25rem] lg:flex-row lg:items-center lg:gap-0 lg:py-5">
+              <div className="shrink-0 lg:max-w-[15.5rem] lg:pr-6 xl:max-w-[17rem] xl:pr-8">
+                <p className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-[0.22em] text-[#00c8ea] uppercase">
+                  <Sparkles
+                    className="size-3.5 fill-[#00c8ea]/30"
+                    aria-hidden
+                  />
+                  Nuestro compromiso
+                </p>
+                <h3 className="mt-3 text-[1.35rem] font-semibold tracking-tight text-balance sm:text-xl md:text-[1.45rem] md:leading-snug">
                   Más que proveedores, somos tu{" "}
                   <span className="text-[#00c8ea]">socio estratégico.</span>
                 </h3>
               </div>
 
-              <ul className="grid flex-1 gap-5 sm:grid-cols-3 sm:gap-4 lg:gap-5">
+              <div
+                className="hidden h-16 w-px shrink-0 bg-white/15 lg:block"
+                aria-hidden
+              />
+
+              <ul className="grid flex-1 gap-5 border-white/10 sm:grid-cols-3 sm:gap-4 lg:gap-5 lg:border-l-0 lg:pl-6 xl:pl-8">
                 {serviciosProcessCommitments.map((item) => {
                   const Icon = commitmentIcons[item.icon];
                   return (
                     <li key={item.title} className="flex gap-3">
-                      <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg border border-[#00c8ea]/30 bg-[#00c8ea]/10 text-[#00c8ea]">
-                        <Icon className="size-4" strokeWidth={1.75} aria-hidden />
-                      </span>
+                      <Icon
+                        className="mt-0.5 size-5 shrink-0 text-[#00c8ea]"
+                        strokeWidth={1.75}
+                        aria-hidden
+                      />
                       <div>
                         <p className="text-sm font-semibold text-foreground">
                           {item.title}
@@ -164,21 +178,21 @@ export function ServiciosProcess() {
                   );
                 })}
               </ul>
+            </div>
 
-              <div className="shrink-0 lg:text-right">
-                <Button
-                  asChild
-                  className="bg-[#00c8ea] text-[#041018] hover:bg-[#00c8ea]/90"
-                >
-                  <Link href="/contacto">
-                    Conversemos tu proyecto
-                    <ArrowRight />
-                  </Link>
-                </Button>
-                <p className="mt-2.5 text-[0.72rem] text-muted-foreground">
-                  Primera reunión gratuita y sin compromiso.
-                </p>
-              </div>
+            <div className="shrink-0 lg:pl-1 lg:text-center">
+              <Button
+                asChild
+                className="w-full bg-[#00c8ea] text-[#041018] hover:bg-[#00c8ea]/90 lg:w-auto"
+              >
+                <Link href="/contacto">
+                  Conversemos tu proyecto
+                  <ArrowRight />
+                </Link>
+              </Button>
+              <p className="mt-2.5 text-center text-[0.72rem] text-muted-foreground">
+                Primera reunión gratuita y sin compromiso.
+              </p>
             </div>
           </div>
         </Reveal>
