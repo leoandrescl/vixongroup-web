@@ -29,7 +29,7 @@ export default function PortafolioPage() {
       </Section>
       <FeaturedCase />
       <MoreThanProjects />
-      <ServiciosCtaBanner />
+      <ServiciosCtaBanner className="bg-white" />
       <TestimonialsSection moreHref="/contacto" />
       <ProjectCta />
     </>

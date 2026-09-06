@@ -3,10 +3,11 @@ import { ArrowRight, BarChart3 } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { cn } from "@/lib/utils";
 
-export function ServiciosCtaBanner() {
+export function ServiciosCtaBanner({ className }: { className?: string }) {
   return (
-    <section className="pb-5 md:pb-6">
+    <section className={cn("pb-5 md:pb-6", className)}>
       <Container>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#070b14] px-5 py-5 shadow-[0_0_50px_-28px_rgb(0_200_234_/_0.45)] sm:px-6 sm:py-5 md:rounded-[1.25rem] md:px-7">
