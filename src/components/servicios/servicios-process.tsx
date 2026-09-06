@@ -77,40 +77,29 @@ export function ServiciosProcess() {
             <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {serviciosProcessSteps.map((step, index) => {
                 const Icon = stepIcons[step.icon];
-                const showArrow = index % 4 !== 3;
 
                 return (
                   <Reveal key={step.n} delay={index * 35}>
-                    <div className="relative h-full">
-                      <article className="relative flex h-full flex-col rounded-2xl border border-[#00c8ea]/25 bg-white/[0.03] p-3.5 shadow-[0_0_28px_-18px_rgb(0_200_234_/_0.55)] backdrop-blur-sm sm:p-4">
-                        <div className="flex items-start justify-between gap-2">
-                          <span className="flex size-7 items-center justify-center rounded-full bg-[#00c8ea]/15 text-[0.65rem] font-semibold tracking-wide text-[#00c8ea] tabular-nums">
-                            {step.n}
-                          </span>
-                          <span className="text-[#00c8ea]">
-                            <Icon
-                              className="size-4"
-                              strokeWidth={1.75}
-                              aria-hidden
-                            />
-                          </span>
-                        </div>
-                        <h3 className="mt-3 text-[0.9rem] font-semibold tracking-tight text-foreground">
-                          {step.title}
-                        </h3>
-                        <p className="mt-1.5 text-[0.72rem] leading-relaxed text-muted-foreground">
-                          {step.body}
-                        </p>
-                      </article>
-
-                      {showArrow ? (
-                        <ArrowRight
-                          className="pointer-events-none absolute top-1/2 -right-3.2 z-10 hidden size-3.5 -translate-y-1/2 text-[#00c8ea] lg:block"
-                          strokeWidth={2.5}
-                          aria-hidden
-                        />
-                      ) : null}
-                    </div>
+                    <article className="relative flex h-full flex-col rounded-2xl border border-[#00c8ea]/25 bg-white/[0.03] p-3.5 shadow-[0_0_28px_-18px_rgb(0_200_234_/_0.55)] backdrop-blur-sm sm:p-4">
+                      <div className="flex items-start justify-between gap-2">
+                        <span className="flex size-7 items-center justify-center rounded-full bg-[#00c8ea]/15 text-[0.65rem] font-semibold tracking-wide text-[#00c8ea] tabular-nums">
+                          {step.n}
+                        </span>
+                        <span className="text-[#00c8ea]">
+                          <Icon
+                            className="size-4"
+                            strokeWidth={1.75}
+                            aria-hidden
+                          />
+                        </span>
+                      </div>
+                      <h3 className="mt-3 text-[0.9rem] font-semibold tracking-tight text-foreground">
+                        {step.title}
+                      </h3>
+                      <p className="mt-1.5 text-[0.72rem] leading-relaxed text-muted-foreground">
+                        {step.body}
+                      </p>
+                    </article>
                   </Reveal>
                 );
               })}
