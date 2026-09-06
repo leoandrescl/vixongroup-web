@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { NosotrosHero } from "@/components/nosotros/nosotros-hero";
+import { NuestraHistoria } from "@/components/nosotros/nuestra-historia";
 import { NuestroEquipo } from "@/components/nosotros/nuestro-equipo";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -18,41 +18,7 @@ export default function NosotrosPage() {
   return (
     <>
       <NosotrosHero />
-
-      <Section id="historia" tone="canvas">
-        <Container className="grid gap-10 lg:grid-cols-2">
-          <Reveal>
-            <Eyebrow>Historia y visión</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-canvas-foreground">
-              Origen y propósito en el mercado.
-            </h2>
-            <p className="mt-4 leading-relaxed text-canvas-foreground/70">
-              Vixon Group se formó cuando vimos el mismo patrón una y otra vez:
-              sitios lentos vendidos como “modernos”, campañas sin tracking
-              fiable, y equipos de marketing y desarrollo que no compartían
-              tablero. El mercado no necesita más slides. Necesita un
-              interlocutor que responda por el LCP y por el CAC.
-            </p>
-            <p className="mt-4 leading-relaxed text-canvas-foreground/70">
-              Nuestra visión es ser el socio de confianza para marcas que
-              quieren un activo digital de producción — web, tienda o
-              plataforma — y un motor de growth que no se desacople a los tres
-              meses.
-            </p>
-          </Reveal>
-          <Reveal delay={90}>
-            <div className="relative min-h-72 overflow-hidden rounded-3xl shadow-sm ring-1 ring-black/5">
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
-                alt="Equipo colaborando alrededor de un producto digital"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </Reveal>
-        </Container>
-      </Section>
+      <NuestraHistoria />
 
       <Section id="manifiesto" tone="surface">
         <Container>
