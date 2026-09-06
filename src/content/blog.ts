@@ -157,11 +157,6 @@ export const blogPosts: BlogPost[] = [
         src: "/blog/img-blog-01-intro.jpg",
         alt: "Pantalla con herramientas de IA para publicidad digital",
       },
-      toolChips: [
-        { icon: "sparkles", label: "Generate" },
-        { icon: "users", label: "Audience" },
-        { icon: "chart", label: "Optimise" },
-      ],
       paragraphs: [
         "Durante el último evento de Meta, Mark Zuckerberg presentó un conjunto de capacidades de inteligencia artificial pensadas para que cualquier negocio —desde una pyme hasta una marca global— pueda crear, segmentar y optimizar anuncios con menos fricción y más precisión.",
       ],
