@@ -12,8 +12,8 @@ export type TeamMember = {
 export const team: TeamMember[] = [
   {
     name: "Elena Vargas",
-    role: "Dirección general",
-    bio: "Estrategia de negocio y calidad de entrega. 12 años liderando productos digitales en Latam.",
+    role: "Dirección General",
+    bio: "Estrategia de negocio y relaciones con clientes.",
     linkedin: "https://www.linkedin.com/",
     photo: {
       src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
@@ -22,32 +22,32 @@ export const team: TeamMember[] = [
   },
   {
     name: "Mateo Ruiz",
-    role: "Ingeniería",
-    bio: "Arquitectura, rendimiento y plataformas. Next.js, cloud y disciplina de producción.",
+    role: "Desarrollo y Tecnología",
+    bio: "Arquitectura, desarrollo y soluciones digitales.",
     linkedin: "https://www.linkedin.com/",
     photo: {
       src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80",
-      alt: "Mateo Ruiz, ingeniería",
+      alt: "Mateo Ruiz, desarrollo y tecnología",
     },
   },
   {
     name: "Sofía Delgado",
-    role: "Growth y performance",
-    bio: "Adquisición, atribución y CRO. Convierte tráfico en pipeline con hipótesis medibles.",
+    role: "Marketing y Contenidos",
+    bio: "Estrategia digital, contenido y posicionamiento de marca.",
     linkedin: "https://www.linkedin.com/",
     photo: {
       src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
-      alt: "Sofía Delgado, growth y performance",
+      alt: "Sofía Delgado, marketing y contenidos",
     },
   },
   {
     name: "Andrés Peña",
-    role: "Diseño de producto",
-    bio: "Sistemas de diseño, UX y storytelling visual. Interfaces que se sienten caras y claras.",
+    role: "Diseño y Producto",
+    bio: "Diseño de experiencias digitales y dirección de producto.",
     linkedin: "https://www.linkedin.com/",
     photo: {
       src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80",
-      alt: "Andrés Peña, diseño de producto",
+      alt: "Andrés Peña, diseño y producto",
     },
   },
 ];

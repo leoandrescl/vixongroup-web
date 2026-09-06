@@ -23,6 +23,7 @@ export default function NosotrosPage() {
       <NuestraHistoria />
       <NuestroProposito />
       <NuestraTrayectoria />
+      <NuestroEquipo />
 
       <Section id="manifiesto" tone="surface">
         <Container>
@@ -67,8 +68,6 @@ export default function NosotrosPage() {
           </div>
         </Container>
       </Section>
-
-      <NuestroEquipo />
     </>
   );
 }
