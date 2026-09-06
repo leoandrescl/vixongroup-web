@@ -117,7 +117,7 @@ export function ServiciosProcess() {
           </div>
 
           <Reveal delay={90}>
-            <div className="relative mx-auto aspect-4/5 w-full max-w-md overflow-hidden rounded-2xl lg:mx-0 lg:max-w-none lg:rounded-3xl">
+            <div className="relative mx-auto aspect-4/5 w-full max-w-md overflow-hidden lg:mx-0 lg:max-w-none">
               <Image
                 src="/home/img-nuestro_proceso.jpg"
                 alt="Espacio de trabajo Vixon Studio con dashboard de resultados"
@@ -126,7 +126,7 @@ export function ServiciosProcess() {
                 className="object-cover object-center"
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-linear-to-t from-background/40 via-transparent to-transparent lg:hidden"
+                className="pointer-events-none absolute inset-0 bg-linear-to-r from-background from-0% via-background/75 via-28% to-transparent to-58%"
                 aria-hidden
               />
             </div>
