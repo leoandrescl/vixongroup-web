@@ -1,3 +1,4 @@
+import { FeaturedCase } from "@/components/portafolio/featured-case";
 import { PortafolioHero } from "@/components/portafolio/portafolio-hero";
 import { ProjectGallery } from "@/components/portafolio/project-gallery";
 import { TrustedCompanies } from "@/components/portafolio/trusted-companies";
@@ -24,6 +25,7 @@ export default function PortafolioPage() {
           <ProjectGallery />
         </Container>
       </Section>
+      <FeaturedCase />
       <TestimonialsSection moreHref="/contacto" />
       <ProjectCta />
     </>
