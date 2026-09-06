@@ -1,6 +1,7 @@
 import { FaqSection } from "@/components/sections/faq-section";
 import { OurProcess } from "@/components/sections/our-process";
 import { ServicePillars } from "@/components/home/service-pillars";
+import { ServiciosCatalog } from "@/components/servicios/servicios-catalog";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { buildMetadata } from "@/lib/seo";
 
@@ -16,6 +17,7 @@ export default function ServiciosPage() {
     <>
       <ServiciosHero />
       <ServicePillars id="pilares" />
+      <ServiciosCatalog />
       <OurProcess />
       <FaqSection />
     </>
