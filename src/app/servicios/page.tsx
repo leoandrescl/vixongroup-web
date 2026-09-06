@@ -1,4 +1,4 @@
-import { FaqSection } from "@/components/sections/faq-section";
+import { FeaturedProjects } from "@/components/home/featured-projects";
 import { ServicePillars } from "@/components/home/service-pillars";
 import { ServiciosCatalog } from "@/components/servicios/servicios-catalog";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
@@ -23,7 +23,7 @@ export default function ServiciosPage() {
       <ServiciosIa />
       <ServiciosTech />
       <ServiciosProcess />
-      <FaqSection />
+      <FeaturedProjects showTrustedBrands={false} />
     </>
   );
 }

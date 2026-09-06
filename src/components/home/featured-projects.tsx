@@ -185,7 +185,11 @@ function FeaturedProjectCard({
   );
 }
 
-export function FeaturedProjects() {
+export function FeaturedProjects({
+  showTrustedBrands = true,
+}: {
+  showTrustedBrands?: boolean;
+} = {}) {
   const featured = getFeaturedProjects(3);
 
   return (
@@ -251,22 +255,39 @@ export function FeaturedProjects() {
           ))}
         </div>
 
-        <Reveal delay={160}>
-          <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 sm:gap-5 lg:flex-row lg:items-center lg:gap-5">
-            <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
-              Marcas que confían en nosotros
-            </p>
+        {showTrustedBrands ? (
+          <Reveal delay={160}>
+            <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 sm:gap-5 lg:flex-row lg:items-center lg:gap-5">
+              <p className="shrink-0 text-[0.65rem] font-semibold tracking-[0.18em] text-brand uppercase whitespace-nowrap">
+                Marcas que confían en nosotros
+              </p>
 
-            <BrandsMarquee brands={trustedBrands} />
+              <BrandsMarquee brands={trustedBrands} />
 
-            <Button asChild size="lg" className="shrink-0 self-start lg:self-center">
-              <Link href="/contacto">
-                Hablemos de tu proyecto
-                <ArrowRight />
-              </Link>
-            </Button>
-          </div>
-        </Reveal>
+              <Button
+                asChild
+                size="lg"
+                className="shrink-0 self-start lg:self-center"
+              >
+                <Link href="/contacto">
+                  Hablemos de tu proyecto
+                  <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+          </Reveal>
+        ) : (
+          <Reveal delay={160}>
+            <div className="mt-10 flex justify-start border-t border-white/8 pt-8 sm:justify-end">
+              <Button asChild size="lg">
+                <Link href="/contacto">
+                  Hablemos de tu proyecto
+                  <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+          </Reveal>
+        )}
       </Container>
     </Section>
   );
