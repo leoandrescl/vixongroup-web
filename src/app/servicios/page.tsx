@@ -4,6 +4,7 @@ import { ServicePillars } from "@/components/home/service-pillars";
 import { ServiciosCatalog } from "@/components/servicios/servicios-catalog";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
 import { ServiciosIa } from "@/components/servicios/servicios-ia";
+import { ServiciosTech } from "@/components/servicios/servicios-tech";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -20,6 +21,7 @@ export default function ServiciosPage() {
       <ServicePillars id="pilares" />
       <ServiciosCatalog />
       <ServiciosIa />
+      <ServiciosTech />
       <OurProcess />
       <FaqSection />
     </>
