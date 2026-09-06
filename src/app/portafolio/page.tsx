@@ -1,5 +1,6 @@
 import { PortafolioHero } from "@/components/portafolio/portafolio-hero";
 import { ProjectGallery } from "@/components/portafolio/project-gallery";
+import { TrustedCompanies } from "@/components/portafolio/trusted-companies";
 import { ProjectCta } from "@/components/sections/project-cta";
 import { TestimonialsSection } from "@/components/sections/testimonial-slider";
 import { Container } from "@/components/ui/container";
@@ -17,6 +18,7 @@ export default function PortafolioPage() {
   return (
     <>
       <PortafolioHero />
+      <TrustedCompanies />
       <Section id="proyectos" tone="surface" className="scroll-mt-24">
         <Container>
           <ProjectGallery />
