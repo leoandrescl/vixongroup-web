@@ -57,9 +57,13 @@ const iconMap = {
   LucideIcon
 >;
 
-export function ServicePillars() {
+export function ServicePillars({
+  id,
+}: {
+  id?: string;
+} = {}) {
   return (
-    <Section>
+    <Section id={id} className={id ? "scroll-mt-24" : undefined}>
       <Container>
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-14">
           <Reveal>
@@ -87,6 +91,7 @@ export function ServicePillars() {
         <div className="mt-12 grid gap-5 lg:mt-14 lg:grid-cols-2 lg:gap-6">
           <Reveal delay={40}>
             <PillarCard
+              id="software"
               theme="tech"
               label="Tecnología & desarrollo"
               title={
@@ -106,6 +111,7 @@ export function ServicePillars() {
 
           <Reveal delay={110}>
             <PillarCard
+              id="marketing"
               theme="marketing"
               label="Marketing, growth & diseño"
               title={
@@ -131,6 +137,7 @@ export function ServicePillars() {
 }
 
 function PillarCard({
+  id,
   theme,
   label,
   title,
@@ -141,6 +148,7 @@ function PillarCard({
   backgroundSrc,
   backgroundAlt,
 }: {
+  id?: string;
   theme: keyof typeof themes;
   label: string;
   title: ReactNode;
@@ -159,7 +167,8 @@ function PillarCard({
 
   return (
     <article
-      className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] p-5 sm:p-7 lg:p-8"
+      id={id}
+      className="relative flex h-full scroll-mt-24 flex-col overflow-hidden rounded-[1.6rem] p-5 sm:p-7 lg:p-8"
       style={{
         boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35)`,
       }}

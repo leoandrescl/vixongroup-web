@@ -86,7 +86,7 @@ export function ServiciosHero() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#software">
+                <a href="#pilares">
                   Explorar servicios
                   <ArrowDown className="size-4" />
                 </a>

@@ -1,14 +1,7 @@
 import { FaqSection } from "@/components/sections/faq-section";
 import { OurProcess } from "@/components/sections/our-process";
+import { ServicePillars } from "@/components/home/service-pillars";
 import { ServiciosHero } from "@/components/servicios/servicios-hero";
-import { Container } from "@/components/ui/container";
-import { Eyebrow, Section } from "@/components/ui/section";
-import {
-  marketingScope,
-  marketingTech,
-  softwareScope,
-  softwareTech,
-} from "@/content/services";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -22,97 +15,8 @@ export default function ServiciosPage() {
   return (
     <>
       <ServiciosHero />
-
-      <Section id="software" tone="canvas" className="scroll-mt-24">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <div>
-            <Eyebrow>Ficha técnica</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-canvas-foreground">
-              Software y e-commerce
-            </h2>
-            <p className="mt-4 leading-relaxed text-canvas-foreground/70">
-              Alcance técnico para productos que tienen que vender, operar o
-              escalar. Priorizamos arquitectura simple, velocidad real (LCP,
-              INP) e integraciones que no se rompen en temporada alta.
-            </p>
-            <ul className="mt-6 space-y-2 text-sm text-canvas-foreground/70">
-              {softwareScope.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-brand">▸</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-            <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
-              Tecnologías
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {softwareTech.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-brand/10 px-3 py-1.5 text-xs font-medium text-brand"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <p className="mt-8 text-sm leading-relaxed text-canvas-foreground/65">
-              Optimización de velocidad incluida en cada entrega: presupuesto
-              de JS, imágenes, edge cache y medición continua de Core Web
-              Vitals en producción.
-            </p>
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="marketing" tone="surface" className="scroll-mt-24">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <div>
-            <Eyebrow className="text-marketing">Ficha técnica</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-              Marketing digital
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Estrategia, ads, SEO y analítica sobre una base de producto
-              sólida. El objetivo no es más tráfico: es pipeline y unidad
-              económica que se puede defender en comité.
-            </p>
-            <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-              {marketingScope.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-marketing">▸</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl bg-background p-8 ring-1 ring-white/8">
-            <p className="text-xs font-semibold tracking-[0.18em] text-marketing uppercase">
-              Stack de growth
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {marketingTech.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-full bg-marketing/10 px-3 py-1.5 text-xs font-medium text-marketing"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-              Atribución server-side, eventos de conversión auditables y
-              experimentación CRO. Si no se puede medir, no se escala el
-              presupuesto.
-            </p>
-          </div>
-        </Container>
-      </Section>
-
+      <ServicePillars id="pilares" />
       <OurProcess />
-
       <FaqSection />
     </>
   );
