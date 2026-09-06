@@ -72,13 +72,13 @@ export function ServiciosCatalog() {
             return (
               <Reveal key={service.n} delay={index * 40}>
                 <article className="relative aspect-square overflow-hidden rounded-2xl border border-black/6 bg-white shadow-[0_12px_40px_-28px_rgba(15,23,42,0.35)]">
-                  {/* Decorative art — bottom-right only, never under the copy */}
-                  <div className="pointer-events-none absolute right-0 bottom-0 z-0 h-[48%] w-[48%]">
+                  {/* Decorative art — full card, anchored bottom-right via object-* */}
+                  <div className="pointer-events-none absolute inset-0 z-0 h-full w-full">
                     <Image
                       src={service.image}
                       alt=""
                       fill
-                      sizes="(min-width: 1024px) 160px, (min-width: 640px) 180px, 45vw"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       className="object-contain object-right-bottom"
                       aria-hidden
                     />
