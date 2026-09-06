@@ -159,7 +159,7 @@ function PillarCard({
 
   return (
     <article
-      className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] p-6 sm:p-7 lg:p-8"
+      className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] p-5 sm:p-7 lg:p-8"
       style={{
         boxShadow: `0 0 0 1px rgb(${t.accentRgb} / 0.35)`,
       }}
@@ -169,16 +169,16 @@ function PillarCard({
         alt={backgroundAlt}
         fill
         sizes="(min-width: 1024px) 50vw, 100vw"
-        className="object-cover object-[78%_center] max-md:object-[70%_center]"
+        className="object-cover object-[78%_center] max-lg:object-[85%_20%]"
         priority={false}
       />
       {/* Soft left scrim so copy stays readable over the photo */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#0c1422]/92 via-[#0c1422]/55 to-transparent max-md:from-[#0c1422]/95 max-md:via-[#0c1422]/70"
+        className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#0c1422]/92 via-[#0c1422]/55 to-transparent max-lg:from-[#0c1422]/94 max-lg:via-[#0c1422]/78 max-lg:to-[#0c1422]/35"
       />
 
-      <div className="relative z-10 grid flex-1 gap-5 lg:grid-cols-[minmax(0,1.5fr)_minmax(7rem,0.5fr)] lg:items-stretch lg:gap-3">
+      <div className="relative z-10 grid flex-1 gap-3 lg:grid-cols-[minmax(0,1.5fr)_minmax(7rem,0.5fr)] lg:items-stretch lg:gap-3">
         <div className="relative flex min-w-0 flex-col">
           <p
             className="text-[0.62rem] font-semibold tracking-[0.2em] uppercase sm:text-[0.65rem]"
@@ -186,36 +186,36 @@ function PillarCard({
           >
             {label}
           </p>
-          <h3 className="mt-3 text-[1.35rem] font-semibold tracking-tight sm:text-2xl lg:text-[1.55rem] lg:leading-snug">
+          <h3 className="mt-2 text-[1.25rem] font-semibold tracking-tight sm:mt-3 sm:text-2xl lg:text-[1.55rem] lg:leading-snug">
             {title}
           </h3>
-          <p className="mt-3 text-[0.85rem] leading-relaxed text-white/70 lg:max-w-none lg:pr-2">
+          <p className="mt-2 text-[0.85rem] leading-relaxed text-white/70 sm:mt-3 lg:max-w-none lg:pr-2">
             {description}
           </p>
 
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-4 space-y-2.5 sm:mt-5 sm:space-y-3">
             {items.map((item) => {
               const Icon = iconMap[item.icon];
               return (
-                <li key={item.title} className="flex items-start gap-3">
+                <li key={item.title} className="flex items-start gap-2.5 sm:gap-3">
                   <span
-                    className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-full sm:size-10"
+                    className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full sm:size-10"
                     style={{
                       color: t.accent,
                       boxShadow: `inset 0 0 0 1px rgb(${t.accentRgb} / 0.55)`,
                     }}
                   >
                     <Icon
-                      className="size-[1.15rem] sm:size-5"
+                      className="size-4 sm:size-5"
                       strokeWidth={1.5}
                       aria-hidden
                     />
                   </span>
                   <div className="min-w-0 pt-0.5">
-                    <p className="text-[0.9rem] font-semibold text-foreground">
+                    <p className="text-[0.85rem] font-semibold text-foreground sm:text-[0.9rem]">
                       {item.title}
                     </p>
-                    <p className="mt-0.5 text-[0.72rem] leading-snug text-white/55">
+                    <p className="mt-0.5 text-[0.7rem] leading-snug text-white/55 sm:text-[0.72rem]">
                       {item.detail}
                     </p>
                   </div>
@@ -226,7 +226,7 @@ function PillarCard({
 
           <Link
             href={href}
-            className="mt-7 inline-flex h-11 w-fit items-center gap-2 rounded-full px-5 text-sm font-semibold transition-[transform,background-color] duration-300 ease-out-expo hover:-translate-y-px"
+            className="mt-5 inline-flex h-10 w-fit items-center gap-2 rounded-full px-5 text-sm font-semibold transition-[transform,background-color] duration-300 ease-out-expo hover:-translate-y-px sm:mt-7 sm:h-11"
             style={{
               backgroundColor: t.buttonBg,
               color: t.buttonText,
@@ -237,9 +237,9 @@ function PillarCard({
           </Link>
         </div>
 
-        {/* Reserved visual column — devices live in the background photo */}
+        {/* Desktop-only spacer so devices in the photo remain visible on the right */}
         <div
-          className="pointer-events-none relative min-h-[17.5rem] sm:min-h-[20rem] lg:min-h-full"
+          className="pointer-events-none relative hidden min-h-full lg:block"
           aria-hidden
         />
       </div>
