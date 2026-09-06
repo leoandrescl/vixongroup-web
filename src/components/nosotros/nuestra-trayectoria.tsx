@@ -71,23 +71,25 @@ export function NuestraTrayectoria() {
               as="li"
               delay={index * 60}
               className={cn(
-                "lg:px-6",
+                "flex items-center gap-4 lg:px-6",
                 index > 0 && "lg:border-l lg:border-canvas-foreground/12",
                 index === 0 && "lg:pl-0",
                 index === stats.length - 1 && "lg:pr-0",
               )}
             >
               <stat.icon
-                className="size-8 text-brand"
+                className="size-8 shrink-0 text-brand"
                 strokeWidth={1.5}
                 aria-hidden
               />
-              <p className="mt-4 text-3xl font-semibold tracking-tight text-brand md:text-[2.15rem]">
-                <AnimatedStat value={stat.value} />
-              </p>
-              <p className="mt-2 text-sm text-canvas-foreground/60">
-                {stat.label}
-              </p>
+              <div>
+                <p className="text-3xl font-semibold tracking-tight text-brand md:text-[2.15rem]">
+                  <AnimatedStat value={stat.value} />
+                </p>
+                <p className="mt-1 text-sm text-canvas-foreground/60">
+                  {stat.label}
+                </p>
+              </div>
             </Reveal>
           ))}
         </ul>
