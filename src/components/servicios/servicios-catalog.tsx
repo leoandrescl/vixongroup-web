@@ -102,22 +102,22 @@ export function ServiciosCatalog() {
                       </span>
                     </div>
 
-                    <p className="mt-3 max-w-[62%] text-[0.8rem] leading-relaxed text-slate-600 sm:text-sm">
+                    <p className="mt-3 max-w-[78%] text-[0.8rem] leading-relaxed text-slate-600 sm:text-sm">
                       {service.description}
                     </p>
 
-                    <ul className="mt-3 max-w-[62%] space-y-1.5 sm:mt-4 sm:space-y-2">
+                    <ul className="mt-3 max-w-[78%] space-y-1.5 sm:mt-4 sm:space-y-2">
                       {service.features.map((feature) => (
                         <li
                           key={feature}
-                          className="flex gap-1.5 text-[0.72rem] leading-snug text-slate-600 sm:gap-2 sm:text-[0.78rem]"
+                          className="flex items-center gap-1.5 text-[0.7rem] leading-none whitespace-nowrap text-slate-600 sm:gap-2 sm:text-[0.75rem]"
                         >
                           <Check
-                            className="mt-0.5 size-3.5 shrink-0 text-brand"
+                            className="size-3.5 shrink-0 text-brand"
                             strokeWidth={2.5}
                             aria-hidden
                           />
-                          {feature}
+                          <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
