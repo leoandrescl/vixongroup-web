@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
     author: defaultBlogAuthor,
     body: {
       secondaryImage: {
-        src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=80",
+        src: "/blog/img-blog-01-intro.jpg",
         alt: "Pantalla con herramientas de IA para publicidad digital",
       },
       toolChips: [
@@ -230,7 +230,7 @@ export const blogPosts: BlogPost[] = [
     author: defaultBlogAuthor,
     body: {
       secondaryImage: {
-        src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+        src: "/blog/img-blog-02-intro.jpg",
         alt: "Análisis de campañas y métricas en pantalla",
       },
       paragraphs: [
@@ -300,7 +300,7 @@ export const blogPosts: BlogPost[] = [
     author: defaultBlogAuthor,
     body: {
       secondaryImage: {
-        src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1400&q=80",
+        src: "/blog/img-blog-03-intro.jpg",
         alt: "Concepto visual de inteligencia artificial aplicada",
       },
       paragraphs: [
