@@ -79,6 +79,7 @@ export const dwTechnologies = [
   { id: "aws" as const, label: "AWS", tone: "brand" as const },
 ];
 
+/** Orden visual: 2 columnas × 3 filas (columna izquierda / derecha). */
 export const dwResultFeatures = [
   {
     icon: "monitor" as const,
@@ -86,24 +87,24 @@ export const dwResultFeatures = [
     description: "Experiencias intuitivas y atractivas.",
   },
   {
-    icon: "seo" as const,
-    title: "Optimización SEO",
-    description: "Estructura técnica preparada para posicionar.",
-  },
-  {
-    icon: "shield" as const,
-    title: "Seguridad",
-    description: "Implementamos buenas prácticas y monitoreo constante.",
-  },
-  {
     icon: "gauge" as const,
     title: "Sitios rápidos",
     description: "Optimización de rendimiento y carga.",
   },
   {
+    icon: "seo" as const,
+    title: "Optimización SEO",
+    description: "Estructura técnica preparada para posicionar.",
+  },
+  {
     icon: "wrench" as const,
     title: "Integraciones",
     description: "Con pasarelas de pago, CRM, ERP, APIs y más.",
+  },
+  {
+    icon: "shield" as const,
+    title: "Seguridad",
+    description: "Implementamos buenas prácticas y monitoreo constante.",
   },
   {
     icon: "pie" as const,

@@ -19,16 +19,16 @@ export function DwFaq() {
   const right = desarrolloWebFaqs.slice(3);
 
   return (
-    <Section tone="canvas" className="scroll-mt-24 bg-white">
+    <Section className="scroll-mt-24 bg-white text-canvas-foreground">
       <Container>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>
             <Eyebrow className="text-[#00c8ea]">Preguntas frecuentes</Eyebrow>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-canvas-foreground md:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
               Resolvemos tus dudas.
             </h2>
           </Reveal>
-          <Reveal delay={50}>
+          <Reveal delay={40}>
             <p className="max-w-xs text-sm leading-relaxed text-canvas-foreground/65 sm:text-right">
               Si tienes otra consulta,{" "}
               <Link
@@ -42,30 +42,30 @@ export function DwFaq() {
           </Reveal>
         </div>
 
-        <div className="mt-10 grid gap-x-8 gap-y-2 lg:grid-cols-2">
+        <div className="mt-10 grid gap-4 lg:grid-cols-2 lg:gap-5">
           {[left, right].map((column, colIndex) => (
-            <Reveal key={colIndex} delay={colIndex * 60}>
-              <Accordion type="single" collapsible className="w-full">
+            <Reveal key={colIndex} delay={colIndex * 50}>
+              <Accordion type="single" collapsible className="flex flex-col gap-3">
                 {column.map((item, index) => (
                   <AccordionItem
                     key={item.question}
                     value={`dw-faq-${colIndex}-${index}`}
-                    className="border-canvas-foreground/10"
+                    className="overflow-hidden rounded-2xl border border-[#00c8ea]/35 border-b-[#00c8ea]/35 bg-white last:border-b"
                   >
                     <AccordionTrigger
                       className={cn(
-                        "gap-4 py-5 text-[0.95rem] font-medium text-canvas-foreground hover:bg-transparent hover:text-[#00c8ea] hover:no-underline",
+                        "gap-4 px-4 py-4 text-[0.95rem] font-medium text-canvas-foreground hover:bg-transparent hover:text-[#00c8ea] hover:no-underline sm:px-5",
                         "**:data-[slot=accordion-trigger-icon]:hidden",
                       )}
                     >
                       <span className="flex min-w-0 flex-1 items-center justify-between gap-4 text-left">
                         <span className="leading-snug">{item.question}</span>
-                        <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-canvas-foreground/15 bg-white text-[#00c8ea] transition-transform group-aria-expanded/accordion-trigger:rotate-45">
+                        <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#00c8ea]/45 bg-white text-[#00c8ea] transition-transform group-aria-expanded/accordion-trigger:rotate-45">
                           <Plus className="size-4" strokeWidth={2.25} aria-hidden />
                         </span>
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="pr-2 text-[0.9375rem] leading-relaxed text-canvas-foreground/65">
+                    <AccordionContent className="px-4 pb-4 text-[0.9375rem] leading-relaxed text-canvas-foreground/65 sm:px-5">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

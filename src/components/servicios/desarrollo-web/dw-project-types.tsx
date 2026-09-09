@@ -8,9 +8,7 @@ import { dwProjectTypes } from "@/content/desarrollo-web";
 
 export function DwProjectTypes() {
   return (
-    <Section
-      className="scroll-mt-24 bg-[#e8f7fb] text-canvas-foreground"
-    >
+    <Section className="scroll-mt-24 bg-[#e8f7fb] text-canvas-foreground">
       <Container>
         <Reveal>
           <Eyebrow className="text-[#00c8ea]">Tipos de proyectos</Eyebrow>
@@ -20,21 +18,21 @@ export function DwProjectTypes() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-3 xl:gap-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
           {dwProjectTypes.map((item, index) => (
             <Reveal key={item.title} delay={index * 40}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/6 bg-white shadow-[0_12px_40px_-28px_rgba(15,23,42,0.25)]">
-                <div className="relative aspect-4/3 overflow-hidden bg-slate-100">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_36px_-24px_rgba(15,23,42,0.28)]">
+                <div className="relative aspect-16/11 overflow-hidden bg-[#dceef4]">
                   <Image
                     src={item.image}
                     alt=""
                     fill
-                    sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                    sizes="(min-width: 1024px) 18vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-4">
-                  <h3 className="text-[0.95rem] font-semibold tracking-tight text-canvas-foreground">
+                <div className="flex flex-1 flex-col p-4 sm:p-5">
+                  <h3 className="text-[0.95rem] font-semibold tracking-tight">
                     {item.title}
                   </h3>
                   <p className="mt-2 flex-1 text-[0.78rem] leading-relaxed text-canvas-foreground/65">

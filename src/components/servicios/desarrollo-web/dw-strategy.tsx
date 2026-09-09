@@ -22,13 +22,13 @@ const cardIcons = {
 
 export function DwStrategy() {
   return (
-    <Section tone="canvas" className="scroll-mt-24">
+    <Section className="scroll-mt-24 bg-white text-canvas-foreground">
       <Container>
-        <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-14">
-          <div>
+        <div className="grid items-stretch gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-10 xl:gap-12">
+          <div className="flex flex-col">
             <Reveal>
               <Eyebrow className="text-[#00c8ea]">Estrategia primero</Eyebrow>
-              <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-balance text-canvas-foreground md:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
+              <h2 className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-balance md:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
                 Entendemos tu negocio para desarrollar{" "}
                 <span className="text-[#00c8ea]">la mejor solución.</span>
               </h2>
@@ -39,12 +39,12 @@ export function DwStrategy() {
               </p>
             </Reveal>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid flex-1 gap-3 sm:grid-cols-3">
               {dwStrategyCards.map((card, index) => {
                 const Icon = cardIcons[card.icon];
                 return (
                   <Reveal key={card.title} delay={index * 40}>
-                    <article className="flex h-full flex-col items-start gap-3 rounded-2xl bg-[#e8f7fb] p-4 sm:p-5">
+                    <article className="flex h-full flex-col gap-3 rounded-2xl bg-[#e8f7fb] p-4 sm:p-5">
                       <span className="flex size-10 items-center justify-center rounded-full bg-[#00c8ea] text-white">
                         <Icon className="size-5" strokeWidth={1.75} aria-hidden />
                       </span>
@@ -59,18 +59,18 @@ export function DwStrategy() {
           </div>
 
           <Reveal delay={80}>
-            <aside className="rounded-3xl bg-[#e8f7fb] p-6 sm:p-7 md:p-8">
-              <span className="flex size-11 items-center justify-center rounded-xl bg-[#00c8ea]/20 text-[#00c8ea]">
+            <aside className="flex h-full flex-col rounded-3xl bg-[#e8f7fb] p-6 sm:p-7 md:p-8">
+              <span className="flex size-11 items-center justify-center rounded-xl bg-[#00c8ea]/15 text-[#00c8ea]">
                 <MonitorCog className="size-5" strokeWidth={1.75} aria-hidden />
               </span>
-              <h3 className="mt-4 text-xl font-semibold tracking-tight text-canvas-foreground">
+              <h3 className="mt-4 text-xl font-semibold tracking-tight">
                 Más que un sitio web
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-canvas-foreground/70">
                 Desarrollamos herramientas digitales que se integran a tu
                 negocio, optimizan tus procesos y te permiten crecer.
               </p>
-              <ul className="mt-5 space-y-2.5">
+              <ul className="mt-6 space-y-3">
                 {dwStrategyChecks.map((item) => (
                   <li
                     key={item}

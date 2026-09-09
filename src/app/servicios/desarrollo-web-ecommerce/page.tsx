@@ -7,7 +7,6 @@ import { DwProjects } from "@/components/servicios/desarrollo-web/dw-projects";
 import { DwResults } from "@/components/servicios/desarrollo-web/dw-results";
 import { DwStrategy } from "@/components/servicios/desarrollo-web/dw-strategy";
 import { DwTechnologies } from "@/components/servicios/desarrollo-web/dw-technologies";
-import { ServiciosCtaBanner } from "@/components/servicios/servicios-cta-banner";
 import { ServiciosProjectCta } from "@/components/servicios/servicios-project-cta";
 import { buildMetadata } from "@/lib/seo";
 
@@ -30,7 +29,6 @@ export default function DesarrolloWebEcommercePage() {
       <DwProcess />
       <DwProjects />
       <DwFaq />
-      <ServiciosCtaBanner />
       <ServiciosProjectCta />
     </>
   );

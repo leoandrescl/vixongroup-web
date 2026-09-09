@@ -23,11 +23,7 @@ const stepIcons = {
 
 export function DwProcess() {
   return (
-    <Section className="relative isolate scroll-mt-24 overflow-hidden">
-      <div
-        className="pointer-events-none absolute top-16 right-0 size-[22rem] rounded-full bg-[#00c8ea]/10 blur-[110px]"
-        aria-hidden
-      />
+    <Section className="scroll-mt-24 bg-white text-canvas-foreground">
       <Container>
         <Reveal>
           <Eyebrow className="text-[#00c8ea]">Nuestro proceso</Eyebrow>
@@ -38,16 +34,16 @@ export function DwProcess() {
 
         <div className="relative mt-10">
           <div
-            className="pointer-events-none absolute top-5 right-8 left-8 hidden h-px bg-linear-to-r from-transparent via-[#00c8ea]/40 to-transparent lg:block"
+            className="pointer-events-none absolute top-5 right-[4%] left-[4%] hidden h-px bg-[#00c8ea]/35 lg:block"
             aria-hidden
           />
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:gap-3">
+          <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-4">
             {dwProcessSteps.map((step, index) => {
               const Icon = stepIcons[step.icon];
               return (
-                <Reveal key={step.n} delay={index * 40}>
-                  <li className="relative flex h-full flex-col items-start rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm">
-                    <span className="relative z-10 flex size-10 items-center justify-center rounded-full bg-[#00c8ea] text-sm font-semibold text-[#041018] tabular-nums">
+                <Reveal key={step.n} delay={index * 35}>
+                  <li className="relative flex flex-col items-start">
+                    <span className="relative z-10 flex size-10 items-center justify-center rounded-full bg-[#00c8ea] text-sm font-semibold text-white tabular-nums">
                       {step.n}
                     </span>
                     <Icon
@@ -55,10 +51,10 @@ export function DwProcess() {
                       strokeWidth={1.75}
                       aria-hidden
                     />
-                    <h3 className="mt-2.5 text-[0.9rem] font-semibold tracking-tight text-foreground">
+                    <h3 className="mt-2.5 text-[0.95rem] font-semibold tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="mt-1.5 text-[0.75rem] leading-relaxed text-muted-foreground">
+                    <p className="mt-1.5 text-[0.78rem] leading-relaxed text-canvas-foreground/65">
                       {step.body}
                     </p>
                   </li>
