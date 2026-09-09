@@ -319,6 +319,19 @@ export function MetaPixelLogo(props: LogoProps) {
   return <MetaAdsLogo {...props} />;
 }
 
+export function HubSpotLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#FF7A59"
+        d="M18.16 9.87V7.27a2.27 2.27 0 0 0 1.31-2.06 2.28 2.28 0 1 0-2.28 2.28h.05v2.4a5.72 5.72 0 0 0-2.74 1.24L7.4 5.02a2.5 2.5 0 1 0-1.1 1.22l6.9 6.04a5.72 5.72 0 1 0 4 0 5.72 5.72 0 0 0 4 0 5.72 5.72 0 0 0 4 0 5.72 5.72 0 0 0 4 0zm-6.5 7.28a3.45 3.45 0 1 1 3.45-3.45 3.45 3.45 0 0 1-3.45 3.45z"
+      />
+      <circle cx="5.4" cy="4.4" r="1.35" fill="#FF7A59" />
+      <circle cx="19.47" cy="5.21" r="1.2" fill="#FF7A59" />
+    </svg>
+  );
+}
+
 export function LookerLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>
@@ -672,6 +685,7 @@ export const techStackLogoMap = {
   ga: GaLogo,
   gtm: GtmLogo,
   metapixel: MetaPixelLogo,
+  hubspot: HubSpotLogo,
   looker: LookerLogo,
   hotjar: HotjarLogo,
   tableau: TableauLogo,

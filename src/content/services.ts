@@ -193,7 +193,7 @@ export const serviceCatalog = [
     icon: "pie",
     iconBg: "#ea580c",
     image: "/home/img-serv-07.jpg",
-    href: "#",
+    href: "/servicios/analitica-datos",
   },
   {
     n: "08",
