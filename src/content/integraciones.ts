@@ -117,7 +117,6 @@ export const iauTechnologies = {
     { id: "python" as const, label: "Python", tone: "brand" as const },
     { id: "gcp" as const, label: "Google Cloud", tone: "brand" as const },
     { id: "aws" as const, label: "AWS", tone: "brand" as const },
-    { id: "php" as const, label: "PHP", tone: "brand" as const },
     { id: "mysql" as const, label: "MySQL", tone: "brand" as const },
   ],
 } as const;

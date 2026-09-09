@@ -8,7 +8,6 @@ import {
   MySqlLogo,
   N8nLogo,
   NodejsLogo,
-  PhpLogo,
   PythonLogo,
   ZapierLogo,
 } from "@/components/icons/tech-stack-logos";
@@ -25,7 +24,6 @@ const logos = {
   python: PythonLogo,
   gcp: GcpLogo,
   aws: AwsLogo,
-  php: PhpLogo,
   mysql: MySqlLogo,
 } as const satisfies Record<
   (typeof iauTechnologies.items)[number]["id"],
