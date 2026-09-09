@@ -29,7 +29,7 @@ export function DwFaq() {
             </h2>
           </Reveal>
           <Reveal delay={40}>
-            <p className="max-w-xs text-sm leading-relaxed text-canvas-foreground/65 sm:text-right">
+            <p className="text-sm leading-relaxed whitespace-nowrap text-canvas-foreground/65 sm:text-right">
               Si tienes otra consulta,{" "}
               <Link
                 href="/contacto"
