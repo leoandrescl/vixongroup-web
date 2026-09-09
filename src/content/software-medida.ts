@@ -117,8 +117,6 @@ export const smTechnologies = {
     { id: "mysql" as const, label: "MySQL", tone: "brand" as const },
     { id: "postgresql" as const, label: "PostgreSQL", tone: "brand" as const },
     { id: "aws" as const, label: "AWS", tone: "brand" as const },
-    { id: "gcp" as const, label: "Google Cloud", tone: "brand" as const },
-    { id: "docker" as const, label: "Docker", tone: "brand" as const },
   ],
 } as const;
 

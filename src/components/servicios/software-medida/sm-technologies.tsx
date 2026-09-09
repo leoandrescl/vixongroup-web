@@ -3,8 +3,6 @@ import type { ComponentType, SVGProps } from "react";
 import { Check, Plus } from "lucide-react";
 import {
   AwsLogo,
-  DockerLogo,
-  GcpLogo,
   LaravelLogo,
   MySqlLogo,
   NextjsLogo,
@@ -28,8 +26,6 @@ const logos = {
   mysql: MySqlLogo,
   postgresql: PostgreSqlLogo,
   aws: AwsLogo,
-  gcp: GcpLogo,
-  docker: DockerLogo,
 } as const satisfies Record<
   (typeof smTechnologies.items)[number]["id"],
   ComponentType<SVGProps<SVGSVGElement>>
