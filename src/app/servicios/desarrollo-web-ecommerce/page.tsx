@@ -1,4 +1,5 @@
 import { DwAi } from "@/components/servicios/desarrollo-web/dw-ai";
+import { DwContact } from "@/components/servicios/desarrollo-web/dw-contact";
 import { DwFaq } from "@/components/servicios/desarrollo-web/dw-faq";
 import { DwHero } from "@/components/servicios/desarrollo-web/dw-hero";
 import { DwProcess } from "@/components/servicios/desarrollo-web/dw-process";
@@ -7,7 +8,6 @@ import { DwProjects } from "@/components/servicios/desarrollo-web/dw-projects";
 import { DwResults } from "@/components/servicios/desarrollo-web/dw-results";
 import { DwStrategy } from "@/components/servicios/desarrollo-web/dw-strategy";
 import { DwTechnologies } from "@/components/servicios/desarrollo-web/dw-technologies";
-import { ServiciosProjectCta } from "@/components/servicios/servicios-project-cta";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -29,7 +29,7 @@ export default function DesarrolloWebEcommercePage() {
       <DwProcess />
       <DwProjects />
       <DwFaq />
-      <ServiciosProjectCta />
+      <DwContact />
     </>
   );
 }
