@@ -39,7 +39,7 @@ export const dwProjectTypes = [
     href: "/contacto",
   },
   {
-    title: "Tiendas online (E-commerce)",
+    title: "Tiendas online",
     description:
       "Vende tus productos en internet con una tienda segura y administrable.",
     image: "/portafolio/allisone-desktop.jpg",
