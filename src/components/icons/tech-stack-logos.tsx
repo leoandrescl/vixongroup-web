@@ -279,6 +279,48 @@ export function YouTubeLogo(props: LogoProps) {
   );
 }
 
+export function InstagramLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <defs>
+        <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#f09433" />
+          <stop offset="45%" stopColor="#dc2743" />
+          <stop offset="100%" stopColor="#bc1888" />
+        </linearGradient>
+      </defs>
+      <path
+        fill="url(#igGrad)"
+        d="M12 2.16c3.2 0 3.58.01 4.85.07 3.12.14 4.53 1.56 4.67 4.67.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.14 3.11-1.55 4.53-4.67 4.67-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.12-.14-4.53-1.56-4.67-4.67-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.14-3.11 1.55-4.53 4.67-4.67 1.27-.06 1.65-.07 4.85-.07ZM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.36-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C21.73 2.7 19.31.27 14.95.07 13.67.01 13.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8Zm6.41-10.85a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z"
+      />
+    </svg>
+  );
+}
+
+export function CapCutLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <rect width="24" height="24" rx="5" fill="#111" />
+      <path
+        fill="#fff"
+        d="M7.2 6.5h3.1l3.4 5.4V6.5h3.1v11h-3.1l-3.4-5.4v5.4H7.2v-11z"
+      />
+    </svg>
+  );
+}
+
+export function CanvaLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <circle cx="12" cy="12" r="11" fill="#00C4CC" />
+      <path
+        fill="#fff"
+        d="M8.1 15.8c-.9-1.1-1.3-2.4-1.3-3.8 0-3.1 2.3-5.6 5.5-5.6 1.5 0 2.8.5 3.7 1.4l-1.5 1.6c-.5-.5-1.2-.8-2.1-.8-1.8 0-3.1 1.4-3.1 3.3 0 .9.3 1.7.9 2.3.6.6 1.4.9 2.3.9.8 0 1.5-.2 2-.7l1.5 1.5c-.9.9-2.2 1.4-3.7 1.4-1.6 0-3-.6-4.2-1.5z"
+      />
+    </svg>
+  );
+}
+
 export function MailchimpLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>
@@ -681,6 +723,9 @@ export const techStackLogoMap = {
   tiktok: TikTokLogo,
   linkedin: LinkedInLogo,
   youtube: YouTubeLogo,
+  instagram: InstagramLogo,
+  capcut: CapCutLogo,
+  canva: CanvaLogo,
   mailchimp: MailchimpLogo,
   ga: GaLogo,
   gtm: GtmLogo,

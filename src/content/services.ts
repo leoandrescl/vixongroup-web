@@ -209,6 +209,6 @@ export const serviceCatalog = [
     icon: "video",
     iconBg: "#dc2626",
     image: "/home/img-serv-08.jpg",
-    href: "#",
+    href: "/servicios/contenido-growth",
   },
 ] as const;

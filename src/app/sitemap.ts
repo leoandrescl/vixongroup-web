@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicios/ux-ui-diseno",
     "/servicios/marketing-digital-360",
     "/servicios/analitica-datos",
+    "/servicios/contenido-growth",
     "/nosotros",
     "/portafolio",
     "/blog",
