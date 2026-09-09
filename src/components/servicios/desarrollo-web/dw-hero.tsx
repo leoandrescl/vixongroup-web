@@ -39,7 +39,7 @@ export function DwHero() {
 
       <Container className="relative z-10 flex flex-1 flex-col gap-6 py-8 md:py-7 lg:py-8">
         <div className="flex flex-1 flex-col justify-center">
-          <div className="relative max-w-lg lg:max-w-xl">
+          <div className="max-w-lg lg:max-w-xl">
             <Eyebrow className="hero-fade">
               Servicios / Desarrollo Web &amp; E-commerce
             </Eyebrow>
@@ -60,15 +60,6 @@ export function DwHero() {
                   <ArrowRight />
                 </Link>
               </Button>
-            </div>
-
-            <div className="hero-fade hero-fade-3 absolute top-0 right-0 hidden max-w-[11rem] translate-x-[105%] rounded-2xl border border-white/12 bg-[#070b14]/90 p-3.5 shadow-[0_20px_50px_-24px_rgb(0_200_234_/_0.55)] backdrop-blur-md xl:block">
-              <span className="flex size-9 items-center justify-center rounded-xl bg-[#00c8ea]/15 text-[#00c8ea]">
-                <BarChart3 className="size-5" strokeWidth={1.75} aria-hidden />
-              </span>
-              <p className="mt-2.5 text-[0.78rem] leading-snug font-medium text-foreground/90">
-                Experiencias digitales que generan resultados
-              </p>
             </div>
           </div>
 

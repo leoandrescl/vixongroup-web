@@ -8,7 +8,9 @@ import { dwProjectTypes } from "@/content/desarrollo-web";
 
 export function DwProjectTypes() {
   return (
-    <Section className="scroll-mt-24">
+    <Section
+      className="scroll-mt-24 bg-[#e8f7fb] text-canvas-foreground"
+    >
       <Container>
         <Reveal>
           <Eyebrow className="text-[#00c8ea]">Tipos de proyectos</Eyebrow>
@@ -21,8 +23,8 @@ export function DwProjectTypes() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-3 xl:gap-4">
           {dwProjectTypes.map((item, index) => (
             <Reveal key={item.title} delay={index * 40}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
-                <div className="relative aspect-4/3 overflow-hidden bg-[#0a121c]">
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/6 bg-white shadow-[0_12px_40px_-28px_rgba(15,23,42,0.25)]">
+                <div className="relative aspect-4/3 overflow-hidden bg-slate-100">
                   <Image
                     src={item.image}
                     alt=""
@@ -30,13 +32,12 @@ export function DwProjectTypes() {
                     sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
                 </div>
                 <div className="flex flex-1 flex-col p-4">
-                  <h3 className="text-[0.95rem] font-semibold tracking-tight text-foreground">
+                  <h3 className="text-[0.95rem] font-semibold tracking-tight text-canvas-foreground">
                     {item.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-[0.78rem] leading-relaxed text-muted-foreground">
+                  <p className="mt-2 flex-1 text-[0.78rem] leading-relaxed text-canvas-foreground/65">
                     {item.description}
                   </p>
                   <Link
