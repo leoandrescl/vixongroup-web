@@ -11,6 +11,7 @@ import { Reveal } from "@/components/motion/reveal";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { dwProcessSteps } from "@/content/desarrollo-web";
+import { cn } from "@/lib/utils";
 
 const stepIcons = {
   search: Search,
@@ -32,37 +33,41 @@ export function DwProcess() {
           </h2>
         </Reveal>
 
-        <div className="relative mt-10">
-          <div
-            className="pointer-events-none absolute top-5 right-[4%] left-[4%] hidden h-px bg-[#00c8ea]/35 lg:block"
-            aria-hidden
-          />
-          <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-4">
-            {dwProcessSteps.map((step, index) => {
-              const Icon = stepIcons[step.icon];
-              return (
-                <Reveal key={step.n} delay={index * 35}>
-                  <li className="relative flex flex-col items-start">
-                    <span className="relative z-10 flex size-10 items-center justify-center rounded-full bg-[#00c8ea] text-sm font-semibold text-white tabular-nums">
+        <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-0">
+          {dwProcessSteps.map((step, index) => {
+            const Icon = stepIcons[step.icon];
+            const isLast = index === dwProcessSteps.length - 1;
+
+            return (
+              <Reveal key={step.n} delay={index * 35}>
+                <li
+                  className={cn(
+                    "relative flex flex-col items-start lg:px-4 xl:px-5",
+                    !isLast &&
+                      "lg:after:absolute lg:after:top-[12%] lg:after:bottom-[8%] lg:after:right-0 lg:after:w-px lg:after:origin-center lg:after:rotate-[16deg] lg:after:bg-[#00c8ea]/45",
+                  )}
+                >
+                  <div className="flex items-center gap-2.5">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#00c8ea] text-[0.7rem] font-semibold text-white tabular-nums sm:size-9 sm:text-sm">
                       {step.n}
                     </span>
                     <Icon
-                      className="mt-4 size-5 text-[#00c8ea]"
-                      strokeWidth={1.75}
+                      className="size-6 text-[#00c8ea] sm:size-7"
+                      strokeWidth={1.5}
                       aria-hidden
                     />
-                    <h3 className="mt-2.5 text-[0.95rem] font-semibold tracking-tight">
-                      {step.title}
-                    </h3>
-                    <p className="mt-1.5 text-[0.78rem] leading-relaxed text-canvas-foreground/65">
-                      {step.body}
-                    </p>
-                  </li>
-                </Reveal>
-              );
-            })}
-          </ol>
-        </div>
+                  </div>
+                  <h3 className="mt-4 text-[0.95rem] font-semibold tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1.5 text-[0.78rem] leading-relaxed text-canvas-foreground/65">
+                    {step.body}
+                  </p>
+                </li>
+              </Reveal>
+            );
+          })}
+        </ol>
       </Container>
     </Section>
   );
