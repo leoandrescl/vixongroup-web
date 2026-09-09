@@ -41,25 +41,18 @@ export function DwStrategy() {
             </Reveal>
 
             <Reveal delay={60}>
-              <ul className="mt-8 grid grid-cols-2 gap-5 sm:flex sm:flex-row sm:items-center sm:gap-0">
+              <ul className="mt-8 flex flex-col gap-0 sm:flex-row sm:items-center">
                 {dwStrategyCards.map((card, index) => {
                   const Icon = cardIcons[card.icon];
-                  const isLast = index === dwStrategyCards.length - 1;
                   return (
                     <Fragment key={card.lines.join(" ")}>
                       {index > 0 ? (
                         <li
-                          className="hidden h-10 w-px shrink-0 self-center bg-[#00c8ea]/45 sm:mx-5 sm:block lg:mx-6"
+                          className="mx-0 my-4 h-px w-full bg-[#00c8ea]/35 sm:mx-5 sm:my-0 sm:h-10 sm:w-px sm:shrink-0 sm:self-center lg:mx-6"
                           aria-hidden
                         />
                       ) : null}
-                      <li
-                        className={
-                          isLast
-                            ? "col-span-2 flex min-w-0 items-center justify-center gap-3 justify-self-center sm:col-span-1 sm:flex-1 sm:justify-start"
-                            : "flex min-w-0 items-center gap-3 sm:flex-1"
-                        }
-                      >
+                      <li className="flex min-w-0 items-center gap-3 sm:flex-1">
                         <Icon
                           className="size-7 shrink-0 text-[#00c8ea] sm:size-8"
                           strokeWidth={1.5}
