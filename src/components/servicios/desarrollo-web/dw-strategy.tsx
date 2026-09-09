@@ -13,6 +13,7 @@ import {
   dwStrategyCards,
   dwStrategyChecks,
 } from "@/content/desarrollo-web";
+import { Fragment } from "react";
 
 const cardIcons = {
   target: Target,
@@ -39,25 +40,35 @@ export function DwStrategy() {
               </p>
             </Reveal>
 
-            <div className="mt-8 grid flex-1 gap-4 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#00c8ea]/40">
-              {dwStrategyCards.map((card, index) => {
-                const Icon = cardIcons[card.icon];
-                return (
-                  <Reveal key={card.title} delay={index * 40}>
-                    <article className="flex h-full items-center gap-3 sm:px-4 sm:first:pl-0 sm:last:pr-0">
-                      <Icon
-                        className="size-7 shrink-0 text-[#00c8ea] sm:size-8"
-                        strokeWidth={1.5}
-                        aria-hidden
-                      />
-                      <p className="text-[0.85rem] leading-snug font-semibold text-canvas-foreground">
-                        {card.title}
-                      </p>
-                    </article>
-                  </Reveal>
-                );
-              })}
-            </div>
+            <Reveal delay={60}>
+              <ul className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-0">
+                {dwStrategyCards.map((card, index) => {
+                  const Icon = cardIcons[card.icon];
+                  return (
+                    <Fragment key={card.lines.join(" ")}>
+                      {index > 0 ? (
+                        <li
+                          className="hidden h-10 w-px shrink-0 self-center bg-[#00c8ea]/45 sm:mx-5 sm:block lg:mx-6"
+                          aria-hidden
+                        />
+                      ) : null}
+                      <li className="flex min-w-0 flex-1 items-center gap-3">
+                        <Icon
+                          className="size-7 shrink-0 text-[#00c8ea] sm:size-8"
+                          strokeWidth={1.5}
+                          aria-hidden
+                        />
+                        <p className="text-[0.85rem] leading-snug font-semibold text-canvas-foreground">
+                          {card.lines[0]}
+                          <br />
+                          {card.lines[1]}
+                        </p>
+                      </li>
+                    </Fragment>
+                  );
+                })}
+              </ul>
+            </Reveal>
           </div>
 
           <Reveal delay={80}>

@@ -10,15 +10,15 @@ export const dwHeroStats = [
 export const dwStrategyCards = [
   {
     icon: "target" as const,
-    title: "Análisis de objetivos y requerimientos",
+    lines: ["Análisis de objetivos", "y requerimientos"] as const,
   },
   {
     icon: "list" as const,
-    title: "Propuesta personalizada",
+    lines: ["Propuesta", "personalizada"] as const,
   },
   {
     icon: "users" as const,
-    title: "Equipo especializado en cada etapa",
+    lines: ["Equipo especializado", "en cada etapa"] as const,
   },
 ];
 
