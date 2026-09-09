@@ -414,6 +414,58 @@ export function FigmaLogo(props: LogoProps) {
   );
 }
 
+export function AdobeCreativeCloudLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#DA1F26"
+        d="M14.4 11.1c.5-.9 1.4-1.5 2.5-1.5 1.6 0 2.9 1.3 2.9 2.9s-1.3 2.9-2.9 2.9c-1.1 0-2-.6-2.5-1.5h-1.9c.5 1.8 2.2 3.1 4.2 3.1 2.4 0 4.4-2 4.4-4.5s-2-4.5-4.4-4.5c-1.9 0-3.5 1.2-4.1 2.9l-.2.5h1.9l.1-.3zm-5.8 5.2L5.5 7.7H3.6l4.1 10.3c.3.7.9 1.1 1.6 1.1h.9c.7 0 1.3-.4 1.6-1.1l1.6-4.1h-1.7l-1.3 3.4-1.8-4.9z"
+      />
+      <path
+        fill="#DA1F26"
+        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18.2c-4.5 0-8.2-3.7-8.2-8.2S7.5 3.8 12 3.8s8.2 3.7 8.2 8.2-3.7 8.2-8.2 8.2z"
+      />
+    </svg>
+  );
+}
+
+export function NotionLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#fff"
+        d="M4.2 4.4 16.1 2.2c.4-.1.7 0 1 .2.2.2.4.5.4.8v16.6c0 .4-.2.7-.5.9l-3.1 2.1c-.4.3-.9.2-1.1-.1-.1-.1-.1-.2-.1-.4V7.3c0-.3-.1-.5-.3-.7L9.1 3.8c-.2-.2-.5-.3-.8-.2L4.5 4.5c-.4.1-.6.5-.5.9v13.1c0 .3.2.5.4.6l2.1 1c.3.1.5 0 .6-.2.1-.1.1-.3.1-.4V6.5c0-.3.1-.6.4-.8l.1-.1c.2-.2.2-.2-.5-.1L4.7 6c-.4.1-.7-.2-.7-.6V5c0-.3.1-.5.2-.6z"
+      />
+    </svg>
+  );
+}
+
+export function MiroLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#FFD02F"
+        d="M17.3 0H6.7C3 0 0 3 0 6.7v10.6C0 21 3 24 6.7 24h10.6c3.7 0 6.7-3 6.7-6.7V6.7C24 3 21 0 17.3 0z"
+      />
+      <path
+        fill="#050038"
+        d="M18.1 5.2 12.8 16H9.9L7.2 5.2h2.9l1.7 7.4 1.8-7.4h2.8l1.8 7.4 1.7-7.4h2.9l-2.7 10.8h-2.9l-1.5-5.9z"
+      />
+    </svg>
+  );
+}
+
+export function MazeLogo(props: LogoProps) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden {...props}>
+      <path
+        fill="#6A35FF"
+        d="M12 2 2.5 7v10L12 22l9.5-5V7L12 2zm0 2.4 6.5 3.4v1.9L12 13.1 5.5 9.7V7.8L12 4.4zM5.5 11.4l5.5 3.2v5.1l-5.5-3.2v-5.1zm7.5 8.3v-5.1l5.5-3.2v5.1L13 19.7z"
+      />
+    </svg>
+  );
+}
+
 export function AdobeXdLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>
@@ -630,11 +682,15 @@ export const techStackLogoMap = {
   mercadopago: MercadoPagoLogo,
   webpay: WebpayLogo,
   figma: FigmaLogo,
+  adobecc: AdobeCreativeCloudLogo,
   adobexd: AdobeXdLogo,
   photoshop: PhotoshopLogo,
   illustrator: IllustratorLogo,
   midjourney: MidjourneyLogo,
   chatgpt: ChatGptLogo,
+  notion: NotionLogo,
+  miro: MiroLogo,
+  maze: MazeLogo,
   openai: OpenAiLogo,
   claude: ClaudeLogo,
   gemini: GeminiLogo,

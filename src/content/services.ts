@@ -161,7 +161,7 @@ export const serviceCatalog = [
     icon: "pen",
     iconBg: "#ec4899",
     image: "/home/img-serv-05.jpg",
-    href: "#",
+    href: "/servicios/ux-ui-diseno",
   },
   {
     n: "06",
