@@ -145,7 +145,7 @@ export const serviceCatalog = [
     icon: "cloud",
     iconBg: "#16a34a",
     image: "/home/img-serv-04.jpg",
-    href: "#",
+    href: "/servicios/cloud-infraestructura-performance",
   },
   {
     n: "05",

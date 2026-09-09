@@ -546,6 +546,30 @@ export function DockerLogo(props: LogoProps) {
   );
 }
 
+export function NginxLogo({ className }: LogoProps) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/tech/logo-nginx.svg"
+      alt=""
+      aria-hidden
+      className={className}
+    />
+  );
+}
+
+export function LinuxLogo({ className }: LogoProps) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/tech/logo-linux.svg"
+      alt=""
+      aria-hidden
+      className={className}
+    />
+  );
+}
+
 export function GitLabLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>
@@ -621,6 +645,8 @@ export const techStackLogoMap = {
   cpanel: CpanelLogo,
   github: GitHubLogo,
   docker: DockerLogo,
+  nginx: NginxLogo,
+  linux: LinuxLogo,
   gitlab: GitLabLogo,
   sentry: SentryLogo,
 } as const;
