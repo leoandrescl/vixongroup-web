@@ -41,9 +41,10 @@ export function DwStrategy() {
             </Reveal>
 
             <Reveal delay={60}>
-              <ul className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-0">
+              <ul className="mt-8 grid grid-cols-2 gap-5 sm:flex sm:flex-row sm:items-center sm:gap-0">
                 {dwStrategyCards.map((card, index) => {
                   const Icon = cardIcons[card.icon];
+                  const isLast = index === dwStrategyCards.length - 1;
                   return (
                     <Fragment key={card.lines.join(" ")}>
                       {index > 0 ? (
@@ -52,7 +53,13 @@ export function DwStrategy() {
                           aria-hidden
                         />
                       ) : null}
-                      <li className="flex min-w-0 flex-1 items-center gap-3">
+                      <li
+                        className={
+                          isLast
+                            ? "col-span-2 flex min-w-0 items-center justify-center gap-3 justify-self-center sm:col-span-1 sm:flex-1 sm:justify-start"
+                            : "flex min-w-0 items-center gap-3 sm:flex-1"
+                        }
+                      >
                         <Icon
                           className="size-7 shrink-0 text-[#00c8ea] sm:size-8"
                           strokeWidth={1.5}

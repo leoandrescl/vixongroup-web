@@ -9,7 +9,6 @@ import { HeroWords } from "@/components/motion/hero-words";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/section";
 import { dwHeroStats } from "@/content/desarrollo-web";
-import { cn } from "@/lib/utils";
 
 const statIcons = {
   bars: BarChart3,
@@ -52,17 +51,12 @@ export function DwHero() {
           </p>
 
           <ul className="hero-fade hero-fade-3 mt-8 grid grid-cols-2 sm:grid-cols-4 sm:divide-x sm:divide-[#00c8ea]/40">
-            {dwHeroStats.map((item, index) => {
+            {dwHeroStats.map((item) => {
               const Icon = statIcons[item.icon];
               return (
                 <li
                   key={item.label}
-                  className={cn(
-                    "flex flex-col items-center gap-2 px-2 py-3 text-center sm:px-3 sm:py-0",
-                    index > 0 &&
-                      index % 2 === 0 &&
-                      "border-t border-white/10 sm:border-t-0",
-                  )}
+                  className="flex flex-col items-center gap-2 px-2 py-3 text-center sm:px-3 sm:py-0"
                 >
                   <Icon
                     className="size-8 shrink-0 text-[#00c8ea]"

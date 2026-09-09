@@ -33,7 +33,7 @@ export function DwProcess() {
           </h2>
         </Reveal>
 
-        <ol className="mt-10 grid gap-8 overflow-visible sm:grid-cols-2 lg:grid-cols-6 lg:gap-0">
+        <ol className="mt-10 grid grid-cols-2 gap-8 overflow-visible lg:grid-cols-6 lg:gap-0">
           {dwProcessSteps.map((step, index) => {
             const Icon = stepIcons[step.icon];
             const isLast = index === dwProcessSteps.length - 1;

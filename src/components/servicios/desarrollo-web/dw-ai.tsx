@@ -53,8 +53,8 @@ export function DwAi() {
             </ul>
           </Reveal>
 
-          <Reveal delay={140}>
-            <aside className="flex h-full min-h-[12rem] w-full max-w-[9.5rem] flex-col justify-between gap-6 justify-self-end rounded-2xl bg-white p-4 shadow-[0_12px_36px_-24px_rgba(15,23,42,0.25)] sm:p-5 lg:max-w-none">
+          <Reveal delay={140} className="hidden lg:block">
+            <aside className="flex h-full min-h-[12rem] w-full flex-col justify-between gap-6 justify-self-end rounded-2xl bg-white p-4 shadow-[0_12px_36px_-24px_rgba(15,23,42,0.25)] sm:p-5">
               <p className="text-[0.95rem] font-semibold leading-snug text-canvas-foreground">
                 Soluciones
                 <br />

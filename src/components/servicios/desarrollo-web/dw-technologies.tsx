@@ -49,7 +49,7 @@ export function DwTechnologies() {
           </Reveal>
 
           <div className="grid items-stretch gap-4 lg:grid-cols-[minmax(0,1fr)_11.5rem] lg:gap-5">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-3">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-3">
               {dwTechnologies.map((tech, index) => {
                 const Logo = logos[tech.id];
                 return (
