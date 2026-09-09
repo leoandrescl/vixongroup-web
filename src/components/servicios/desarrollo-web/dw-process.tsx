@@ -44,7 +44,7 @@ export function DwProcess() {
                   className={cn(
                     "relative flex flex-col items-start lg:px-4 xl:px-5",
                     !isLast &&
-                      "lg:after:absolute lg:after:top-[12%] lg:after:bottom-[8%] lg:after:right-0 lg:after:w-px lg:after:origin-center lg:after:rotate-[16deg] lg:after:bg-[#00c8ea]/45",
+                      "lg:after:absolute lg:after:-top-[30px] lg:after:-bottom-[30px] lg:after:right-0 lg:after:w-px lg:after:origin-center lg:after:-rotate-[8deg] lg:after:bg-[#00c8ea]/45",
                   )}
                 >
                   <div className="flex items-center gap-2.5">
