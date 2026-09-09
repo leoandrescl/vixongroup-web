@@ -120,7 +120,6 @@ export const cipTechnologies = {
     { id: "nginx" as const, label: "NGINX", tone: "brand" as const },
     { id: "linux" as const, label: "Linux", tone: "brand" as const },
     { id: "docker" as const, label: "Docker", tone: "brand" as const },
-    { id: "cpanel" as const, label: "cPanel", tone: "brand" as const },
     { id: "mysql" as const, label: "MySQL", tone: "brand" as const },
   ],
 } as const;

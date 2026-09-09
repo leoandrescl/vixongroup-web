@@ -4,7 +4,6 @@ import { Check, Plus } from "lucide-react";
 import {
   AwsLogo,
   CloudflareLogo,
-  CpanelLogo,
   DigitalOceanLogo,
   DockerLogo,
   GcpLogo,
@@ -25,7 +24,6 @@ const logos = {
   nginx: NginxLogo,
   linux: LinuxLogo,
   docker: DockerLogo,
-  cpanel: CpanelLogo,
   mysql: MySqlLogo,
 } as const satisfies Record<
   (typeof cipTechnologies.items)[number]["id"],
