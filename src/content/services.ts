@@ -97,6 +97,7 @@ export const serviceCatalog = [
     icon: "monitor",
     iconBg: "#00b4d8",
     image: "/home/img-serv-01.jpg",
+    href: "/servicios/desarrollo-web-ecommerce",
   },
   {
     n: "02",
@@ -112,6 +113,7 @@ export const serviceCatalog = [
     icon: "code",
     iconBg: "#1e3a8a",
     image: "/home/img-serv-02.jpg",
+    href: "#",
   },
   {
     n: "03",
@@ -127,6 +129,7 @@ export const serviceCatalog = [
     icon: "cog",
     iconBg: "#7c3aed",
     image: "/home/img-serv-03.jpg",
+    href: "#",
   },
   {
     n: "04",
@@ -142,6 +145,7 @@ export const serviceCatalog = [
     icon: "cloud",
     iconBg: "#16a34a",
     image: "/home/img-serv-04.jpg",
+    href: "#",
   },
   {
     n: "05",
@@ -157,6 +161,7 @@ export const serviceCatalog = [
     icon: "pen",
     iconBg: "#ec4899",
     image: "/home/img-serv-05.jpg",
+    href: "#",
   },
   {
     n: "06",
@@ -172,6 +177,7 @@ export const serviceCatalog = [
     icon: "chart",
     iconBg: "#0d9488",
     image: "/home/img-serv-06.jpg",
+    href: "#",
   },
   {
     n: "07",
@@ -187,6 +193,7 @@ export const serviceCatalog = [
     icon: "pie",
     iconBg: "#ea580c",
     image: "/home/img-serv-07.jpg",
+    href: "#",
   },
   {
     n: "08",
@@ -202,5 +209,6 @@ export const serviceCatalog = [
     icon: "video",
     iconBg: "#dc2626",
     image: "/home/img-serv-08.jpg",
+    href: "#",
   },
 ] as const;
