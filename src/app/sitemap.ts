@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicios",
     "/servicios/desarrollo-web-ecommerce",
     "/servicios/software-plataformas-a-medida",
+    "/servicios/integraciones-automatizacion",
     "/nosotros",
     "/portafolio",
     "/blog",

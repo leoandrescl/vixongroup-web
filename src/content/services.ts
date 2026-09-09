@@ -129,7 +129,7 @@ export const serviceCatalog = [
     icon: "cog",
     iconBg: "#7c3aed",
     image: "/home/img-serv-03.jpg",
-    href: "#",
+    href: "/servicios/integraciones-automatizacion",
   },
   {
     n: "04",
