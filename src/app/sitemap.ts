@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicios/integraciones-automatizacion",
     "/servicios/cloud-infraestructura-performance",
     "/servicios/ux-ui-diseno",
+    "/servicios/marketing-digital-360",
     "/nosotros",
     "/portafolio",
     "/blog",

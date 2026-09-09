@@ -177,7 +177,7 @@ export const serviceCatalog = [
     icon: "chart",
     iconBg: "#0d9488",
     image: "/home/img-serv-06.jpg",
-    href: "#",
+    href: "/servicios/marketing-digital-360",
   },
   {
     n: "07",
