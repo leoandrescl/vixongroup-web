@@ -39,15 +39,17 @@ export function DwStrategy() {
               </p>
             </Reveal>
 
-            <div className="mt-8 grid flex-1 gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid flex-1 gap-4 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-[#00c8ea]/40">
               {dwStrategyCards.map((card, index) => {
                 const Icon = cardIcons[card.icon];
                 return (
                   <Reveal key={card.title} delay={index * 40}>
-                    <article className="flex h-full flex-col gap-3 rounded-2xl bg-[#e8f7fb] p-4 sm:p-5">
-                      <span className="flex size-10 items-center justify-center rounded-full bg-[#00c8ea] text-white">
-                        <Icon className="size-5" strokeWidth={1.75} aria-hidden />
-                      </span>
+                    <article className="flex h-full items-center gap-3 sm:px-4 sm:first:pl-0 sm:last:pr-0">
+                      <Icon
+                        className="size-7 shrink-0 text-[#00c8ea] sm:size-8"
+                        strokeWidth={1.5}
+                        aria-hidden
+                      />
                       <p className="text-[0.85rem] leading-snug font-semibold text-canvas-foreground">
                         {card.title}
                       </p>
