@@ -171,10 +171,20 @@ export function ContactForm({ className }: { className?: string }) {
             name="interest"
             defaultValue=""
             className={cn(
-              fieldClass,
-              "w-full cursor-pointer appearance-none bg-[length:1rem] bg-[right_0.85rem_center] bg-no-repeat pr-10 text-sm",
-              "bg-[url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 fill=%27none%27 stroke=%27%239aa3b5%27 stroke-width=%271.5%27%3E%3Cpath d=%27m5 8 5 5 5-5%27/%3E%3C/svg%3E')]",
+              "h-11 w-full cursor-pointer appearance-none rounded-xl border border-white/12 bg-[#161d2b] px-3.5 pr-10 text-sm text-foreground",
+              "hover:border-white/20 focus-visible:border-brand focus-visible:outline-none",
+              "color-scheme-dark bg-[length:1rem] bg-[right_0.85rem_center] bg-no-repeat",
+              "bg-[url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2720%27 height=%2720%27 fill=%27none%27 stroke=%27%2300c8ea%27 stroke-width=%271.5%27%3E%3Cpath d=%27m5 8 5 5 5-5%27/%3E%3C/svg%3E')]",
             )}
+            style={{
+              backgroundColor: "#161d2b",
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' stroke='%2300c8ea' stroke-width='1.5'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E\")",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right 0.85rem center",
+              backgroundSize: "1rem",
+              colorScheme: "dark",
+            }}
             aria-invalid={Boolean(fieldErrors.interest)}
           >
             <option value="" disabled>
