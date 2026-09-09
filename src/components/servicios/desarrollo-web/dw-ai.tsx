@@ -26,7 +26,7 @@ export function DwAi() {
           <Reveal delay={60}>
             <div className="relative mx-auto aspect-square w-full max-w-[16rem] lg:max-w-none">
               <Image
-                src="/home/img-servicios-ia.png"
+                src="/home/robot-desarrollo-web.png"
                 alt="Asistente de inteligencia artificial aplicado a sitios web"
                 fill
                 sizes="(min-width: 1024px) 22vw, (min-width: 640px) 40vw, 100vw"
