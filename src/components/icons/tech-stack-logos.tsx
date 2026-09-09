@@ -90,6 +90,18 @@ export function MySqlLogo({ className }: LogoProps) {
   );
 }
 
+export function PostgreSqlLogo({ className }: LogoProps) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/tech/logo-postgresql.svg"
+      alt=""
+      aria-hidden
+      className={className}
+    />
+  );
+}
+
 export function PhpLogo(props: LogoProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden {...props}>
@@ -568,6 +580,8 @@ export const techStackLogoMap = {
   python: PythonLogo,
   nodejs: NodejsLogo,
   typescript: TypeScriptLogo,
+  mysql: MySqlLogo,
+  postgresql: PostgreSqlLogo,
   aws: AwsLogo,
   gcp: GcpLogo,
   digitalocean: DigitalOceanLogo,

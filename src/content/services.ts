@@ -113,7 +113,7 @@ export const serviceCatalog = [
     icon: "code",
     iconBg: "#1e3a8a",
     image: "/home/img-serv-02.jpg",
-    href: "#",
+    href: "/servicios/software-plataformas-a-medida",
   },
   {
     n: "03",
