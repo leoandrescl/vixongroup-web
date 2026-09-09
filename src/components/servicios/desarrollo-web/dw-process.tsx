@@ -33,7 +33,7 @@ export function DwProcess() {
           </h2>
         </Reveal>
 
-        <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:gap-0">
+        <ol className="mt-10 grid gap-8 overflow-visible sm:grid-cols-2 lg:grid-cols-6 lg:gap-0">
           {dwProcessSteps.map((step, index) => {
             const Icon = stepIcons[step.icon];
             const isLast = index === dwProcessSteps.length - 1;
@@ -44,7 +44,7 @@ export function DwProcess() {
                   className={cn(
                     "relative flex flex-col items-start lg:px-4 xl:px-5",
                     !isLast &&
-                      "lg:after:absolute lg:after:-top-[30px] lg:after:-bottom-[30px] lg:after:right-0 lg:after:w-px lg:after:origin-center lg:after:-rotate-[8deg] lg:after:bg-[#00c8ea]/45",
+                      "lg:after:absolute lg:after:-top-[10px] lg:after:-bottom-[10px] lg:after:right-0 lg:after:w-px lg:after:origin-center lg:after:-rotate-[8deg] lg:after:bg-[#00c8ea]/45",
                   )}
                 >
                   <div className="flex items-center gap-2.5">
