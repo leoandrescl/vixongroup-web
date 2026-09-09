@@ -70,7 +70,7 @@ export const dwProjectTypes = [
 
 export const dwTechnologies = [
   { id: "wordpress" as const, label: "WordPress", tone: "white" as const },
-  { id: "woocommerce" as const, label: "WOOCOMMERCE", tone: "white" as const },
+  { id: "woocommerce" as const, label: "WOOCOMMERCE", tone: "brand" as const },
   { id: "shopify" as const, label: "Shopify", tone: "brand" as const },
   { id: "react" as const, label: "React", tone: "brand" as const },
   { id: "nextjs" as const, label: "Next.js", tone: "white" as const },

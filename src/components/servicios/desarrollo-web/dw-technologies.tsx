@@ -57,7 +57,7 @@ export function DwTechnologies() {
                     <article className="flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-[#121826] px-2 text-center ring-1 ring-white/8">
                       <Logo
                         className={cn(
-                          "size-8 sm:size-9",
+                          "h-8 w-auto max-w-[4.25rem] object-contain sm:h-9 sm:max-w-[4.75rem]",
                           tech.tone === "white" &&
                             "[&_path]:fill-white [&_ellipse]:fill-white",
                         )}
