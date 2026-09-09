@@ -10,7 +10,7 @@ export function DwAi() {
   return (
     <Section className="scroll-mt-24 bg-[#e8f7fb] text-canvas-foreground">
       <Container>
-        <div className="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 xl:gap-8">
+        <div className="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_0.5fr] lg:gap-6 xl:gap-8">
           <Reveal>
             <Eyebrow className="text-[#00c8ea]">Innovación a tu favor</Eyebrow>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-balance md:text-[1.75rem] lg:text-[1.85rem] lg:leading-[1.15]">
@@ -54,9 +54,15 @@ export function DwAi() {
           </Reveal>
 
           <Reveal delay={140}>
-            <aside className="flex h-full min-h-[12rem] flex-col justify-between gap-6 rounded-2xl bg-white p-5 shadow-[0_12px_36px_-24px_rgba(15,23,42,0.25)] sm:p-6">
+            <aside className="flex h-full min-h-[12rem] w-full max-w-[9.5rem] flex-col justify-between gap-6 justify-self-end rounded-2xl bg-white p-4 shadow-[0_12px_36px_-24px_rgba(15,23,42,0.25)] sm:p-5 lg:max-w-none">
               <p className="text-[0.95rem] font-semibold leading-snug text-canvas-foreground">
-                Soluciones inteligentes para negocios reales.
+                Soluciones
+                <br />
+                inteligentes
+                <br />
+                para negocios
+                <br />
+                reales.
               </p>
               <Link
                 href="/contacto"
