@@ -10,7 +10,7 @@ export function DwAi() {
   return (
     <Section className="scroll-mt-24 bg-[#e8f7fb] text-canvas-foreground">
       <Container>
-        <div className="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_0.5fr] lg:gap-6 xl:gap-8">
+        <div className="grid items-center gap-8 sm:grid-cols-2 lg:grid-cols-[1.5fr_.75fr_1fr_.75fr] lg:gap-6 xl:gap-8">
           <Reveal>
             <Eyebrow className="text-[#00c8ea]">Innovación a tu favor</Eyebrow>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight text-balance md:text-[1.75rem] lg:text-[1.85rem] lg:leading-[1.15]">
