@@ -51,19 +51,21 @@ export function DwProjects() {
                   <h3 className="text-[0.95rem] font-semibold tracking-tight">
                     {project.title}
                   </h3>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-[#e6eef1] px-2.5 py-1 text-[0.65rem] font-medium text-canvas-foreground/70"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="mt-auto flex items-center justify-between gap-2 pt-3">
+                    <div className="flex min-w-0 flex-wrap gap-1.5">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-[#e6eef1] px-2.5 py-1 text-[0.65rem] font-medium text-canvas-foreground/70"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-[#00c8ea] text-[#041018] transition-colors group-hover:bg-[#00c8ea]/90">
+                      <ArrowRight className="size-4" aria-hidden />
+                    </span>
                   </div>
-                  <span className="mt-4 inline-flex size-9 items-center justify-center self-end rounded-full bg-[#00c8ea] text-[#041018] transition-colors group-hover:bg-[#00c8ea]/90">
-                    <ArrowRight className="size-4" aria-hidden />
-                  </span>
                 </div>
               </Link>
             </Reveal>
