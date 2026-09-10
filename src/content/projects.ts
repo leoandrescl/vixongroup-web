@@ -316,7 +316,7 @@ export const projects: Project[] = [
   {
     slug: "gana-seguro",
     client: "Gana Seguro",
-    title: "Plataforma de concursos con DigiTicket",
+    title: "Plataforma de concursos con Ilustraciones",
     summary:
       "Plataforma de sorteos digitales en gsdigital.cl: G-Pass, pagos integrados y gestión de usuarios — misma arquitectura DigiTicket que Sorteo Seguro.",
     category: "ecommerce",
@@ -355,7 +355,7 @@ export const projects: Project[] = [
   {
     slug: "vixon",
     client: "Vixon",
-    title: "Plataforma de concursos con DigiTicket",
+    title: "Plataforma de concursos con VixPass",
     summary:
       "Plataforma de sorteos digitales en vixon.cl con sistema de tickets, pagos integrados y gestión de usuarios — misma arquitectura DigiTicket que Sorteo Seguro.",
     category: "ecommerce",
