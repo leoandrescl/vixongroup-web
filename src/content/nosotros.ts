@@ -146,7 +146,7 @@ export const nosotrosEquipo = {
       name: "José Ignacio García Pinto",
       role: "Especialista en Paid Media & Performance",
       bio: "Especialista en performance y e-commerce, con experiencia en Google Ads, Meta Ads y optimización de campañas. Perfil técnico-analítico con GTM, GA4 y dashboards en Looker Studio para transformar datos en decisiones de negocio.",
-      photo: "/nosotros/equipo-ignacio.jpeg" as string | null,
+      photo: null as string | null,
     },
   ],
 } as const;
