@@ -6,13 +6,13 @@ export const siteConfig = {
     "Agencia tecnológica integral: ingeniería, e-commerce y marketing digital. Productos que rinden y estrategias que los hacen crecer.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "es",
-  email: "hola@vixongroup.com",
-  phone: "+58 412 000 0000",
-  phoneDisplay: "+58 412 000 0000",
-  address: "Santiago, Chile",
-  hours: "Lun–Vie, 9:00–18:00 (GMT-3)",
+  email: "contacto@studiovixon.com",
+  phone: "+56 9 6587 8558",
+  phoneDisplay: "+56 9 6587 8558",
+  address: "Santiago - Viña del Mar / Chile",
+  hours: "Lun - Vie, 9:00 - 18:00",
   whatsapp: {
-    number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "584120000000",
+    number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+56 9 6587 8558",
     message:
       process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
       "Hola Vixon Group, quiero hablar de un proyecto.",

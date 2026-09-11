@@ -271,31 +271,31 @@ export const uxFaqs: FaqItem[] = [
   {
     question: "¿Cuál es la diferencia entre UX y UI?",
     answer:
-      "UX se centra en la experiencia: investigación, flujos y usabilidad. UI se enfoca en la interfaz visual: tipografía, color, componentes y estilo. Trabajamos ambas de forma integrada.",
+      "UX se enfoca en cómo funciona y se experimenta un producto; UI se concentra en su interfaz visual e interacción. Ambas disciplinas trabajan juntas para crear una experiencia coherente.",
   },
   {
     question: "¿Pueden diseñar mi sitio aunque otro equipo lo desarrolle?",
     answer:
-      "Sí. Entregamos wireframes, prototipos y sistemas de diseño listos para implementación, con especificaciones claras para tu equipo o proveedor de desarrollo.",
+      "Sí. Podemos preparar diseños, prototipos y recursos para que sean implementados por tu equipo o proveedor de desarrollo.",
   },
   {
-    question: "¿Pueden mejorar el diseño de una web existente?",
+    question: "¿Pueden mejorar el diseño de una web o plataforma existente?",
     answer:
-      "Sí. Auditores UX/UI, rediseños parciales o totales y mejoras basadas en datos, feedback y objetivos de conversión.",
+      "Sí. Podemos evaluar su estructura, navegación e interfaz para identificar oportunidades de mejora y proponer un rediseño parcial o completo.",
   },
   {
     question: "¿Incluyen diseño para dispositivos móviles?",
     answer:
-      "Sí. Diseñamos responsive desde el inicio, priorizando la experiencia en móvil cuando el tráfico o el uso lo requieren.",
+      "Podemos contemplar versiones responsive y adaptar las interfaces a los dispositivos definidos en el alcance del proyecto.",
   },
   {
     question: "¿Pueden crear o renovar la identidad visual de mi marca?",
     answer:
-      "Sí. Creamos o actualizamos identidad visual, guidelines y aplicaciones digitales para mantener coherencia en todos los canales.",
+      "Sí, podemos desarrollar o adaptar elementos de identidad visual según las necesidades del proyecto.",
   },
   {
     question: "¿Qué recibo al finalizar el trabajo?",
     answer:
-      "Archivos de diseño (Figma u otros), prototipos, componentes y documentación necesaria para desarrollo o handoff. Ajustamos el paquete según el alcance acordado.",
+      "Depende del alcance contratado. Podemos entregar archivos de diseño, prototipos, componentes, recursos gráficos y documentación para facilitar la implementación.",
   },
 ];

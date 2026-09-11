@@ -266,31 +266,31 @@ export const cloudFaqs: FaqItem[] = [
   {
     question: "¿Qué infraestructura necesita mi proyecto?",
     answer:
-      "Depende del tipo de sitio o plataforma, tráfico esperado, integraciones y criticidad. Tras el diagnóstico recomendamos una arquitectura acorde a tu operación y presupuesto, sin sobredimensionar.",
+      "Depende del tipo de aplicación, tráfico, funcionalidades, presupuesto y necesidades de disponibilidad. Evaluamos esos factores antes de recomendar una solución.",
   },
   {
     question: "¿Pueden optimizar un sitio que ya está funcionando?",
     answer:
-      "Sí. Revisamos servidor, aplicación, base de datos, caché y CDN para mejorar velocidad, estabilidad y Core Web Vitals sin interrumpir tu operación.",
+      "Sí. Podemos revisar su rendimiento e infraestructura actual para identificar oportunidades de mejora y proponer acciones concretas.",
   },
   {
     question: "¿Es necesario migrar a otro servidor o proveedor?",
     answer:
-      "No siempre. Primero evaluamos si podemos optimizar tu entorno actual. Solo proponemos migración cuando hay límites técnicos, de seguridad, costos o escalabilidad claros.",
+      "No siempre. Primero evaluamos si el entorno actual puede optimizarse o si existe una razón técnica para recomendar una migración.",
   },
   {
-    question: "¿Qué pasa si mi sitio recibe mucho tráfico?",
+    question: "¿Qué ocurre si mi sitio recibe mucho tráfico?",
     answer:
-      "Diseñamos con escalabilidad en mente: caché, CDN, balanceo y capacidad de crecer recursos cuando el tráfico sube, manteniendo tiempos de respuesta estables.",
+      "Podemos evaluar la capacidad de la infraestructura y proponer medidas de optimización o escalabilidad según el comportamiento esperado y los recursos disponibles.",
   },
   {
     question: "¿Incluyen respaldos y seguridad?",
     answer:
-      "Sí. Implementamos respaldos, controles de acceso, buenas prácticas de hardening y planes de recuperación según la criticidad de tu sistema.",
+      "Podemos contemplarlos dentro del servicio, definiendo frecuencia, alcance, retención y procedimientos de recuperación según las necesidades del proyecto.",
   },
   {
     question: "¿Ofrecen mantenimiento y monitoreo?",
     answer:
-      "Sí. Podemos acompañar con monitoreo, alertas, actualizaciones y soporte ante incidentes para que tu infraestructura evolucione con el negocio.",
+      "Sí, podemos considerar servicios de mantenimiento, monitoreo y soporte según el alcance y la modalidad contratada.",
   },
 ];

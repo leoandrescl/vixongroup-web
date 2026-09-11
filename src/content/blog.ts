@@ -129,7 +129,7 @@ export const defaultBlogAuthor: BlogAuthor = {
     linkedin: "https://www.linkedin.com/company/vixon-group",
     instagram: "https://www.instagram.com/vixongroup",
     x: "https://x.com/",
-    email: "hola@vixongroup.com",
+    email: "contacto@studiovixon.com",
   },
 };
 

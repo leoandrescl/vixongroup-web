@@ -267,31 +267,31 @@ export const marketingFaqs: FaqItem[] = [
   {
     question: "¿Qué incluye un servicio de marketing digital 360°?",
     answer:
-      "Puede incluir estrategia, publicidad digital, SEO, contenido, redes, remarketing, CRM/automatización y analítica. Armamos el alcance según tus objetivos y presupuesto.",
+      "Depende de las necesidades del negocio. Puede incluir estrategia, publicidad, contenido, SEO, analítica, automatización y optimización, según el alcance contratado.",
   },
   {
     question: "¿Necesito contratar todos los servicios?",
     answer:
-      "No. Priorizamos los canales y acciones con mayor impacto para tu negocio. Podemos empezar por un núcleo y escalar cuando tenga sentido.",
+      "No. Podemos comenzar con las áreas prioritarias y ampliar la estrategia cuando el proyecto lo requiera.",
   },
   {
     question: "¿Qué presupuesto necesito para publicidad?",
     answer:
-      "Depende del mercado, competencia y objetivos. Te proponemos un rango realista de inversión media y un plan de pruebas para validar qué funciona antes de escalar.",
+      "Depende del mercado, los objetivos, la competencia y los canales. Evaluamos el proyecto para recomendar una inversión adecuada y distinguir el presupuesto publicitario de los honorarios de gestión.",
   },
   {
     question: "¿Cuánto tiempo demora en verse resultados?",
     answer:
-      "En paid media suelen verse señales en semanas. SEO y marca toman más tiempo. Definimos KPIs y horizontes claros desde el inicio para medir avance con criterio.",
+      "Varía según el canal, el mercado, la oferta y el estado inicial del negocio. Algunas campañas pueden generar información rápidamente, mientras que estrategias como SEO requieren un trabajo más prolongado.",
   },
   {
     question: "¿Cómo sabré si las campañas están funcionando?",
     answer:
-      "Configuramos medición (GA4, GTM, píxeles) y reportes con KPIs acordados: leads, ventas, CAC, ROAS u otros indicadores relevantes a tu negocio.",
+      "Definimos indicadores relevantes y revisamos los resultados mediante las herramientas de medición disponibles, relacionándolos con los objetivos del negocio cuando sea posible.",
   },
   {
     question: "¿Pueden trabajar con mi sitio web o equipo actual?",
     answer:
-      "Sí. Integramos la estrategia con tu sitio, CRM y equipo interno o proveedores, y coordinamos handoffs claros para implementación y optimización.",
+      "Sí. Podemos evaluar los activos existentes y coordinarnos con tu equipo o proveedores para implementar la estrategia.",
   },
 ];

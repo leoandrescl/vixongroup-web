@@ -257,31 +257,31 @@ export const softwareMedidaFaqs: FaqItem[] = [
   {
     question: "¿Cuánto cuesta desarrollar un software a medida?",
     answer:
-      "Depende del alcance, integraciones y complejidad. Tras el diagnóstico entregamos una propuesta con fases, supuestos y un rango de inversión claro, sin compromisos ocultos.",
+      "Depende del alcance, las funcionalidades, integraciones y complejidad. Primero evaluamos el requerimiento para proponer una solución y un presupuesto adecuados.",
   },
   {
     question: "¿Cuánto tiempo demora?",
     answer:
-      "Un MVP o módulo inicial suele tomar entre 8 y 14 semanas. Plataformas más completas van de 3 a 6 meses según funcionalidades e integraciones. Acotamos el cronograma en la propuesta.",
+      "Se define según el tamaño del proyecto. Podemos organizar el desarrollo por etapas para validar funcionalidades y avanzar de manera controlada.",
   },
   {
-    question: "¿Pueden mejorar un sistema existente?",
+    question: "¿Pueden mejorar o continuar un sistema existente?",
     answer:
-      "Sí. Evaluamos tu stack actual, deuda técnica y prioridades para evolucionar, migrar o complementar lo que ya tienes sin romper la operación.",
+      "Sí, podemos evaluar su arquitectura, código y estado actual para determinar si conviene optimizarlo, ampliarlo o desarrollar una nueva solución.",
   },
   {
-    question: "¿Se puede integrar con mis herramientas actuales?",
+    question: "¿Se puede integrar con las herramientas que ya utilizamos?",
     answer:
-      "En la mayoría de los casos sí. Integramos CRM, ERP, pasarelas de pago, APIs y herramientas internas. Validamos factibilidad en la etapa de diagnóstico.",
+      "En muchos casos sí. Revisamos las APIs, posibilidades de integración y restricciones técnicas de cada plataforma.",
   },
   {
-    question: "¿Podemos comenzar con una versión inicial?",
+    question: "¿Podemos comenzar con una versión inicial y agregar funciones después?",
     answer:
-      "Sí. Preferimos partir con un MVP o fases incrementales: valor temprano, aprendizaje con usuarios reales y evolución controlada del producto.",
+      "Sí. Cuando el proyecto lo permite, podemos definir una primera versión con las funcionalidades prioritarias y planificar su evolución.",
   },
   {
-    question: "¿Qué pasa después del lanzamiento?",
+    question: "¿Qué ocurre después del lanzamiento?",
     answer:
-      "Incluimos soporte post-lanzamiento y podemos continuar con mantención, mejoras y nuevas funcionalidades, o hacer handoff documentado a tu equipo.",
+      "Podemos contemplar soporte, mantenimiento, monitoreo y nuevas funcionalidades según las necesidades del proyecto y el servicio contratado.",
   },
 ];

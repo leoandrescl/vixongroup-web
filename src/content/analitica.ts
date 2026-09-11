@@ -275,33 +275,33 @@ export const anRecentProjects = [
 
 export const analiticaFaqs: FaqItem[] = [
   {
-    question: "¿Qué diferencia hay entre GA4, Tag Manager y un Pixel?",
+    question: "¿Qué diferencia hay entre Google Analytics, Tag Manager y un Pixel?",
     answer:
-      "GA4 analiza el comportamiento y conversiones en tu propiedad. Tag Manager organiza y publica etiquetas sin tocar código constantemente. Un Pixel (o CAPI) envía eventos a plataformas publicitarias como Meta para optimizar campañas.",
+      "Cumplen funciones distintas. Analytics permite analizar comportamiento y eventos; Tag Manager ayuda a administrar implementaciones de etiquetas; y los píxeles permiten registrar determinadas acciones para plataformas publicitarias.",
   },
   {
     question: "¿Pueden revisar una medición que ya está instalada?",
     answer:
-      "Sí. Auditamos implementaciones existentes, detectamos duplicados, eventos mal configurados o brechas de atribución, y entregamos un plan de corrección priorizado.",
+      "Sí. Podemos auditar la configuración existente, revisar eventos y conversiones, detectar inconsistencias y proponer mejoras.",
   },
   {
-    question: "¿Por qué mis ventas no coinciden con las de Meta o Google Ads?",
+    question: "¿Por qué mis ventas no coinciden exactamente con las conversiones de Meta o Google Ads?",
     answer:
-      "Es normal por diferencias de atribución, ventanas de conversión, consentimientos y modelos de cada plataforma. Alineamos definiciones, validamos eventos y te ayudamos a interpretar cada fuente con criterio.",
+      "Las plataformas pueden utilizar distintos modelos de atribución, ventanas de conversión y métodos de medición. Por eso es importante interpretar los datos considerando esas diferencias.",
   },
   {
     question: "¿Pueden conectar los datos de mi tienda con mis campañas?",
     answer:
-      "Sí. Integramos e-commerce (Shopify, WooCommerce u otros), CRM y plataformas publicitarias para unificar conversiones, audiencias y reportes.",
+      "En muchos casos sí. Evaluamos las herramientas disponibles y las posibilidades de integración para construir una visión más completa.",
   },
   {
     question: "¿Pueden crear un dashboard personalizado?",
     answer:
-      "Sí. Diseñamos paneles en Looker Studio u otras herramientas con los KPIs que tu equipo necesita revisar de forma recurrente.",
+      "Sí. Podemos diseñar paneles con los indicadores relevantes para tu negocio, según las fuentes de información disponibles.",
   },
   {
     question: "¿Qué ocurre si mi sitio cambia después de implementar la medición?",
     answer:
-      "Podemos acompañar cambios de sitio o campañas con revalidación de eventos, actualización de contenedores y ajustes al plan de medición.",
+      "Los cambios pueden afectar eventos o etiquetas. Por eso es importante revisar y actualizar la medición cuando se modifican procesos, formularios, checkout o funcionalidades relevantes.",
   },
 ];

@@ -272,31 +272,31 @@ export const contenidoFaqs: FaqItem[] = [
   {
     question: "¿Qué incluye un servicio de Contenido & Growth?",
     answer:
-      "Puede incluir estrategia, planificación, producción audiovisual, diseño de piezas, gestión de redes, contenido para campañas y análisis de resultados. Armamos el alcance según tus objetivos.",
+      "Depende de las necesidades de la marca. Puede incluir estrategia, planificación, diseño, producción audiovisual, gestión de redes, contenido para campañas y análisis de resultados.",
   },
   {
     question: "¿Pueden encargarse de la fotografía y los videos?",
     answer:
-      "Sí. Producimos fotografía, video, reels y piezas audiovisuales adaptadas a cada canal y a la identidad de tu marca.",
+      "Sí, podemos contemplar producción audiovisual según el alcance, las necesidades y la ubicación del proyecto.",
   },
   {
     question: "¿Necesito contratar la gestión completa de redes sociales?",
     answer:
-      "No necesariamente. Podemos enfocarnos en estrategia y producción, o también en publicación y gestión continua, según lo que necesites.",
+      "No. Podemos desarrollar una campaña, producir contenido específico o trabajar de manera continua, según lo que necesites.",
   },
   {
     question: "¿Pueden crear contenido para mis campañas publicitarias?",
     answer:
-      "Sí. Creamos piezas y mensajes para anuncios, landing pages, email y otras acciones de conversión, alineados a la estrategia de campaña.",
+      "Sí. Podemos desarrollar piezas y mensajes adaptados a los objetivos, formatos y canales de cada campaña.",
   },
   {
     question: "¿Cómo se mide si el contenido está funcionando?",
     answer:
-      "Definimos KPIs por canal (alcance, engagement, leads, ventas u otros) y revisamos resultados para ajustar formatos, mensajes y distribución.",
+      "Definimos indicadores según el objetivo de cada acción y analizamos los resultados disponibles para orientar mejoras.",
   },
   {
     question: "¿Pueden trabajar con mi equipo de marketing actual?",
     answer:
-      "Sí. Nos integramos con tu equipo o proveedores, con handoffs claros de briefing, producción, publicación y reporting.",
+      "Sí. Podemos complementar a tu equipo con estrategia, diseño, producción o apoyo especializado según el proyecto.",
   },
 ];

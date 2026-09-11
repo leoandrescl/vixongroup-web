@@ -252,31 +252,31 @@ export const integracionesFaqs: FaqItem[] = [
   {
     question: "¿Pueden integrar las herramientas que ya utiliza mi empresa?",
     answer:
-      "En la mayoría de los casos sí. Evaluamos APIs, webhooks y conectores disponibles de tus plataformas actuales y diseñamos la integración más estable y mantenible.",
+      "En muchos casos sí. Revisamos si cuentan con APIs, webhooks u otros mecanismos de conexión y evaluamos la alternativa más adecuada.",
   },
   {
     question: "¿Necesito cambiar mis sistemas actuales?",
     answer:
-      "No necesariamente. Priorizamos conectar lo que ya usas. Solo sugerimos cambios o migraciones cuando hay límites técnicos, costos o riesgos claros.",
+      "No necesariamente. Primero analizamos si es posible aprovechar las herramientas existentes y conectarlas de manera eficiente.",
   },
   {
     question: "¿Qué pasa si una integración falla?",
     answer:
-      "Diseñamos manejo de errores, reintentos y alertas. Así puedes detectar incidencias rápido, evitar pérdida de datos y recuperar el flujo con trazabilidad.",
+      "Podemos implementar registros, alertas, reintentos y mecanismos de control según la criticidad del proceso.",
   },
   {
-    question: "¿Se pueden automatizar procesos con aprobación humana?",
+    question: "¿Se pueden automatizar procesos que requieren aprobación humana?",
     answer:
-      "Sí. Configuramos workflows con pasos de revisión, asignación y aprobación antes de ejecutar acciones críticas o notificaciones.",
+      "Sí. Es posible diseñar flujos donde ciertas acciones se ejecuten automáticamente y otras requieran revisión o autorización.",
   },
   {
     question: "¿Pueden integrar inteligencia artificial?",
     answer:
-      "Sí. Incorporamos IA cuando aporta valor real: clasificación, extracción de datos, respuestas asistidas o decisiones dentro del flujo automatizado.",
+      "Sí, cuando el proceso lo justifica y existen condiciones adecuadas de datos, seguridad y supervisión.",
   },
   {
     question: "¿Cuánto cuesta una integración o automatización?",
     answer:
-      "Depende de la cantidad de sistemas, reglas de negocio y volumen de datos. Tras el diagnóstico entregamos una propuesta con alcance, fases y un rango de inversión claro.",
+      "Depende de los sistemas involucrados, la complejidad del flujo, el volumen de operaciones y las funcionalidades necesarias. Evaluamos el requerimiento antes de proponer un presupuesto.",
   },
 ];

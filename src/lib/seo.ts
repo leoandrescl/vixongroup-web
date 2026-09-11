@@ -63,7 +63,7 @@ export function organizationJsonLd() {
     telephone: siteConfig.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Santiago",
+      addressLocality: "Santiago - Viña del Mar",
       addressCountry: "CL",
     },
     sameAs: Object.values(siteConfig.social),
