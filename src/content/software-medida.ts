@@ -59,42 +59,42 @@ export const smProjectTypes = {
       title: "Sistemas internos y paneles admin",
       description:
         "Centraliza procesos, usuarios y operación de tu empresa.",
-      image: "/home/img-hero-home.jpg",
+      icon: "admin" as const,
       href: "/contacto",
     },
     {
       title: "CRM y gestión comercial",
       description:
         "Organiza clientes, oportunidades y procesos de venta.",
-      image: "/home/img-hero-home.jpg",
+      icon: "crm" as const,
       href: "/contacto",
     },
     {
       title: "Plataformas digitales a medida",
       description:
         "Soluciones con funcionalidades propias para tu negocio.",
-      image: "/home/img-hero-home.jpg",
+      icon: "platform" as const,
       href: "/contacto",
     },
     {
       title: "Portales privados e intranets",
       description:
         "Acceso seguro para colaboradores, clientes o proveedores.",
-      image: "/home/img-hero-home.jpg",
+      icon: "portal" as const,
       href: "/contacto",
     },
     {
       title: "Dashboards y reportes",
       description:
         "Información en tiempo real para una mejor toma de decisiones.",
-      image: "/home/img-hero-home.jpg",
+      icon: "dashboard" as const,
       href: "/contacto",
     },
     {
       title: "Aplicaciones personalizadas",
       description:
         "Módulos y herramientas específicas según tus necesidades.",
-      image: "/home/img-hero-home.jpg",
+      icon: "apps" as const,
       href: "/contacto",
     },
   ],
