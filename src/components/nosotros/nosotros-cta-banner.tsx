@@ -8,7 +8,7 @@ import { nosotrosCta } from "@/content/nosotros";
 
 export function NosotrosCtaBanner() {
   return (
-    <section className="pb-10 md:pb-12">
+    <section className="py-10 md:py-12">
       <Container>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-[#00c8ea]/35 bg-[#070b14] shadow-[0_0_0_1px_rgb(0_200_234_/_0.12),0_0_50px_-20px_rgb(0_200_234_/_0.4)] md:rounded-[1.25rem]">
