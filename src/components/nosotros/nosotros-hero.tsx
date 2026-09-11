@@ -29,7 +29,7 @@ export function NosotrosHero() {
     <section className="relative isolate flex min-h-0 flex-col overflow-hidden md:h-[min(36rem,calc(100svh-11rem))] lg:h-[min(38rem,calc(100svh-11rem))]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home/img-hero-home.jpg"
+          src="/nosotros/img-hero-nosotros.jpg"
           alt=""
           fill
           priority
