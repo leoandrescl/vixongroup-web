@@ -26,7 +26,7 @@ export const nosotrosHistoria = {
     "Por eso buscamos comprender el negocio antes de proponer una solución. Nos interesa conocer sus procesos, sus clientes, sus desafíos y sus objetivos para desarrollar herramientas y estrategias que tengan sentido en su realidad.",
     "Nuestra visión es construir relaciones de largo plazo, acompañando a nuestros clientes desde la idea inicial hasta la evolución de sus proyectos.",
   ],
-  imageOverlay: "PROYECTOS / PERSONAS / NEGOCIOS / TECNOLOGÍA",
+  image: "/nosotros/img-nuestra_historia-nosotros.jpg",
 } as const;
 
 export const nosotrosFormaTrabajar = {

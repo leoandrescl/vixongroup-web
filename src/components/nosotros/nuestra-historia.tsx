@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/reveal";
 import { Container } from "@/components/ui/container";
 import { Eyebrow, Section } from "@/components/ui/section";
@@ -29,20 +30,14 @@ export function NuestraHistoria() {
           </Reveal>
 
           <Reveal delay={80} className="relative">
-            <div
-              className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-[#e8eef2] ring-1 ring-[#00c8ea]/15"
-              aria-label="Espacio reservado para la imagen de Nuestra historia y propósito"
-            >
-              <div
-                className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgb(0_200_234_/_0.12),transparent_60%)]"
-                aria-hidden
+            <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-[#e8eef2] ring-1 ring-[#00c8ea]/15">
+              <Image
+                src={nosotrosHistoria.image}
+                alt="Nuestra historia y propósito en ViXon Studio"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
               />
-              <p
-                className="pointer-events-none absolute top-1/2 right-4 hidden -translate-y-1/2 text-[0.65rem] font-semibold tracking-[0.28em] text-canvas-foreground/35 uppercase [writing-mode:vertical-rl] sm:block"
-                aria-hidden
-              >
-                {nosotrosHistoria.imageOverlay}
-              </p>
             </div>
           </Reveal>
         </div>
