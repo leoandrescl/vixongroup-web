@@ -162,13 +162,13 @@ export const nosotrosIa = {
       name: "ViXon IA",
       role: "Especialista en Estrategia e Innovación",
       bio: "Asistente digital orientada a investigación, análisis, ideación y aplicación de IA en procesos de negocio, marketing y experiencias digitales.",
-      photo: null as string | null,
+      photo: "/nosotros/vixon-ia-1.jpg" as string | null,
     },
     {
       name: "ViXon IA",
       role: "Especialista en Desarrollo y Automatización",
       bio: "Asistente digital orientado a programación, análisis técnico, integraciones y automatización de procesos mediante inteligencia artificial.",
-      photo: null as string | null,
+      photo: "/nosotros/vixon-ia-2.jpg" as string | null,
     },
   ],
   note: [
