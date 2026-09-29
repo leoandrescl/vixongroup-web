@@ -12,10 +12,8 @@ export const siteConfig = {
   address: "Santiago - Viña del Mar / Chile",
   hours: "Lun - Vie, 9:00 - 18:00",
   whatsapp: {
-    number: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "+56 9 6326 9991",
-    message:
-      process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE ??
-      "Hola Vixon Group, quiero hablar de un proyecto.",
+    number: "+56 9 6326 9991",
+    message: "Hola Vixon Group, quiero hablar de un proyecto.",
   },
   social: {
     linkedin: "https://www.linkedin.com/company/vixon-group",
