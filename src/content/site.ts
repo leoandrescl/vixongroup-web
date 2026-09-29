@@ -7,8 +7,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   locale: "es",
   email: "contacto@studiovixon.com",
-  phone: "+56 9 6587 8558",
-  phoneDisplay: "+56 9 6587 8558",
+  phone: "+56 9 6326 9991",
+  phoneDisplay: "+56 9 6326 9991",
   address: "Santiago - Viña del Mar / Chile",
   hours: "Lun - Vie, 9:00 - 18:00",
   whatsapp: {
