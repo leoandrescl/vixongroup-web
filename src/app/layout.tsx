@@ -46,9 +46,6 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
-  icons: {
-    icon: "/icon",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
