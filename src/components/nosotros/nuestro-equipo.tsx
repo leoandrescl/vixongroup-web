@@ -32,7 +32,7 @@ export function NuestroEquipo() {
             <Reveal key={member.name} delay={index * 70}>
               <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-surface ring-1 ring-white/10">
                 <div
-                  className="relative aspect-[4/5] bg-[#121821]"
+                  className="relative hidden aspect-[4/5] bg-[#121821]"
                   aria-label={
                     member.photo
                       ? undefined
